@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "academy": "Academy",
+    "brief": "The Brief"
+  },
+  "hero": {
+    "headline": "I don't just edit.",
+    "headlineBold": "I build Money Machines.",
+    "subheadline": "Retention-Engineered Content for 7-Figure Entrepreneurs",
+    "cta": "Apply for a Spot"
+  },
+  "retention": {
+    "title": "The Retention Engine",
+    "subtitle": "Where Attention Becomes Equity",
+    "description": "While your competitors hemorrhage viewers at the 3-second mark, my engineered content keeps audiences captivated—transforming passive scrollers into engaged customers.",
+    "standardLabel": "Standard Content",
+    "engineeredLabel": "Retention-Engineered",
+    "viewerRetention": "Viewer Retention",
+    "timeSeconds": "Time (seconds)"
+  },
+  "works": {
+    "title": "Selected Archives",
+    "subtitle": "Proof of Performance",
+    "viewProject": "View Details"
+  },
+  "about": {
+    "name": "ZYAD",
+    "profession": "Professional Video Editor & Motion Designer",
+    "hero": {
+      "headline": "Engineering Attention Through Visual Storytelling",
+      "subheadline": "I transform raw footage into structured narratives designed to maximize retention and drive growth.",
+      "cta": "Let's Collab"
+    },
+    "philosophy": {
+      "title": "The Attention Architect",
+      "text": "Editing is engineered attention. I don't just cut clips; I architect intentional pacing and structured storytelling using retention psychology to turn viewers into equity."
+    },
+    "impact": {
+      "title": "Proof of Impact",
+      "items": [
+        {
+          "value": "3+",
+          "label": "Years Experience"
+        },
+        {
+          "value": "40+",
+          "label": "Clients Served"
+        },
+        {
+          "value": "5+",
+          "label": "Major Creators"
+        },
+        {
+          "value": "70M+",
+          "label": "Total Views"
+        }
+      ]
+    },
+    "differentiation": {
+      "title": "Strategic Differentiation",
+      "narrative": "I don't apply templates. I build custom visual identities based on deep niche analysis and audience psychology.",
+      "bullets": [
+        "Custom editing style per client",
+        "Niche & audience analysis",
+        "Custom visual identity building",
+        "Retention & CTR engineering"
+      ]
+    },
+    "skills": {
+      "title": "Capabilities",
+      "creative": {
+        "title": "Creative",
+        "items": [
+          "Visual Storytelling",
+          "Motion Design",
+          "Art Direction",
+          "Color Grading"
+        ]
+      },
+      "technical": {
+        "title": "Technical",
+        "items": [
+          "Advanced Editing",
+          "3D Exploration",
+          "Sound Design",
+          "Platform Optimization"
+        ]
+      },
+      "strategic": {
+        "title": "Strategic",
+        "items": [
+          "Retention Psychology",
+          "Niche Analysis",
+          "CTR Optimization",
+          "Market Positioning"
+        ]
+      }
+    },
+    "human": {
+      "title": "Beyond the Screen",
+      "traits": "Curious about everything. A fast learner with a continuous self-development mindset.",
+      "interests": [
+        "Filmmaking",
+        "3D Art",
+        "Music",
+        "Cooking",
+        "Training"
+      ]
+    },
+    "closing": {
+      "title": "Ready to Scale?",
+      "text": "Let's build something intentional that dominates the market.",
+      "cta": "Let's Collab"
+    }
+  },
+  "academy": {
+    "comingSoon": "The Academy",
+    "subtitle": "Coming Soon",
+    "description": "An exclusive masterclass in retention engineering for high-ticket creators.",
+    "placeholder": "Enter your email",
+    "cta": "Secure Your Spot",
+    "success": "You're on the list. We'll be in touch."
+  },
+  "brief": {
+    "title": "The Selection Brief",
+    "subtitle": "Not everyone qualifies.",
+    "step1Title": "What should we call you?",
+    "step1Placeholder": "Your name",
+    "step2Title": "Where can we find your work?",
+    "step2Placeholder": "@handle",
+    "step3Title": "What is the financial cost of your current retention drop-off?",
+    "step3Placeholder": "Describe the impact on your business...",
+    "step4Title": "Investment Tier",
+    "tier1": "$2k – $5k",
+    "tier2": "$5k – $10k",
+    "tier3": "$10k+",
+    "tierLabel1": "Foundation",
+    "tierLabel2": "Growth",
+    "tierLabel3": "Enterprise",
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Submit Application",
+    "successTitle": "Application Received",
+    "successMessage": "Your application is being vetted. Expect a response within 48 hours."
+  },
+  "valueProps": {
+    "retention": {
+      "title": "Retention Engineering",
+      "description": "We don't just edit; we engineer attention. Using pacing, sound design, and pattern interrupts to keep viewers hooked."
+    },
+    "conversion": {
+      "title": "Conversion Focused",
+      "description": "Every frame is optimized for the sale. We build authority and trust, turning passive viewers into high-ticket leads."
+    },
+    "platform": {
+      "title": "Platform Native",
+      "description": "Deep understanding of algorithms. Whether it's YouTube Shorts, Reels, or TikTok, we format for maximum reach."
+    }
+  },
+  "selectedWorks": {
+    "title": "Selected Works",
+    "subtitle": "High-performing creative for brands that demand attention.",
+    "cta": "View All Projects",
+    "works": {
+      "brandLaunch": {
+        "title": "Brand Launch Campaign",
+        "client": "Luxury Brand"
+      },
+      "productShowcase": {
+        "title": "Product Showcase",
+        "client": "Tech Startup"
+      },
+      "personalBrand": {
+        "title": "Personal Brand Intro",
+        "client": "Entrepreneur"
+      },
+      "courseAnnouncement": {
+        "title": "Course Announcement",
+        "client": "Coach"
+      }
+    },
+    "labels": {
+      "views": "Views",
+      "retention": "Retention"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "connect": "Connect",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap"
+  },
+  "language": {
+    "toggle": "العربية"
+  }
+}

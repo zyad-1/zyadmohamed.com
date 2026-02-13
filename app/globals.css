@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-obsidian: #050505;
+  --color-obsidian-subtle: #0A0A0A;
+  --color-surface-card: rgba(255, 255, 255, 0.03);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  --color-silver: #C0C0C0;
+  --color-silver-dim: #808080;
+  --color-silver-dark: #404040;
+  --color-white: #FFFFFF;
+
+  /* Semantic Colors */
+  --color-bg-primary: var(--color-obsidian);
+  --color-bg-secondary: var(--color-obsidian-subtle);
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-silver);
+  --color-text-tertiary: var(--color-silver-dim);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+
+  /* Spacing (4pt Grid) */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
+  --spacing-3xl: 4rem;
+  /* 64px */
+  --spacing-section: 6rem;
+  /* 96px */
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Animation & Motion */
+  --motion-duration: 0.3s;
+  --motion-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* ease-out-quad */
+  --animate-fade-in: fadeIn var(--motion-duration) var(--motion-ease) forwards;
+  --animate-slide-up: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  /* Typography Scale */
+  --text-h1: clamp(3rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+}
+
+/* Base Styles */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-silver);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* RTL Support */
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
+  font-family: var(--font-arabic);
+}
+
+/* Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  line-height: 1.6;
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Utilities */
+.glass-panel {
+  background: var(--color-surface-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.container-width {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .container-width {
+    padding-inline: var(--spacing-2xl);
+  }
+}
