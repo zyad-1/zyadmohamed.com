@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
+<<<<<<< HEAD
 import Script from "next/script";
+=======
+>>>>>>> f8c8befe691c1ecbc01da38ed43a9912fad826ca
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { cookies } from "next/headers";
