@@ -1,6 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/Button';
+import { Button, buttonBaseStyles, buttonVariants, buttonSizes } from '@/components/ui/Button';
+import { cn } from '@/lib/utils/cn';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -53,10 +54,8 @@ export default function SelectedWorks() {
                             <TextTransition>{t('selectedWorks.subtitle')}</TextTransition>
                         </div>
                     </div>
-                    <Link href="/brief">
-                        <Button variant="outline">
-                            <TextTransition inline>{t('selectedWorks.cta')}</TextTransition>
-                        </Button>
+                    <Link href="/brief" className={cn(buttonBaseStyles, buttonVariants.outline, buttonSizes.md)}>
+                        <TextTransition inline>{t('selectedWorks.cta')}</TextTransition>
                     </Link>
                 </div>
 
