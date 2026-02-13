@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 import { useLanguage } from '@/contexts/LanguageContext';
 import WaitlistForm from '@/components/academy/WaitlistForm';
 

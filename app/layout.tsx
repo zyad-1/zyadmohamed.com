@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
-<<<<<<< HEAD
 import Script from "next/script";
-=======
->>>>>>> f8c8befe691c1ecbc01da38ed43a9912fad826ca
+import Analytics from "@/components/analytics/Analytics";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { cookies } from "next/headers";
@@ -59,32 +57,11 @@ export default async function RootLayout({
           rel="stylesheet"
         />
 
-        {/* Microsoft Clarity Analytics */}
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "vdw3ceml6f");
-          `}
-        </Script>
 
-        {/* Google Analytics 4 */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-8664952B33`}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8664952B33');
-          `}
-        </Script>
+
       </head>
       <body className={`${syne.variable} ${inter.variable} antialiased`}>
+        <Analytics />
         <LanguageProvider initialLanguage={lang}>
           <ScrollProgress />
           <NebulaBackground />
