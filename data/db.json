@@ -1,0 +1,52 @@
+{
+  "magnets": [],
+  "leads": [],
+  "forms": [
+    {
+      "id": "frm_1793737847314_l98ix",
+      "slug": "zoCdlVye8PlPCA",
+      "title": "شلبث",
+      "description": "ثقلصلصث",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "الاسم بالكامل",
+          "type": "text",
+          "placeholder": "",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "f2",
+          "label": "رقم الواتساب / الموبايل",
+          "type": "tel",
+          "placeholder": "",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "f3",
+          "label": "البريد الإلكتروني",
+          "type": "email",
+          "placeholder": "",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "f4",
+          "label": "تفاصيل طلبك أو استفسارك",
+          "type": "textarea",
+          "placeholder": "",
+          "required": false,
+          "options": []
+        }
+      ],
+      "buttonText": "إرسال البيانات",
+      "successMessage": "تم استلام بياناتك بنجاح! سنتواصل معك في أقرب وقت.",
+      "views": 1,
+      "submissionsCount": 1,
+      "createdAt": "2026-11-03T20:30:47.314Z"
+    }
+  ],
+  "formSubmissions": []
+}
