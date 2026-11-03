@@ -16,23 +16,17 @@ import {
   MessageSquareQuote,
   AlertCircle,
   Check,
+  Gift,
 } from 'lucide-react'
 import {
-  VSL_VIDEO_URL,
   CALENDLY_EMBED_URL,
-  HERO_METRICS,
-  PARTNER_BRANDS,
-  PROBLEM_POINTS,
-  SYSTEM_STEPS,
-  FOUNDER_INFO,
-  FIT_FOR_LIST,
-  NOT_FIT_FOR_LIST,
-  FAQ_ITEMS,
   DEFAULT_MAIN_FUNNEL_FORM,
   DEFAULT_SITE_SETTINGS,
+  DEFAULT_PAGE_CONTENT,
   type SiteSettings,
 } from '@/lib/constants'
 import type { CustomForm } from '@/lib/storage'
+import CountryPhoneInput from '@/components/CountryPhoneInput'
 import { trackFunnelEvent } from '@/lib/analytics'
 
 declare global {
@@ -60,6 +54,10 @@ export default function SalesFunnelHomePage() {
   const [submitting, setSubmitting] = useState(false)
   const [formError, setFormError] = useState('')
   const [qualified, setQualified] = useState(false)
+  const [unqualifiedState, setUnqualifiedState] = useState<{
+    message: string
+    redirectUrl: string
+  } | null>(null)
 
   // Calendly inline container ref
   const calendlyRef = useRef<HTMLDivElement | null>(null)
@@ -68,9 +66,18 @@ export default function SalesFunnelHomePage() {
   // FAQ state
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
+  const pageContent = {
+    ...DEFAULT_PAGE_CONTENT,
+    ...(siteSettings.pageContent || {}),
+    founderInfo: {
+      ...DEFAULT_PAGE_CONTENT.founderInfo,
+      ...(siteSettings.pageContent?.founderInfo || {}),
+    },
+  }
+
   // Fetch live form & siteSettings from /api/funnel/qualify
   useEffect(() => {
-    fetch('/api/funnel/qualify')
+    fetch('/api/funnel/qualify', { cache: 'no-store' })
       .then(res => res.json())
       .then(data => {
         if (data?.form && Array.isArray(data.form.fields) && data.form.fields.length > 0) {
@@ -175,7 +182,21 @@ export default function SalesFunnelHomePage() {
 
       if (data.qualified === false && data.redirectUrl) {
         trackFunnelEvent('Lead_Unqualified', { answers })
-        router.push(data.redirectUrl)
+        setUnqualifiedState({
+          message:
+            data.unqualifiedMessage ||
+            siteSettings.unqualifiedMessage ||
+            'للأسف حاليًا غير مؤهل للعمل معنا، وده هدية مجانية لك',
+          redirectUrl: data.redirectUrl,
+        })
+        setSubmitting(false)
+        setTimeout(() => {
+          if (data.redirectUrl.startsWith('http://') || data.redirectUrl.startsWith('https://')) {
+            window.location.href = data.redirectUrl
+          } else {
+            router.push(data.redirectUrl)
+          }
+        }, 1800)
         return
       }
 
@@ -193,6 +214,8 @@ export default function SalesFunnelHomePage() {
   const showAnyProofSection =
     (siteSettings.showProofCards && visibleProofCards.length > 0) ||
     (siteSettings.showTestimonialsSection && visibleTestimonials.length > 0)
+
+  const vslUrl = pageContent.vslVideoUrl || ''
 
   return (
     <main className="min-h-screen bg-void text-luminance relative overflow-x-hidden">
@@ -229,7 +252,7 @@ export default function SalesFunnelHomePage() {
             className="inline-flex items-center gap-2 rounded-xl bg-authority hover:bg-crown text-white font-bold text-xs md:text-sm px-5 py-3 shadow-[0_0_25px_rgba(139,92,246,0.35)] transition-all duration-300"
           >
             <Calendar className="w-4 h-4" />
-            <span>احجز مكالمتك الاستراتيجية</span>
+            <span>{pageContent.headerCtaText}</span>
           </a>
         </div>
       </header>
@@ -241,30 +264,35 @@ export default function SalesFunnelHomePage() {
         <div id="about" className="sr-only" aria-hidden="true" />
         <div className="max-w-5xl mx-auto text-center space-y-6">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-depth/90 border border-authority/35 text-xs md:text-sm text-luminance/90">
-            <Sparkles className="w-4 h-4 text-authority flex-shrink-0" />
-            <span>
-              للخبراء، الأطباء، الاستشاريين، وأصحاب البيزنس في الخليج ومصر
-            </span>
-          </div>
+          {pageContent.eyebrowText && (
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-depth/90 border border-authority/35 text-xs md:text-sm text-luminance/90">
+              <Sparkles className="w-4 h-4 text-authority flex-shrink-0" />
+              <span>{pageContent.eyebrowText}</span>
+            </div>
+          )}
 
           {/* H1 */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.35] max-w-4xl mx-auto">
-            نحوّل خبرتك إلى براند شخصي قوي ومنظومة فيديوهات قصيرة تجلب لك{' '}
-            <span className="text-gradient">عملاء مؤهلين خلال 90 يوماً</span>
+            {pageContent.heroTitle}{' '}
+            {pageContent.heroTitleHighlight && (
+              <span className="text-gradient">{pageContent.heroTitleHighlight}</span>
+            )}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg text-luminance/80 max-w-2xl mx-auto leading-[1.85]">
-            نكتب السكريبتات ونعطيك توجيهات التصوير لتصوّر من مكانك في جلسة واحدة — ثم نستلم الفيديوهات ونتولى المونتاج وربط الـ Funnel بالكامل.
-          </p>
+          {pageContent.heroSubtitle && (
+            <p className="text-sm sm:text-base md:text-lg text-luminance/80 max-w-2xl mx-auto leading-[1.85]">
+              {pageContent.heroSubtitle}
+            </p>
+          )}
 
           {/* VSL Video Box */}
           <div className="max-w-4xl mx-auto pt-2">
             <div className="relative rounded-3xl overflow-hidden border-2 border-authority/40 bg-depth/80 shadow-[0_0_80px_rgba(139,92,246,0.22)] aspect-video">
-              {vslPlaying && VSL_VIDEO_URL ? (
+              {vslPlaying && vslUrl ? (
                 <video
-                  src={VSL_VIDEO_URL}
+                  src={vslUrl}
+                  poster={pageContent.vslPosterUrl || undefined}
                   controls
                   autoPlay
                   playsInline
@@ -274,8 +302,15 @@ export default function SalesFunnelHomePage() {
                 <button
                   type="button"
                   onClick={handleVslPlay}
-                  className="w-full h-full relative flex flex-col items-center justify-center p-6 md:p-12 text-center group cursor-pointer bg-gradient-to-b from-depth/90 via-void/90 to-depth/95"
+                  className="w-full h-full relative flex flex-col items-center justify-center p-6 md:p-12 text-center group cursor-pointer bg-gradient-to-b from-depth/90 via-void/90 to-depth/95 overflow-hidden"
                 >
+                  {pageContent.vslPosterUrl && (
+                    <img
+                      src={pageContent.vslPosterUrl}
+                      alt="VSL Cover"
+                      className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity"
+                    />
+                  )}
                   <div
                     className="absolute inset-0 opacity-25 group-hover:opacity-40 transition-opacity duration-500"
                     style={{
@@ -289,11 +324,11 @@ export default function SalesFunnelHomePage() {
                   </div>
 
                   <p className="relative z-10 text-base md:text-xl font-bold text-white max-w-xl leading-relaxed">
-                    شاهد في 4 دقائق: كيف نبني منظومة براندك الشخصي في 3 خطوات بسيطة
+                    {pageContent.vslCaption}
                   </p>
-                  {vslPlaying && !VSL_VIDEO_URL && (
+                  {vslPlaying && !vslUrl && (
                     <span className="relative z-10 mt-3 inline-block px-4 py-1.5 rounded-lg bg-authority/20 border border-authority/40 text-xs text-luminance">
-                      يمكنك إضافة رابط فيديو الـ VSL في متغير NEXT_PUBLIC_VSL_VIDEO_URL
+                      يمكنك إضافة رابط فيديو الـ VSL من لوحة التحكم (/admin ← محتوى الصفحة)
                     </span>
                   )}
                 </button>
@@ -308,12 +343,12 @@ export default function SalesFunnelHomePage() {
               className="inline-flex items-center justify-center gap-3 bg-authority hover:bg-crown text-white font-bold text-base md:text-lg px-9 py-4 rounded-2xl shadow-[0_0_45px_rgba(139,92,246,0.45)] transition-all duration-300 hover:scale-[1.02]"
             >
               <Calendar className="w-5 h-5" />
-              <span>احجز مكالمة استراتيجية مجانية (30 دقيقة)</span>
+              <span>{pageContent.heroCtaText}</span>
             </a>
 
-            <p className="text-xs text-luminance/65">
-              Done-For-You · Reels & TikTok & Shorts · الخليج ومصر
-            </p>
+            {pageContent.heroSubCtaText && (
+              <p className="text-xs text-luminance/65">{pageContent.heroSubCtaText}</p>
+            )}
           </div>
         </div>
       </section>
@@ -324,9 +359,9 @@ export default function SalesFunnelHomePage() {
       <section className="py-10 px-5 md:px-10 border-y border-authority/20 bg-depth/35">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {HERO_METRICS.map(item => (
+            {(pageContent.heroMetrics || []).map((item, idx) => (
               <div
-                key={item.num}
+                key={idx}
                 className="glass rounded-2xl p-5 text-center border border-authority/25"
               >
                 <div className="font-display font-bold text-3xl md:text-4xl text-white mb-1">
@@ -337,22 +372,24 @@ export default function SalesFunnelHomePage() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 text-center">
-            <span className="text-xs text-luminance/60">
-              خبرة عملية مع علامات تجارية رائدة:
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-2.5">
-              {PARTNER_BRANDS.map(brand => (
-                <div
-                  key={brand.nameEn}
-                  className="px-4 py-2 rounded-xl bg-void/80 border border-authority/25 flex items-center gap-2"
-                >
-                  <span className="text-xs md:text-sm font-bold text-white">{brand.nameAr}</span>
-                  <span className="font-mono text-[11px] text-authority">{brand.nameEn}</span>
-                </div>
-              ))}
+          {(pageContent.partnerBrands || []).length > 0 && (
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 text-center">
+              <span className="text-xs text-luminance/60">{pageContent.brandsLabel}</span>
+              <div className="flex flex-wrap items-center justify-center gap-2.5">
+                {pageContent.partnerBrands.map((brand, idx) => (
+                  <div
+                    key={idx}
+                    className="px-4 py-2 rounded-xl bg-void/80 border border-authority/25 flex items-center gap-2"
+                  >
+                    <span className="text-xs md:text-sm font-bold text-white">{brand.nameAr}</span>
+                    {brand.nameEn && (
+                      <span className="font-mono text-[11px] text-authority">{brand.nameEn}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
@@ -366,18 +403,18 @@ export default function SalesFunnelHomePage() {
               01 — The Challenge
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-[1.35]">
-              خبرتك قوية على أرض الواقع.. لكن حضورك الرقمي لا يعكسها.
+              {pageContent.problemHeading}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {PROBLEM_POINTS.map(point => (
+            {(pageContent.problemPoints || []).map((point, idx) => (
               <div
-                key={point.index}
+                key={idx}
                 className="glass glass-hover rounded-2xl p-6 border border-authority/25 space-y-3"
               >
                 <div className="w-9 h-9 rounded-xl bg-authority/15 border border-authority/35 flex items-center justify-center font-mono text-xs font-bold text-authority">
-                  {point.index}
+                  {point.index || String(idx + 1).padStart(2, '0')}
                 </div>
                 <h3 className="text-lg font-bold text-white">{point.title}</h3>
                 <p className="text-xs md:text-sm text-luminance/75 leading-[1.85]">{point.body}</p>
@@ -398,26 +435,28 @@ export default function SalesFunnelHomePage() {
               02 — How It Works
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-[1.35]">
-              كيف نعمل في APX؟ (أقل خطوات ومجهود منك)
+              {pageContent.systemHeading}
             </h2>
-            <p className="text-xs md:text-sm text-luminance/75">
-              منظومة متكاملة (<span className="font-mono text-white">Done-For-You</span>) في 3 خطوات بسيطة فقط:
-            </p>
+            {pageContent.systemSubheading && (
+              <p className="text-xs md:text-sm text-luminance/75">{pageContent.systemSubheading}</p>
+            )}
           </div>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {SYSTEM_STEPS.map(step => (
+            {(pageContent.systemSteps || []).map((step, idx) => (
               <div
-                key={step.index}
+                key={idx}
                 className="glass glass-hover rounded-2xl p-6 border border-authority/25 space-y-3"
               >
                 <div className="flex items-center justify-between">
                   <span className="w-9 h-9 rounded-xl bg-authority/20 border border-authority/40 flex items-center justify-center font-mono text-xs font-bold text-white">
-                    {step.index}
+                    {step.index || String(idx + 1).padStart(2, '0')}
                   </span>
-                  <span className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-authority/15 border border-authority/30 text-authority">
-                    {step.tag}
-                  </span>
+                  {step.tag && (
+                    <span className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-authority/15 border border-authority/30 text-authority">
+                      {step.tag}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-base md:text-lg font-bold text-white">{step.title}</h3>
                 <p className="text-xs md:text-sm text-luminance/75 leading-[1.8]">{step.body}</p>
@@ -429,25 +468,25 @@ export default function SalesFunnelHomePage() {
           <div className="glass rounded-3xl p-6 md:p-9 border border-authority/35 bg-gradient-to-l from-depth/80 via-void/90 to-depth/60 flex flex-col md:flex-row items-center gap-6 md:gap-9">
             <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-authority/50 shadow-[0_0_35px_rgba(139,92,246,0.3)] flex-shrink-0 bg-void">
               <img
-                src={FOUNDER_INFO.photoUrl}
-                alt={`${FOUNDER_INFO.nameAr} — ${FOUNDER_INFO.nameEn}`}
+                src={pageContent.founderInfo.photoUrl || '/founder-zyad.jpg'}
+                alt={`${pageContent.founderInfo.nameAr} — ${pageContent.founderInfo.nameEn}`}
                 className="w-full h-full object-cover object-top"
               />
             </div>
 
             <div className="text-center md:text-right space-y-2.5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-authority/15 border border-authority/35 text-authority text-xs font-bold">
-                <span>{FOUNDER_INFO.roleAr}</span>
+                <span>{pageContent.founderInfo.roleAr}</span>
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-                <span>{FOUNDER_INFO.nameAr}</span>
+                <span>{pageContent.founderInfo.nameAr}</span>
                 <span className="text-luminance/40 font-normal">|</span>
                 <span className="font-display text-lg md:text-xl text-authority">
-                  {FOUNDER_INFO.nameEn}
+                  {pageContent.founderInfo.nameEn}
                 </span>
               </h3>
               <p className="text-xs md:text-sm text-luminance/80 leading-[1.85] max-w-2xl">
-                {FOUNDER_INFO.bio}
+                {pageContent.founderInfo.bio}
               </p>
             </div>
           </div>
@@ -466,7 +505,7 @@ export default function SalesFunnelHomePage() {
                 03 — Results & Testimonials
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-[1.35]">
-                نتائج حقيقية وآراء العملاء
+                {pageContent.proofHeading}
               </h2>
             </div>
 
@@ -492,7 +531,7 @@ export default function SalesFunnelHomePage() {
             {siteSettings.showTestimonialsSection && visibleTestimonials.length > 0 && (
               <div className="space-y-5">
                 <h3 className="text-lg md:text-xl font-bold text-white text-center md:text-right">
-                  شهادات ورسائل العملاء
+                  {pageContent.testimonialsSubheading}
                 </h3>
 
                 <div className="grid md:grid-cols-3 gap-5">
@@ -543,7 +582,7 @@ export default function SalesFunnelHomePage() {
                 className="inline-flex items-center justify-center gap-3 bg-authority hover:bg-crown text-white font-bold text-sm md:text-base px-9 py-4 rounded-2xl shadow-[0_0_40px_rgba(139,92,246,0.4)] transition-all duration-300"
               >
                 <Calendar className="w-5 h-5" />
-                <span>احجز مكالمتك الاستراتيجية الآن</span>
+                <span>{pageContent.proofCtaText}</span>
               </a>
             </div>
           </div>
@@ -560,7 +599,7 @@ export default function SalesFunnelHomePage() {
               04 — Who This Is For
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-[1.35]">
-              هل هذه المنظومة مناسبة لك؟
+              {pageContent.fitHeading}
             </h2>
           </div>
 
@@ -571,12 +610,12 @@ export default function SalesFunnelHomePage() {
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <h3 className="text-base md:text-lg font-bold text-white">
-                  مناسبة لك إذا كنت:
+                  {pageContent.fitYesTitle}
                 </h3>
               </div>
 
               <ul className="space-y-3">
-                {FIT_FOR_LIST.map((item, idx) => (
+                {(pageContent.fitForList || []).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs md:text-sm text-luminance/85 leading-[1.75]">
                     <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1" />
                     <span>{item}</span>
@@ -591,12 +630,12 @@ export default function SalesFunnelHomePage() {
                   <XCircle className="w-5 h-5" />
                 </div>
                 <h3 className="text-base md:text-lg font-bold text-white">
-                  غير مناسبة لك إذا كنت:
+                  {pageContent.fitNoTitle}
                 </h3>
               </div>
 
               <ul className="space-y-3">
-                {NOT_FIT_FOR_LIST.map((item, idx) => (
+                {(pageContent.notFitForList || []).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs md:text-sm text-luminance/75 leading-[1.75]">
                     <XCircle className="w-4 h-4 text-red-400/80 flex-shrink-0 mt-1" />
                     <span>{item}</span>
@@ -629,65 +668,95 @@ export default function SalesFunnelHomePage() {
           </div>
 
           <div className="glass rounded-3xl p-5 md:p-8 border border-authority/35 shadow-[0_0_90px_rgba(139,92,246,0.18)] relative overflow-hidden">
-            {!showCalendlyDirectly ? (
+            {unqualifiedState ? (
+              <div className="py-10 px-4 text-center space-y-5">
+                <div className="w-16 h-16 rounded-2xl bg-authority/20 border border-authority/40 flex items-center justify-center text-authority mx-auto">
+                  <Gift className="w-8 h-8" />
+                </div>
+                <h3 className="text-lg md:text-2xl font-bold text-white leading-relaxed">
+                  {unqualifiedState.message}
+                </h3>
+                <p className="text-xs md:text-sm text-luminance/70">
+                  جاري تحويلك الآن إلى صفحة الهدية المجانية...
+                </p>
+                <div className="pt-2">
+                  <a
+                    href={unqualifiedState.redirectUrl}
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl bg-authority hover:bg-crown text-white font-bold text-sm py-3.5 px-8 transition-all"
+                  >
+                    <span>الانتقال إلى الهدية المجانية الآن ←</span>
+                  </a>
+                </div>
+              </div>
+            ) : !showCalendlyDirectly ? (
               <form
                 onSubmit={handleQualificationSubmit}
                 onFocus={handleFormInteraction}
                 className="space-y-5"
               >
-                {funnelForm.fields.map((field, idx) => (
-                  <div key={field.id}>
-                    <label className="block text-xs md:text-sm font-bold text-white mb-2">
-                      {idx + 1}. {field.label}{' '}
-                      {field.required && <span className="text-authority">*</span>}
-                    </label>
+                {funnelForm.fields.map((field, idx) => {
+                  const optionTexts =
+                    Array.isArray(field.optionItems) && field.optionItems.length > 0
+                      ? field.optionItems.map(o => o.text)
+                      : Array.isArray(field.options)
+                      ? field.options
+                      : []
 
-                    {field.type === 'select' && Array.isArray(field.options) && field.options.length > 0 ? (
-                      <div className="grid sm:grid-cols-2 gap-2.5">
-                        {field.options.map(opt => (
-                          <button
-                            type="button"
-                            key={opt}
-                            onClick={() => handleAnswerChange(field.label, opt)}
-                            className={`text-right rounded-xl px-4 py-3 border text-xs md:text-sm font-medium transition-all ${
-                              answers[field.label] === opt
-                                ? 'bg-authority/25 border-authority text-white shadow-[0_0_20px_rgba(139,92,246,0.25)] font-bold'
-                                : 'bg-void/70 border-authority/25 text-luminance/80 hover:border-authority/50'
-                            }`}
-                          >
-                            {opt}
-                          </button>
-                        ))}
-                      </div>
-                    ) : field.type === 'textarea' ? (
-                      <textarea
-                        rows={3}
-                        required={field.required}
-                        value={answers[field.label] || ''}
-                        onChange={e => handleAnswerChange(field.label, e.target.value)}
-                        placeholder={field.placeholder || ''}
-                        className="w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority resize-none"
-                      />
-                    ) : (
-                      <input
-                        type={field.type}
-                        dir={field.type === 'tel' || field.type === 'email' ? 'ltr' : 'rtl'}
-                        required={field.required}
-                        value={answers[field.label] || ''}
-                        onChange={e => handleAnswerChange(field.label, e.target.value)}
-                        placeholder={
-                          field.placeholder ||
-                          (field.type === 'tel' ? '+966 50 000 0000' : '')
-                        }
-                        className={`w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority ${
-                          field.type === 'tel' || field.type === 'email'
-                            ? 'text-right font-mono'
-                            : ''
-                        }`}
-                      />
-                    )}
-                  </div>
-                ))}
+                  return (
+                    <div key={field.id}>
+                      <label className="block text-xs md:text-sm font-bold text-white mb-2">
+                        {idx + 1}. {field.label}{' '}
+                        {field.required && <span className="text-authority">*</span>}
+                      </label>
+
+                      {field.type === 'select' && optionTexts.length > 0 ? (
+                        <div className="grid sm:grid-cols-2 gap-2.5">
+                          {optionTexts.map(opt => (
+                            <button
+                              type="button"
+                              key={opt}
+                              onClick={() => handleAnswerChange(field.label, opt)}
+                              className={`text-right rounded-xl px-4 py-3 border text-xs md:text-sm font-medium transition-all ${
+                                answers[field.label] === opt
+                                  ? 'bg-authority/25 border-authority text-white shadow-[0_0_20px_rgba(139,92,246,0.25)] font-bold'
+                                  : 'bg-void/70 border-authority/25 text-luminance/80 hover:border-authority/50'
+                              }`}
+                            >
+                              {opt}
+                            </button>
+                          ))}
+                        </div>
+                      ) : field.type === 'tel' ? (
+                        <CountryPhoneInput
+                          value={answers[field.label] || ''}
+                          onChange={val => handleAnswerChange(field.label, val)}
+                          required={field.required}
+                        />
+                      ) : field.type === 'textarea' ? (
+                        <textarea
+                          rows={3}
+                          required={field.required}
+                          value={answers[field.label] || ''}
+                          onChange={e => handleAnswerChange(field.label, e.target.value)}
+                          placeholder={field.placeholder || ''}
+                          className="w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority resize-none"
+                        />
+                      ) : (
+                        <input
+                          type={field.type}
+                          dir={field.type === 'email' ? 'ltr' : 'rtl'}
+                          required={field.required}
+                          value={answers[field.label] || ''}
+                          onChange={e => handleAnswerChange(field.label, e.target.value)}
+                          placeholder={field.placeholder || ''}
+                          className={`w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority ${
+                            field.type === 'email' ? 'text-right font-mono' : ''
+                          }`}
+                        />
+                      )}
+                    </div>
+                  )
+                })}
 
                 {formError && (
                   <div className="flex items-center gap-2 text-xs text-red-300 bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3">
@@ -760,12 +829,12 @@ export default function SalesFunnelHomePage() {
               06 — FAQ
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-[1.35]">
-              الأسئلة الشائعة
+              {pageContent.faqHeading}
             </h2>
           </div>
 
           <div className="space-y-3.5">
-            {FAQ_ITEMS.map((item, idx) => {
+            {(pageContent.faqItems || []).map((item, idx) => {
               const isOpen = openFaq === idx
               return (
                 <div
@@ -799,7 +868,7 @@ export default function SalesFunnelHomePage() {
               href="#book"
               className="inline-flex items-center justify-center gap-3 bg-authority hover:bg-crown text-white font-bold text-sm md:text-base px-9 py-4 rounded-2xl shadow-[0_0_40px_rgba(139,92,246,0.4)] transition-all duration-300"
             >
-              <span>ابدأ الآن: احجز مكالمتك الاستراتيجية ↑</span>
+              <span>{pageContent.faqCtaText}</span>
             </a>
           </div>
         </div>
@@ -817,11 +886,11 @@ export default function SalesFunnelHomePage() {
           </a>
 
           <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-authority">
-            APX Agency · Build. Brand. Grow.
+            {pageContent.footerTagline}
           </span>
 
           <span className="text-xs text-luminance/50">
-            © 2025 APX — جميع الحقوق محفوظة
+            {pageContent.footerCopyright}
           </span>
         </div>
       </footer>

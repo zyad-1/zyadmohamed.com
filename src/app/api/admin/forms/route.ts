@@ -6,9 +6,41 @@ import {
   generateEncryptedToken,
   type CustomForm,
   type FormField,
+  type FormFieldOption,
 } from '@/lib/storage'
 
 export const dynamic = 'force-dynamic'
+
+function sanitizeField(f: Partial<FormField>, idx: number): FormField {
+  const rawOptionItems: FormFieldOption[] = Array.isArray(f.optionItems)
+    ? f.optionItems
+        .map((item, i) => ({
+          id: item.id || `opt_${i + 1}_${Date.now()}`,
+          text: String(item.text || '').trim(),
+          qualified: typeof item.qualified === 'boolean' ? item.qualified : true,
+        }))
+        .filter(item => item.text.length > 0)
+    : Array.isArray(f.options)
+    ? f.options
+        .map(s => String(s || '').trim())
+        .filter(Boolean)
+        .map((text, i) => ({
+          id: `opt_${i + 1}_${Date.now()}`,
+          text,
+          qualified: !text.includes('أقل من'),
+        }))
+    : []
+
+  return {
+    id: f.id || `fld_${idx}_${Date.now()}`,
+    label: String(f.label || `حقل ${idx + 1}`).trim(),
+    type: f.type || 'text',
+    placeholder: String(f.placeholder || '').trim(),
+    required: f.required !== false,
+    options: rawOptionItems.map(item => item.text),
+    optionItems: rawOptionItems,
+  }
+}
 
 export async function POST(request: Request) {
   if (!isAdminAuthenticated()) {
@@ -36,14 +68,9 @@ export async function POST(request: Request) {
       )
     }
 
-    const fields: FormField[] = rawFields.map((f: Partial<FormField>, idx: number) => ({
-      id: f.id || `fld_${idx}_${Date.now()}`,
-      label: String(f.label || `حقل ${idx + 1}`).trim(),
-      type: f.type || 'text',
-      placeholder: String(f.placeholder || '').trim(),
-      required: f.required !== false,
-      options: Array.isArray(f.options) ? f.options.map(String) : [],
-    }))
+    const fields: FormField[] = rawFields.map((f: Partial<FormField>, idx: number) =>
+      sanitizeField(f, idx)
+    )
 
     const db = await getDatabase()
 
@@ -112,17 +139,22 @@ export async function PUT(request: Request) {
     if (disqualifyOption) {
       form.disqualifyOption = disqualifyOption
     }
-    form.fields = rawFields.map((f: Partial<FormField>, idx: number) => ({
-      id: f.id || `fld_${idx}_${Date.now()}`,
-      label: String(f.label || `حقل ${idx + 1}`).trim(),
-      type: f.type || 'text',
-      placeholder: String(f.placeholder || '').trim(),
-      required: f.required !== false,
-      options: Array.isArray(f.options) ? f.options.map(String) : [],
-    }))
+    form.fields = rawFields.map((f: Partial<FormField>, idx: number) =>
+      sanitizeField(f, idx)
+    )
+
+    // Also allow updating unqualifiedMessage & unqualifiedRedirectTarget on siteSettings if passed
+    if (db.siteSettings) {
+      if (typeof body.unqualifiedMessage === 'string' && body.unqualifiedMessage.trim()) {
+        db.siteSettings.unqualifiedMessage = body.unqualifiedMessage.trim()
+      }
+      if (typeof body.unqualifiedRedirectTarget === 'string') {
+        db.siteSettings.unqualifiedRedirectTarget = body.unqualifiedRedirectTarget.trim()
+      }
+    }
 
     await saveDatabase(db)
-    return NextResponse.json({ form })
+    return NextResponse.json({ form, siteSettings: db.siteSettings })
   } catch (err) {
     console.error('Update form error:', err)
     return NextResponse.json({ error: 'حدث خطأ أثناء تحديث الفورم' }, { status: 500 })

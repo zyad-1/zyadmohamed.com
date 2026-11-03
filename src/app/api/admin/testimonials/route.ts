@@ -3,6 +3,8 @@ import { isAdminAuthenticated } from '@/lib/auth'
 import { getDatabase, saveDatabase } from '@/lib/storage'
 import {
   DEFAULT_SITE_SETTINGS,
+  DEFAULT_PAGE_CONTENT,
+  DEFAULT_UNQUALIFIED_MESSAGE,
   type SiteSettings,
   type TestimonialItem,
   type ProofCardItem,
@@ -30,6 +32,23 @@ export async function PUT(request: Request) {
     const body = await request.json()
     const db = await getDatabase()
     const current = db.siteSettings || DEFAULT_SITE_SETTINGS
+    const currentPage = current.pageContent || DEFAULT_PAGE_CONTENT
+
+    const nextPageContent =
+      body.restoreDefaultPageContent === true
+        ? { ...DEFAULT_PAGE_CONTENT }
+        : body.pageContent && typeof body.pageContent === 'object'
+        ? {
+            ...DEFAULT_PAGE_CONTENT,
+            ...currentPage,
+            ...body.pageContent,
+            founderInfo: {
+              ...DEFAULT_PAGE_CONTENT.founderInfo,
+              ...(currentPage.founderInfo || {}),
+              ...(body.pageContent.founderInfo || {}),
+            },
+          }
+        : currentPage
 
     const updated: SiteSettings = {
       showTestimonialsSection:
@@ -48,6 +67,14 @@ export async function PUT(request: Request) {
         typeof body.calendlyUrl === 'string' && body.calendlyUrl.trim()
           ? body.calendlyUrl.trim()
           : current.calendlyUrl,
+      unqualifiedMessage:
+        typeof body.unqualifiedMessage === 'string' && body.unqualifiedMessage.trim()
+          ? body.unqualifiedMessage.trim()
+          : current.unqualifiedMessage || DEFAULT_UNQUALIFIED_MESSAGE,
+      unqualifiedRedirectTarget:
+        typeof body.unqualifiedRedirectTarget === 'string'
+          ? body.unqualifiedRedirectTarget.trim()
+          : current.unqualifiedRedirectTarget || '',
       proofCards: Array.isArray(body.proofCards)
         ? body.proofCards.map((c: Partial<ProofCardItem>, i: number) => ({
             id: String(c.id || `proof-${Date.now()}-${i}`),
@@ -67,6 +94,7 @@ export async function PUT(request: Request) {
             visible: typeof t.visible === 'boolean' ? t.visible : true,
           }))
         : current.testimonials,
+      pageContent: nextPageContent,
     }
 
     db.siteSettings = updated

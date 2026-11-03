@@ -5,12 +5,22 @@ import { put, list, del } from '@vercel/blob'
 import {
   DEFAULT_MAIN_FUNNEL_FORM as CONST_MAIN_FUNNEL_FORM,
   DEFAULT_SITE_SETTINGS,
+  DEFAULT_PAGE_CONTENT,
+  DEFAULT_UNQUALIFIED_MESSAGE,
   type SiteSettings,
+  type PageContent,
   type TestimonialItem,
   type ProofCardItem,
+  type FormFieldOption,
 } from '@/lib/constants'
 
-export type { SiteSettings, TestimonialItem, ProofCardItem }
+export type {
+  SiteSettings,
+  PageContent,
+  TestimonialItem,
+  ProofCardItem,
+  FormFieldOption,
+}
 
 export interface LeadMagnet {
   id: string
@@ -52,6 +62,7 @@ export interface FormField {
   placeholder?: string
   required: boolean
   options?: string[]
+  optionItems?: FormFieldOption[]
 }
 
 export interface CustomForm {
@@ -62,7 +73,7 @@ export interface CustomForm {
   fields: FormField[]
   buttonText: string
   successMessage: string
-  disqualifyOption?: string // Option text that redirects to Lead Magnet instead of Calendar
+  disqualifyOption?: string // Legacy fallback
   isMainFunnel?: boolean
   views: number
   submissionsCount: number
@@ -75,6 +86,7 @@ export interface FormSubmission {
   formTitle: string
   formSlug: string
   answers: Record<string, string>
+  qualified?: boolean
   createdAt: string
 }
 
@@ -90,63 +102,145 @@ const BLOB_DB_PATH = 'zyad-cms/db.json'
 
 export const DEFAULT_MAIN_FUNNEL_FORM: CustomForm = CONST_MAIN_FUNNEL_FORM
 
+function normalizeFormFields(fields: FormField[], disqualifyOption = 'أقل من $2,700'): FormField[] {
+  return (fields || []).map(f => {
+    if (f.type !== 'select') return f
+    const rawItems = Array.isArray(f.optionItems) ? f.optionItems : []
+    const rawStrings = Array.isArray(f.options) ? f.options : []
+    if (rawItems.length > 0) {
+      return {
+        ...f,
+        optionItems: rawItems.map((item, idx) => ({
+          id: item.id || `opt_${idx + 1}`,
+          text: String(item.text || '').trim(),
+          qualified: typeof item.qualified === 'boolean' ? item.qualified : true,
+        })),
+        options: rawItems.map(item => String(item.text || '').trim()).filter(Boolean),
+      }
+    }
+    const builtItems: FormFieldOption[] = rawStrings
+      .map(s => String(s || '').trim())
+      .filter(Boolean)
+      .map((text, idx) => ({
+        id: `opt_${idx + 1}`,
+        text,
+        qualified: text !== disqualifyOption.trim() && !text.includes('أقل من'),
+      }))
+    return {
+      ...f,
+      options: builtItems.map(i => i.text),
+      optionItems: builtItems,
+    }
+  })
+}
+
 export function ensureMainFunnelForm(db: DatabaseSchema): DatabaseSchema {
   const existingIdx = db.forms.findIndex(
     f => f.id === 'frm_funnel_main' || f.slug === 'funnel-qualification'
   )
   if (existingIdx === -1) {
-    db.forms.unshift({ ...DEFAULT_MAIN_FUNNEL_FORM })
+    db.forms.unshift({
+      ...DEFAULT_MAIN_FUNNEL_FORM,
+      fields: normalizeFormFields(DEFAULT_MAIN_FUNNEL_FORM.fields),
+    })
   } else {
     db.forms[existingIdx].isMainFunnel = true
     if (!db.forms[existingIdx].disqualifyOption) {
       db.forms[existingIdx].disqualifyOption = 'أقل من $2,700'
     }
-    // Upgrade legacy unedited 6-field form or empty skeleton to the minimal 2-field form
     const currentFields = db.forms[existingIdx].fields || []
     const hasOptions = currentFields.some(
-      f => Array.isArray(f.options) && f.options.length > 0
+      f =>
+        (Array.isArray(f.options) && f.options.length > 0) ||
+        (Array.isArray(f.optionItems) && f.optionItems.length > 0)
     )
     const isLegacySixFieldDefault =
       currentFields.length === 6 &&
       currentFields.some(f => f.id === 'fld_account') &&
       currentFields.some(f => f.id === 'fld_role')
     if (!hasOptions || isLegacySixFieldDefault) {
-      db.forms[existingIdx].fields = DEFAULT_MAIN_FUNNEL_FORM.fields
+      db.forms[existingIdx].fields = normalizeFormFields(DEFAULT_MAIN_FUNNEL_FORM.fields)
       db.forms[existingIdx].title = DEFAULT_MAIN_FUNNEL_FORM.title
       db.forms[existingIdx].description = DEFAULT_MAIN_FUNNEL_FORM.description
       db.forms[existingIdx].buttonText = DEFAULT_MAIN_FUNNEL_FORM.buttonText
+    } else {
+      db.forms[existingIdx].fields = normalizeFormFields(
+        db.forms[existingIdx].fields,
+        db.forms[existingIdx].disqualifyOption
+      )
     }
   }
 
-  // Ensure siteSettings exist with defaults
-  if (!db.siteSettings) {
-    db.siteSettings = {
-      ...DEFAULT_SITE_SETTINGS,
-      proofCards: [...DEFAULT_SITE_SETTINGS.proofCards],
-      testimonials: [...DEFAULT_SITE_SETTINGS.testimonials],
-    }
-  } else {
-    db.siteSettings = {
-      showTestimonialsSection:
-        typeof db.siteSettings.showTestimonialsSection === 'boolean'
-          ? db.siteSettings.showTestimonialsSection
-          : DEFAULT_SITE_SETTINGS.showTestimonialsSection,
-      showProofCards:
-        typeof db.siteSettings.showProofCards === 'boolean'
-          ? db.siteSettings.showProofCards
-          : DEFAULT_SITE_SETTINGS.showProofCards,
-      skipQualificationForm:
-        typeof db.siteSettings.skipQualificationForm === 'boolean'
-          ? db.siteSettings.skipQualificationForm
-          : DEFAULT_SITE_SETTINGS.skipQualificationForm,
-      calendlyUrl: db.siteSettings.calendlyUrl || DEFAULT_SITE_SETTINGS.calendlyUrl,
-      proofCards: Array.isArray(db.siteSettings.proofCards)
-        ? db.siteSettings.proofCards
-        : [...DEFAULT_SITE_SETTINGS.proofCards],
-      testimonials: Array.isArray(db.siteSettings.testimonials)
-        ? db.siteSettings.testimonials
-        : [...DEFAULT_SITE_SETTINGS.testimonials],
-    }
+  // Normalize all other forms' select fields too
+  db.forms = db.forms.map(frm => ({
+    ...frm,
+    fields: normalizeFormFields(frm.fields, frm.disqualifyOption),
+  }))
+
+  // Ensure siteSettings exist with defaults + deep merge pageContent
+  const rawSettings = db.siteSettings || ({} as Partial<SiteSettings>)
+  const rawPage = rawSettings.pageContent || ({} as Partial<PageContent>)
+
+  db.siteSettings = {
+    showTestimonialsSection:
+      typeof rawSettings.showTestimonialsSection === 'boolean'
+        ? rawSettings.showTestimonialsSection
+        : DEFAULT_SITE_SETTINGS.showTestimonialsSection,
+    showProofCards:
+      typeof rawSettings.showProofCards === 'boolean'
+        ? rawSettings.showProofCards
+        : DEFAULT_SITE_SETTINGS.showProofCards,
+    skipQualificationForm:
+      typeof rawSettings.skipQualificationForm === 'boolean'
+        ? rawSettings.skipQualificationForm
+        : DEFAULT_SITE_SETTINGS.skipQualificationForm,
+    calendlyUrl: rawSettings.calendlyUrl || DEFAULT_SITE_SETTINGS.calendlyUrl,
+    unqualifiedMessage:
+      typeof rawSettings.unqualifiedMessage === 'string' && rawSettings.unqualifiedMessage.trim()
+        ? rawSettings.unqualifiedMessage
+        : DEFAULT_UNQUALIFIED_MESSAGE,
+    unqualifiedRedirectTarget:
+      typeof rawSettings.unqualifiedRedirectTarget === 'string'
+        ? rawSettings.unqualifiedRedirectTarget
+        : '',
+    proofCards: Array.isArray(rawSettings.proofCards)
+      ? rawSettings.proofCards
+      : [...DEFAULT_SITE_SETTINGS.proofCards],
+    testimonials: Array.isArray(rawSettings.testimonials)
+      ? rawSettings.testimonials
+      : [...DEFAULT_SITE_SETTINGS.testimonials],
+    pageContent: {
+      ...DEFAULT_PAGE_CONTENT,
+      ...rawPage,
+      founderInfo: {
+        ...DEFAULT_PAGE_CONTENT.founderInfo,
+        ...(rawPage.founderInfo || {}),
+      },
+      heroMetrics: Array.isArray(rawPage.heroMetrics)
+        ? rawPage.heroMetrics
+        : [...DEFAULT_PAGE_CONTENT.heroMetrics],
+      partnerBrands: Array.isArray(rawPage.partnerBrands)
+        ? rawPage.partnerBrands
+        : [...DEFAULT_PAGE_CONTENT.partnerBrands],
+      problemPoints: Array.isArray(rawPage.problemPoints)
+        ? rawPage.problemPoints
+        : [...DEFAULT_PAGE_CONTENT.problemPoints],
+      systemSteps: Array.isArray(rawPage.systemSteps)
+        ? rawPage.systemSteps
+        : [...DEFAULT_PAGE_CONTENT.systemSteps],
+      fitForList: Array.isArray(rawPage.fitForList)
+        ? rawPage.fitForList
+        : [...DEFAULT_PAGE_CONTENT.fitForList],
+      notFitForList: Array.isArray(rawPage.notFitForList)
+        ? rawPage.notFitForList
+        : [...DEFAULT_PAGE_CONTENT.notFitForList],
+      faqItems: Array.isArray(rawPage.faqItems)
+        ? rawPage.faqItems
+        : [...DEFAULT_PAGE_CONTENT.faqItems],
+      bookedSteps: Array.isArray(rawPage.bookedSteps)
+        ? rawPage.bookedSteps
+        : [...DEFAULT_PAGE_CONTENT.bookedSteps],
+    },
   }
 
   return db

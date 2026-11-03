@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { CheckCircle2, Send, AlertCircle, ClipboardList } from 'lucide-react'
+import CountryPhoneInput from '@/components/CountryPhoneInput'
 import type { CustomForm } from '@/lib/storage'
 
 export default function PublicFormPage({
@@ -195,19 +196,22 @@ export default function PublicFormPage({
                           </option>
                         ))}
                       </select>
+                    ) : field.type === 'tel' ? (
+                      <CountryPhoneInput
+                        value={answers[field.label] || ''}
+                        onChange={val => handleFieldChange(field.label, val)}
+                        required={field.required}
+                      />
                     ) : (
                       <input
                         type={field.type}
-                        dir={field.type === 'tel' || field.type === 'email' ? 'ltr' : 'rtl'}
+                        dir={field.type === 'email' ? 'ltr' : 'rtl'}
                         required={field.required}
                         value={answers[field.label] || ''}
                         onChange={e => handleFieldChange(field.label, e.target.value)}
-                        placeholder={
-                          field.placeholder ||
-                          (field.type === 'tel' ? '+966 50 000 0000' : `اكتب ${field.label}...`)
-                        }
+                        placeholder={field.placeholder || `اكتب ${field.label}...`}
                         className={`w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority ${
-                          field.type === 'tel' || field.type === 'email' ? 'text-right font-mono' : ''
+                          field.type === 'email' ? 'text-right font-mono' : ''
                         }`}
                       />
                     )}

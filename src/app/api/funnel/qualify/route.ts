@@ -5,7 +5,7 @@ import {
   validateRealEmail,
   DEFAULT_MAIN_FUNNEL_FORM,
 } from '@/lib/storage'
-import { DEFAULT_SITE_SETTINGS } from '@/lib/constants'
+import { DEFAULT_SITE_SETTINGS, DEFAULT_UNQUALIFIED_MESSAGE } from '@/lib/constants'
 
 export const dynamic = 'force-dynamic'
 
@@ -38,6 +38,9 @@ export async function POST(request: Request) {
       body.answers && typeof body.answers === 'object' ? body.answers : {}
 
     const cleanedAnswers: Record<string, string> = {}
+    let isUnqualified = false
+    let disqualifyReason = ''
+
     for (const field of funnelForm.fields) {
       const val = String(rawAnswers[field.label] || rawAnswers[field.id] || '').trim()
       if (field.required && !val) {
@@ -56,15 +59,30 @@ export async function POST(request: Request) {
         }
       }
       cleanedAnswers[field.label] = val || '—'
+
+      // Check per-option qualification flag
+      if (field.type === 'select' && val && Array.isArray(field.optionItems)) {
+        const matchedOption = field.optionItems.find(
+          opt => opt.text.trim() === val.trim()
+        )
+        if (matchedOption && matchedOption.qualified === false) {
+          isUnqualified = true
+          disqualifyReason = matchedOption.text
+        }
+      }
     }
 
-    const disqualifyTarget = (funnelForm.disqualifyOption || 'أقل من $2,700').trim()
-    const isUnqualified = Object.values(cleanedAnswers).some(
-      ans => ans.trim() === disqualifyTarget
-    )
+    // Legacy fallback if optionItems weren't matched
+    if (!isUnqualified && funnelForm.disqualifyOption) {
+      const target = funnelForm.disqualifyOption.trim()
+      if (Object.values(cleanedAnswers).some(ans => ans.trim() === target)) {
+        isUnqualified = true
+        disqualifyReason = target
+      }
+    }
 
     cleanedAnswers['حالة التأهيل'] = isUnqualified
-      ? `غير مؤهل (${disqualifyTarget}) — تم تحويله للدليل المجاني`
+      ? `غير مؤهل (${disqualifyReason}) — تم تحويله للصفحة البديلة`
       : 'مؤهل — فُتح له تقويم Calendly'
 
     funnelForm.submissionsCount = (funnelForm.submissionsCount || 0) + 1
@@ -75,16 +93,37 @@ export async function POST(request: Request) {
       formTitle: funnelForm.title,
       formSlug: funnelForm.slug,
       answers: cleanedAnswers,
+      qualified: !isUnqualified,
       createdAt: new Date().toISOString(),
     })
 
+    const settings = db.siteSettings || DEFAULT_SITE_SETTINGS
+    const unqualifiedMessage =
+      settings.unqualifiedMessage || DEFAULT_UNQUALIFIED_MESSAGE
+
+    // Determine redirect target for unqualified leads
     const defaultMagnetSlug = db.magnets[0]?.slug || '5d9b6c24bb6044'
+    let redirectUrl = `/d/${encodeURIComponent(defaultMagnetSlug)}?from=funnel`
+
+    const customTarget = (settings.unqualifiedRedirectTarget || '').trim()
+    if (customTarget) {
+      if (customTarget.startsWith('http://') || customTarget.startsWith('https://') || customTarget.startsWith('/')) {
+        redirectUrl = customTarget.includes('?')
+          ? `${customTarget}&from=funnel`
+          : `${customTarget}?from=funnel`
+      } else {
+        // It's a magnet slug
+        redirectUrl = `/d/${encodeURIComponent(customTarget)}?from=funnel`
+      }
+    }
+
     await saveDatabase(db)
 
     if (isUnqualified) {
       return NextResponse.json({
         qualified: false,
-        redirectUrl: `/d/${encodeURIComponent(defaultMagnetSlug)}?from=funnel`,
+        unqualifiedMessage,
+        redirectUrl,
       })
     }
 

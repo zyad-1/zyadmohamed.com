@@ -11,6 +11,8 @@ import {
   ShieldCheck,
   ArrowRight,
 } from 'lucide-react'
+import CountryPhoneInput from '@/components/CountryPhoneInput'
+import { DEFAULT_UNQUALIFIED_MESSAGE } from '@/lib/constants'
 
 interface PublicMagnet {
   id: string
@@ -51,6 +53,7 @@ export default function LeadMagnetPublicPage({
   const [loading, setLoading] = useState(true)
   const [notFoundErr, setNotFoundErr] = useState(false)
   const [fromFunnel, setFromFunnel] = useState(false)
+  const [unqualifiedMsg, setUnqualifiedMsg] = useState(DEFAULT_UNQUALIFIED_MESSAGE)
 
   // Lead form state
   const [name, setName] = useState('')
@@ -66,6 +69,14 @@ export default function LeadMagnetPublicPage({
       const sp = new URLSearchParams(window.location.search)
       if (sp.get('from') === 'funnel') {
         setFromFunnel(true)
+        fetch('/api/funnel/qualify')
+          .then(r => r.json())
+          .then(d => {
+            if (d?.siteSettings?.unqualifiedMessage) {
+              setUnqualifiedMsg(d.siteSettings.unqualifiedMessage)
+            }
+          })
+          .catch(() => {})
       }
     }
 
@@ -234,11 +245,7 @@ export default function LeadMagnetPublicPage({
         {fromFunnel && (
           <div className="glass rounded-2xl p-6 border border-authority/40 bg-authority/10 space-y-3">
             <p className="text-sm md:text-base font-bold text-white leading-relaxed">
-              شكراً لاهتمامك بمنظومة APX!
-            </p>
-            <p className="text-xs md:text-sm text-luminance/85 leading-relaxed">
-              نظراً لأن منظومة التنفيذ الكامل (<span className="font-mono text-white">Done-For-You</span>) لدينا تتطلب استثماراً يبدأ من{' '}
-              <span className="font-mono font-bold text-white">$2,700</span> شهرياً، فقد جهزنا لك هذا الدليل العملي المجاني لتبدأ بتطبيق أساسيات المحتوى البيعي الآن:
+              {unqualifiedMsg}
             </p>
             <div className="pt-2 border-t border-authority/25">
               <Link
@@ -247,7 +254,7 @@ export default function LeadMagnetPublicPage({
               >
                 <ArrowRight className="w-3.5 h-3.5" />
                 <span>
-                  ملاحظة: إذا كنت مستعداً للاستثمار في منظومة Done-For-You (تبدأ من $2,700/شهر) واخترت الخيار السابق بالخطأ، اضغط هنا للعودة وحجز مكالمتك الاستراتيجية.
+                  إذا اخترت الخيار السابق بالخطأ، اضغط هنا للعودة وحجز مكالمتك الاستراتيجية.
                 </span>
               </Link>
             </div>
@@ -354,14 +361,10 @@ export default function LeadMagnetPublicPage({
                   <label className="block text-xs font-bold text-luminance/90 mb-2">
                     رقم الواتساب أو الهاتف <span className="text-authority">*</span>
                   </label>
-                  <input
-                    type="tel"
-                    dir="ltr"
-                    required
+                  <CountryPhoneInput
                     value={phone}
-                    onChange={e => setPhone(e.target.value)}
-                    placeholder="+966 50 000 0000"
-                    className="w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority text-right font-mono"
+                    onChange={val => setPhone(val)}
+                    required
                   />
                 </div>
               )}

@@ -9,6 +9,9 @@ export const VSL_VIDEO_URL = process.env.NEXT_PUBLIC_VSL_VIDEO_URL || ''
 export const CALENDLY_EMBED_URL =
   'https://calendly.com/zyaddonga/30min?hide_gdpr_banner=1&primary_color=8b5cf6'
 
+export const DEFAULT_UNQUALIFIED_MESSAGE =
+  'للأسف حاليًا غير مؤهل للعمل معنا، وده هدية مجانية لك'
+
 export const HERO_METRICS = [
   {
     num: '+80M',
@@ -49,7 +52,6 @@ export const PROBLEM_POINTS = [
   },
 ]
 
-// 3 Minimal Steps for the Client
 export const SYSTEM_STEPS = [
   {
     index: '01',
@@ -96,13 +98,79 @@ export interface TestimonialItem {
   visible: boolean
 }
 
+export interface PageContent {
+  // Section 1: Header, Hero & VSL
+  headerCtaText: string
+  eyebrowText: string
+  heroTitle: string
+  heroTitleHighlight: string
+  heroSubtitle: string
+  vslVideoUrl: string
+  vslPosterUrl: string
+  vslCaption: string
+  heroCtaText: string
+  heroSubCtaText: string
+
+  // Section 2: Metrics & Brands
+  heroMetrics: Array<{ num: string; label: string }>
+  brandsLabel: string
+  partnerBrands: Array<{ nameAr: string; nameEn: string }>
+
+  // Section 3: Problem
+  problemHeading: string
+  problemPoints: Array<{ index: string; title: string; body: string }>
+
+  // Section 4: System Steps & Founder
+  systemHeading: string
+  systemSubheading: string
+  systemSteps: Array<{ index: string; tag: string; title: string; body: string }>
+  founderInfo: {
+    nameAr: string
+    nameEn: string
+    roleAr: string
+    photoUrl: string
+    bio: string
+  }
+
+  // Section 5: Proof & Testimonials Headings
+  proofHeading: string
+  testimonialsSubheading: string
+  proofCtaText: string
+
+  // Section 6: Fit / Not Fit
+  fitHeading: string
+  fitYesTitle: string
+  fitForList: string[]
+  fitNoTitle: string
+  notFitForList: string[]
+
+  // Section 8: FAQ & Footer
+  faqHeading: string
+  faqItems: Array<{ q: string; a: string }>
+  faqCtaText: string
+  footerTagline: string
+  footerCopyright: string
+
+  // Booked Page (/booked)
+  bookedBadge: string
+  bookedTitle: string
+  bookedSubtitle: string
+  bookedWhatsappBtnText: string
+  bookedWhatsappMessage: string
+  bookedStepsTitle: string
+  bookedSteps: Array<{ title: string; desc: string }>
+}
+
 export interface SiteSettings {
   showTestimonialsSection: boolean
   showProofCards: boolean
   skipQualificationForm: boolean
   calendlyUrl: string
+  unqualifiedMessage: string
+  unqualifiedRedirectTarget: string // '' (default magnet) or '/d/slug' or custom URL
   proofCards: ProofCardItem[]
   testimonials: TestimonialItem[]
+  pageContent: PageContent
 }
 
 export const PROOF_CARDS: ProofCardItem[] = [
@@ -159,15 +227,6 @@ export const TESTIMONIAL_SCREENSHOTS: TestimonialItem[] = [
   },
 ]
 
-export const DEFAULT_SITE_SETTINGS: SiteSettings = {
-  showTestimonialsSection: true,
-  showProofCards: true,
-  skipQualificationForm: false,
-  calendlyUrl: CALENDLY_EMBED_URL,
-  proofCards: PROOF_CARDS,
-  testimonials: TESTIMONIAL_SCREENSHOTS,
-}
-
 export const FIT_FOR_LIST = [
   'خبير، طبيب، استشاري، مدرب، أو صاحب بيزنس تقدم خدمة عالية القيمة (High-Ticket).',
   'تريد منظومة متكاملة تتولى عنك التخطيط، كتابة السكريبتات، توجيه التصوير، مونتاج الفيديوهات، وربط الـ Funnel.',
@@ -199,7 +258,88 @@ export const FAQ_ITEMS = [
   },
 ]
 
-// Ultra-short qualification form (2 quick questions before Calendly so the client doesn't repeat Name/Email that Calendly already asks for)
+export const DEFAULT_PAGE_CONTENT: PageContent = {
+  headerCtaText: 'احجز مكالمتك الاستراتيجية',
+  eyebrowText: 'للخبراء، الأطباء، الاستشاريين، وأصحاب البيزنس في الخليج ومصر',
+  heroTitle: 'نحوّل خبرتك إلى براند شخصي قوي ومنظومة فيديوهات قصيرة تجلب لك',
+  heroTitleHighlight: 'عملاء مؤهلين خلال 90 يوماً',
+  heroSubtitle:
+    'نكتب السكريبتات ونعطيك توجيهات التصوير لتصوّر من مكانك في جلسة واحدة — ثم نستلم الفيديوهات ونتولى المونتاج وربط الـ Funnel بالكامل.',
+  vslVideoUrl: VSL_VIDEO_URL,
+  vslPosterUrl: '',
+  vslCaption: 'شاهد في 4 دقائق: كيف نبني منظومة براندك الشخصي في 3 خطوات بسيطة',
+  heroCtaText: 'احجز مكالمة استراتيجية مجانية (30 دقيقة)',
+  heroSubCtaText: 'Done-For-You · Reels & TikTok & Shorts · الخليج ومصر',
+
+  heroMetrics: HERO_METRICS,
+  brandsLabel: 'خبرة عملية مع علامات تجارية رائدة:',
+  partnerBrands: PARTNER_BRANDS,
+
+  problemHeading: 'خبرتك قوية على أرض الواقع.. لكن حضورك الرقمي لا يعكسها.',
+  problemPoints: PROBLEM_POINTS,
+
+  systemHeading: 'كيف نعمل في APX؟ (أقل خطوات ومجهود منك)',
+  systemSubheading: 'منظومة متكاملة (Done-For-You) في 3 خطوات بسيطة فقط:',
+  systemSteps: SYSTEM_STEPS,
+  founderInfo: FOUNDER_INFO,
+
+  proofHeading: 'نتائج حقيقية وآراء العملاء',
+  testimonialsSubheading: 'شهادات ورسائل العملاء',
+  proofCtaText: 'احجز مكالمتك الاستراتيجية الآن',
+
+  fitHeading: 'هل هذه المنظومة مناسبة لك؟',
+  fitYesTitle: 'مناسبة لك إذا كنت:',
+  fitForList: FIT_FOR_LIST,
+  fitNoTitle: 'غير مناسبة لك إذا كنت:',
+  notFitForList: NOT_FIT_FOR_LIST,
+
+  faqHeading: 'الأسئلة الشائعة',
+  faqItems: FAQ_ITEMS,
+  faqCtaText: 'ابدأ الآن: احجز مكالمتك الاستراتيجية ↑',
+  footerTagline: 'APX Agency · Build. Brand. Grow.',
+  footerCopyright: '© 2025 APX — جميع الحقوق محفوظة',
+
+  bookedBadge: 'تم استلام طلبك بنجاح',
+  bookedTitle: 'خطوة أخيرة لتأكيد موعد مكالمتك الاستراتيجية',
+  bookedSubtitle:
+    'اضغط على زر الواتساب بالأسفل لتأكيد حضورك واستلام رابط الاجتماع وتفاصيل التحضير قبل المكالمة.',
+  bookedWhatsappBtnText: 'تأكيد الموعد الآن عبر واتساب',
+  bookedWhatsappMessage: 'أهلاً APX، قمت بحجز موعد المكالمة الاستراتيجية وأود تأكيد الحضور.',
+  bookedStepsTitle: 'ماذا يحدث قبل مكالمتنا؟',
+  bookedSteps: [
+    {
+      title: '1. مراجعة حسابك الحالي',
+      desc: 'نقوم بمراجعة حضورك الرقمي الحالي وتجهيز ملاحظات عملية مخصصة لمجالك قبل الموعد.',
+    },
+    {
+      title: '2. رسم خارطة طريق الـ 90 يوماً',
+      desc: 'نناقش في المكالمة خطة المحتوى البيعي وكيفية تحويل المشاهدات إلى استفسارات ومكالمات مبيعات.',
+    },
+    {
+      title: '3. الالتزام بالموعد المحدد',
+      desc: 'نخصص هذا الوقت بالكامل لتحليل مشروعك، لذا يرجى التواجد في مكان هادئ في الموعد المحدد.',
+    },
+  ],
+}
+
+export const DEFAULT_SITE_SETTINGS: SiteSettings = {
+  showTestimonialsSection: true,
+  showProofCards: true,
+  skipQualificationForm: false,
+  calendlyUrl: CALENDLY_EMBED_URL,
+  unqualifiedMessage: DEFAULT_UNQUALIFIED_MESSAGE,
+  unqualifiedRedirectTarget: '',
+  proofCards: PROOF_CARDS,
+  testimonials: TESTIMONIAL_SCREENSHOTS,
+  pageContent: DEFAULT_PAGE_CONTENT,
+}
+
+export interface FormFieldOption {
+  id: string
+  text: string
+  qualified: boolean // true = مؤهل (يفتح التقويم), false = غير مؤهل (يتحول للصفحة البديلة)
+}
+
 export const DEFAULT_MAIN_FUNNEL_FORM = {
   id: 'frm_funnel_main',
   slug: 'funnel-qualification',
@@ -210,9 +350,9 @@ export const DEFAULT_MAIN_FUNNEL_FORM = {
   fields: [
     {
       id: 'fld_phone',
-      label: 'رقم الواتساب (مع كود الدولة)',
+      label: 'رقم الواتساب',
       type: 'tel' as const,
-      placeholder: '+966 50 000 0000',
+      placeholder: '',
       required: true,
     },
     {
@@ -225,6 +365,12 @@ export const DEFAULT_MAIN_FUNNEL_FORM = {
         'من $2,700 إلى $5,000',
         'من $5,000 إلى $10,000',
         'أكتر من $10,000',
+      ],
+      optionItems: [
+        { id: 'opt_1', text: 'أقل من $2,700', qualified: false },
+        { id: 'opt_2', text: 'من $2,700 إلى $5,000', qualified: true },
+        { id: 'opt_3', text: 'من $5,000 إلى $10,000', qualified: true },
+        { id: 'opt_4', text: 'أكتر من $10,000', qualified: true },
       ],
     },
   ],
