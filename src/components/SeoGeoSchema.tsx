@@ -4,14 +4,62 @@ import { FAQ_ITEMS, FOUNDER_INFO } from '@/lib/constants'
 export default function SeoGeoSchema() {
   const siteUrl = 'https://zyadmohamed.com'
 
+  const socialProfiles = [
+    'https://instagram.com/zyadcreative',
+    'https://www.tiktok.com/@zyadcreative',
+    'https://www.youtube.com/@zyadcreative',
+  ]
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'ProfessionalService'],
+        '@type': 'Person',
+        '@id': `${siteUrl}/#person`,
+        name: 'زياد سعدون',
+        alternateName: [
+          'Zyad Saadon',
+          'زياد محمد',
+          'Zyad Mohamed',
+          'Zyad Mohamed APX',
+          'Zyad Creative',
+          'APX',
+        ],
+        jobTitle: 'Founder of APX — Personal Branding & Short-Form Video Strategist',
+        url: siteUrl,
+        image: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}${FOUNDER_INFO.photoUrl}`,
+          width: 800,
+          height: 1000,
+          caption: 'زياد سعدون | Zyad Saadon — مؤسس APX',
+        },
+        worksFor: {
+          '@id': `${siteUrl}/#organization`,
+        },
+        knowsAbout: [
+          'Personal Branding',
+          'بناء البراند الشخصي',
+          'Short-Form Video Content Marketing',
+          'صناعة المحتوى للخبراء والأطباء وأصحاب البيزنس',
+          'Instagram Reels',
+          'TikTok',
+          'YouTube Shorts',
+          'Sales Funnels',
+        ],
+        sameAs: socialProfiles,
+      },
+      {
+        '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
         name: 'APX',
-        alternateName: ['APX Agency', 'وكالة APX لبناء البراند الشخصي وصناعة المحتوى'],
+        alternateName: [
+          'زياد سعدون APX',
+          'Zyad Saadon APX',
+          'Zyad Mohamed APX',
+          'زياد محمد APX',
+          'Zyad Creative',
+        ],
         url: siteUrl,
         logo: {
           '@type': 'ImageObject',
@@ -20,77 +68,50 @@ export default function SeoGeoSchema() {
           contentUrl: `${siteUrl}/icon.png`,
           width: 512,
           height: 512,
-          caption: 'APX',
+          caption: 'APX — زياد سعدون | Zyad Saadon',
         },
         image: `${siteUrl}/og-image.png`,
-        description:
-          'منظومة متكاملة (Done-For-You) لبناء البراند الشخصي وصناعة محتوى الفيديو القصير (Reels, TikTok, Shorts) للخبراء والأطباء وأصحاب البيزنس في الخليج ومصر لتحقيق عملاء مؤهلين خلال 90 يوماً.',
         founder: {
-          '@id': `${siteUrl}/#founder`,
+          '@id': `${siteUrl}/#person`,
+        },
+        sameAs: socialProfiles,
+      },
+      {
+        '@type': 'ProfessionalService',
+        '@id': `${siteUrl}/#service`,
+        name: 'زياد سعدون | Zyad Saadon — APX: منظومة البراند الشخصي والمحتوى للخبراء',
+        alternateName: ['APX Agency', 'Zyad Mohamed APX', 'زياد محمد APX'],
+        url: siteUrl,
+        logo: `${siteUrl}/icon.png`,
+        image: `${siteUrl}/og-image.png`,
+        description:
+          'منظومة Done-For-You لبناء البراند الشخصي وصناعة الفيديوهات القصيرة (Reels, TikTok, Shorts) للخبراء والأطباء والاستشاريين وأصحاب البيزنس لجذب عملاء مؤهلين خلال 90 يوماً في السعودية والإمارات ومصر.',
+        founder: {
+          '@id': `${siteUrl}/#person`,
+        },
+        provider: {
+          '@id': `${siteUrl}/#organization`,
         },
         areaServed: [
           { '@type': 'Country', name: 'Saudi Arabia' },
           { '@type': 'Country', name: 'United Arab Emirates' },
           { '@type': 'Country', name: 'Egypt' },
-          { '@type': 'Country', name: 'Kuwait' },
-          { '@type': 'Country', name: 'Qatar' },
-          { '@type': 'Country', name: 'Bahrain' },
-          { '@type': 'Country', name: 'Oman' },
         ],
-        knowsAbout: [
-          'Personal Branding',
-          'بناء البراند الشخصي',
-          'Content Marketing',
-          'صناعة المحتوى البيعي',
-          'Short-Form Video Editing',
-          'مونتاج الفيديوهات القصيرة والريلز',
-          'Instagram Reels Strategy',
-          'TikTok Growth Strategy',
-          'YouTube Shorts',
-          'High-Ticket Sales Funnels',
-        ],
-        sameAs: ['https://instagram.com/zyadcreative'],
-      },
-      {
-        '@type': 'Person',
-        '@id': `${siteUrl}/#founder`,
-        name: FOUNDER_INFO.nameAr,
-        alternateName: FOUNDER_INFO.nameEn,
-        jobTitle: 'Founder of APX',
-        image: `${siteUrl}${FOUNDER_INFO.photoUrl}`,
-        url: siteUrl,
-        worksFor: {
-          '@id': `${siteUrl}/#organization`,
-        },
-        sameAs: ['https://instagram.com/zyadcreative'],
+        sameAs: socialProfiles,
       },
       {
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         url: siteUrl,
-        name: 'APX',
-        alternateName: 'APX Agency',
+        name: 'زياد سعدون | Zyad Saadon — APX',
+        alternateName: ['Zyad Mohamed', 'زياد محمد', 'Zyad Mohamed APX', 'APX'],
         publisher: {
           '@id': `${siteUrl}/#organization`,
         },
+        about: {
+          '@id': `${siteUrl}/#person`,
+        },
         inLanguage: 'ar',
-      },
-      {
-        '@type': 'Service',
-        '@id': `${siteUrl}/#service`,
-        name: 'منظومة البراند الشخصي وصناعة الفيديوهات القصيرة (Done-For-You)',
-        provider: {
-          '@id': `${siteUrl}/#organization`,
-        },
-        serviceType: 'Personal Branding & Short-Form Video Content Marketing',
-        areaServed: ['SA', 'AE', 'EG', 'KW', 'QA', 'BH', 'OM'],
-        description:
-          'كتابة السكريبتات، توجيهات التصوير عن بُعد، مونتاج الفيديوهات القصيرة (Reels, TikTok, Shorts)، وربط المحتوى بـ Funnel المبيعات لجذب عملاء مؤهلين خلال 90 يوماً.',
-        offers: {
-          '@type': 'Offer',
-          url: `${siteUrl}/#book`,
-          availability: 'https://schema.org/InStock',
-        },
       },
       {
         '@type': 'FAQPage',

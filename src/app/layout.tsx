@@ -10,34 +10,33 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const SEO_TITLE =
+  'زياد سعدون | Zyad Saadon — APX: منظومة البراند الشخصي والمحتوى السينمائي للخبراء'
+// 149 characters (strictly <= 155 chars), includes name, 90-day promise, and الخليج ومصر
+const SEO_DESC =
+  'زياد سعدون (Zyad Saadon - APX): منظومة Done-For-You لبناء البراند الشخصي والفيديوهات القصيرة للخبراء لجذب عملاء مؤهلين خلال 90 يوماً في الخليج ومصر.'
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://zyadmohamed.com'),
-  applicationName: 'APX',
-  title: {
-    default: 'APX | منظومة البراند الشخصي وصناعة المحتوى للخبراء وأصحاب البيزنس',
-    template: '%s | APX',
-  },
-  description:
-    'في APX نحول خبرتك إلى براند شخصي قوي ومنظومة فيديوهات قصيرة (Reels · TikTok · Shorts) تجلب لك عملاء مؤهلين ومكالمات مبيعات خلال 90 يوماً. نكتب السكريبتات ونعطيك توجيهات التصوير ونتولى المونتاج وربط الـ Funnel بالكامل في السعودية والخليج ومصر.',
+  applicationName: 'APX — زياد سعدون | Zyad Saadon',
+  title: SEO_TITLE,
+  description: SEO_DESC,
   keywords: [
-    'APX',
-    'بناء البراند الشخصي',
-    'صناعة المحتوى',
-    'تسويق بالمحتوى',
-    'مونتاج ريلز احترافي',
-    'كتابة سكريبتات ريلز',
-    'وكالة براند شخصي في السعودية',
-    'وكالة صناعة محتوى في الخليج',
-    'تسويق للأطباء والاستشاريين',
-    'Personal Branding Agency Saudi Arabia',
-    'Personal Branding Dubai',
-    'Short Form Video Agency MENA',
-    'Done For You Content Marketing',
     'زياد سعدون',
     'Zyad Saadon',
+    'زياد محمد',
+    'Zyad Mohamed',
+    'Zyad Mohamed APX',
+    'APX',
+    'بناء البراند الشخصي',
+    'صناعة المحتوى للخبراء',
+    'تسويق بالمحتوى في السعودية والخليج ومصر',
+    'Personal Branding Saudi Arabia',
+    'Personal Branding UAE',
+    'Personal Branding Egypt',
   ],
-  authors: [{ name: 'APX', url: 'https://zyadmohamed.com' }],
-  creator: 'APX',
+  authors: [{ name: 'زياد سعدون | Zyad Saadon (APX)', url: 'https://zyadmohamed.com' }],
+  creator: 'زياد سعدون (Zyad Saadon)',
   publisher: 'APX',
   manifest: '/manifest.webmanifest',
   icons: {
@@ -56,12 +55,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://zyadmohamed.com',
     languages: {
+      ar: 'https://zyadmohamed.com',
+      'x-default': 'https://zyadmohamed.com',
       'ar-SA': 'https://zyadmohamed.com',
       'ar-AE': 'https://zyadmohamed.com',
-      'ar-KW': 'https://zyadmohamed.com',
-      'ar-QA': 'https://zyadmohamed.com',
       'ar-EG': 'https://zyadmohamed.com',
-      ar: 'https://zyadmohamed.com',
     },
   },
   robots: {
@@ -76,32 +74,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'APX | منظومة البراند الشخصي وصناعة المحتوى للخبراء وأصحاب البيزنس',
-    description:
-      'نكتب السكريبتات ونعطيك توجيهات التصوير لتصوّر من مكانك في جلسة واحدة — ثم نستلم الفيديوهات ونتولى المونتاج وربط الـ Funnel لجذب عملاء مؤهلين خلال 90 يوماً.',
+    title: SEO_TITLE,
+    description: SEO_DESC,
     url: 'https://zyadmohamed.com',
-    siteName: 'APX',
-    locale: 'ar_SA',
+    siteName: 'زياد سعدون | Zyad Saadon — APX',
+    locale: 'ar_AR',
     type: 'website',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'APX — Personal Branding & Short-Form Video Agency',
+        alt: 'زياد سعدون | Zyad Saadon — APX: منظومة البراند الشخصي للخبراء وأصحاب البيزنس',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'APX | منظومة البراند الشخصي وصناعة المحتوى',
-    description:
-      'نحول خبرتك إلى براند شخصي قوي ومنظومة فيديوهات قصيرة تجلب لك عملاء مؤهلين خلال 90 يوماً في الخليج ومصر.',
+    title: SEO_TITLE,
+    description: SEO_DESC,
     images: ['/og-image.png'],
-  },
-  other: {
-    'geo.region': 'SA;AE;EG;KW;QA',
-    'geo.placename': 'Riyadh, Dubai, Cairo',
   },
 }
 

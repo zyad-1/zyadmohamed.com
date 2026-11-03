@@ -219,12 +219,14 @@ export default function SalesFunnelHomePage() {
 
   return (
     <main className="min-h-screen bg-void text-luminance relative overflow-x-hidden">
-      {/* Calendly External Script */}
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-        onLoad={() => setCalendlyScriptLoaded(true)}
-      />
+      {/* Calendly External Script (Lazy-loaded when calendar is shown) */}
+      {showCalendlyDirectly && (
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
+          onLoad={() => setCalendlyScriptLoaded(true)}
+        />
+      )}
 
       {/* Ambient Brand Glows */}
       <div
@@ -242,7 +244,9 @@ export default function SalesFunnelHomePage() {
           <a href="#hero" className="flex items-center gap-3 group">
             <img
               src="/logo/logo-white.png"
-              alt="APX"
+              alt="شعار وكالة APX لبناء البراند الشخصي وصناعة المحتوى — زياد سعدون (Zyad Saadon)"
+              width={112}
+              height={32}
               className="h-7 md:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </a>
@@ -307,7 +311,10 @@ export default function SalesFunnelHomePage() {
                   {pageContent.vslPosterUrl && (
                     <img
                       src={pageContent.vslPosterUrl}
-                      alt="VSL Cover"
+                      alt="غلاف الفيديو التعريفي لمنظومة الـ 90 يوماً من APX — زياد سعدون"
+                      width={1280}
+                      height={720}
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity"
                     />
                   )}
@@ -464,12 +471,15 @@ export default function SalesFunnelHomePage() {
             ))}
           </div>
 
-          {/* قسم المؤسس (Founder Card — زياد سعدون / Zyad Saadon) */}
+          {/* قسم المؤسس وإشارات الكيان (Founder & Entity Signals — زياد سعدون / Zyad Saadon / Zyad Mohamed) */}
           <div className="glass rounded-3xl p-6 md:p-9 border border-authority/35 bg-gradient-to-l from-depth/80 via-void/90 to-depth/60 flex flex-col md:flex-row items-center gap-6 md:gap-9">
             <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-authority/50 shadow-[0_0_35px_rgba(139,92,246,0.3)] flex-shrink-0 bg-void">
               <img
                 src={pageContent.founderInfo.photoUrl || '/founder-zyad.jpg'}
-                alt={`${pageContent.founderInfo.nameAr} — ${pageContent.founderInfo.nameEn}`}
+                alt="زياد سعدون (Zyad Saadon) — مؤسس وكالة APX لبناء البراند الشخصي وصناعة المحتوى للخبراء"
+                width={144}
+                height={144}
+                loading="lazy"
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -488,6 +498,39 @@ export default function SalesFunnelHomePage() {
               <p className="text-xs md:text-sm text-luminance/80 leading-[1.85] max-w-2xl">
                 {pageContent.founderInfo.bio}
               </p>
+              <p className="text-[11px] md:text-xs text-luminance/60 leading-relaxed max-w-2xl">
+                بقيادة <strong className="text-white">زياد سعدون (Zyad Saadon)</strong> — المعروف أيضاً باسم{' '}
+                <strong className="text-white">Zyad Mohamed (زياد محمد)</strong> — تقدم{' '}
+                <strong className="text-white">APX</strong> منظومة Done-For-You لبناء البراند الشخصي وصناعة الفيديوهات القصيرة (Reels · TikTok · Shorts) للخبراء، الأطباء، الاستشاريين، وأصحاب البيزنس في المملكة العربية السعودية، الإمارات العربية المتحدة، ومصر.
+              </p>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-1">
+                <a
+                  href="https://instagram.com/zyadcreative"
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="text-xs font-mono text-authority hover:text-white underline underline-offset-4 transition-colors"
+                >
+                  Instagram (@zyadcreative)
+                </a>
+                <span className="text-luminance/30">·</span>
+                <a
+                  href="https://www.tiktok.com/@zyadcreative"
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="text-xs font-mono text-authority hover:text-white underline underline-offset-4 transition-colors"
+                >
+                  TikTok (@zyadcreative)
+                </a>
+                <span className="text-luminance/30">·</span>
+                <a
+                  href="https://www.youtube.com/@zyadcreative"
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="text-xs font-mono text-authority hover:text-white underline underline-offset-4 transition-colors"
+                >
+                  YouTube (@zyadcreative)
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -544,7 +587,10 @@ export default function SalesFunnelHomePage() {
                         <div className="rounded-xl overflow-hidden border border-authority/25 bg-void">
                           <img
                             src={shot.imageUrl}
-                            alt={shot.clientTag}
+                            alt={`شهادة عميل لدى وكالة APX — ${shot.clientTag}`}
+                            width={600}
+                            height={400}
+                            loading="lazy"
                             className="w-full h-auto object-cover"
                           />
                         </div>
@@ -843,21 +889,24 @@ export default function SalesFunnelHomePage() {
                 >
                   <button
                     type="button"
+                    aria-expanded={isOpen}
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
                     className="w-full px-6 py-4.5 text-right flex items-center justify-between gap-4 cursor-pointer"
                   >
-                    <span className="text-sm md:text-base font-bold text-white">{item.q}</span>
+                    <h3 className="text-sm md:text-base font-bold text-white">{item.q}</h3>
                     <ChevronDown
                       className={`w-5 h-5 text-authority flex-shrink-0 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
                   </button>
-                  {isOpen && (
-                    <div className="px-6 pb-5 pt-1 text-xs md:text-sm text-luminance/80 leading-[1.85] border-t border-authority/15">
-                      {item.a}
-                    </div>
-                  )}
+                  <div
+                    className={`px-6 pb-5 pt-1 text-xs md:text-sm text-luminance/80 leading-[1.85] border-t border-authority/15 ${
+                      isOpen ? 'block' : 'hidden'
+                    }`}
+                  >
+                    {item.a}
+                  </div>
                 </div>
               )
             })}
@@ -876,22 +925,61 @@ export default function SalesFunnelHomePage() {
 
       {/* Footer */}
       <footer className="px-5 md:px-10 pb-10 pt-4">
-        <div className="max-w-5xl mx-auto glass rounded-2xl px-6 md:px-10 py-7 flex flex-col md:flex-row items-center justify-between gap-4 border border-authority/20">
-          <a href="#hero" className="flex items-center gap-3">
-            <img
-              src="/logo/logo-white.png"
-              alt="APX"
-              className="h-6 w-auto object-contain"
-            />
-          </a>
+        <div className="max-w-5xl mx-auto glass rounded-2xl px-6 md:px-10 py-7 flex flex-col gap-5 border border-authority/20">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <a href="#hero" className="flex items-center gap-3">
+              <img
+                src="/logo/logo-white.png"
+                alt="شعار وكالة APX — زياد سعدون (Zyad Saadon)"
+                width={96}
+                height={28}
+                loading="lazy"
+                className="h-6 w-auto object-contain"
+              />
+            </a>
 
-          <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-authority">
-            {pageContent.footerTagline}
-          </span>
+            <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-authority">
+              {pageContent.footerTagline}
+            </span>
 
-          <span className="text-xs text-luminance/50">
-            {pageContent.footerCopyright}
-          </span>
+            <span className="text-xs text-luminance/50">
+              {pageContent.footerCopyright}
+            </span>
+          </div>
+
+          <div className="pt-4 border-t border-authority/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-luminance/55 text-center sm:text-right">
+            <p>
+              زياد سعدون (Zyad Saadon) — المعروف أيضاً باسم Zyad Mohamed (زياد محمد) · مؤسس APX لبناء البراند الشخصي وصناعة المحتوى للخبراء في السعودية والإمارات ومصر.
+            </p>
+            <div className="flex items-center gap-3 font-mono">
+              <a
+                href="https://instagram.com/zyadcreative"
+                target="_blank"
+                rel="me noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Instagram
+              </a>
+              <span>·</span>
+              <a
+                href="https://www.tiktok.com/@zyadcreative"
+                target="_blank"
+                rel="me noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                TikTok
+              </a>
+              <span>·</span>
+              <a
+                href="https://www.youtube.com/@zyadcreative"
+                target="_blank"
+                rel="me noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </main>
