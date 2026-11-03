@@ -65,13 +65,67 @@ export async function POST(request: Request) {
       createdAt: new Date().toISOString(),
     }
 
-    db.forms.unshift(newForm)
+    db.forms.push(newForm)
     await saveDatabase(db)
 
     return NextResponse.json({ form: newForm })
   } catch (err) {
     console.error('Create form error:', err)
     return NextResponse.json({ error: 'حدث خطأ أثناء إنشاء الفورم' }, { status: 500 })
+  }
+}
+
+export async function PUT(request: Request) {
+  if (!isAdminAuthenticated()) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  try {
+    const body = await request.json()
+    const formId = String(body.id || '').trim()
+    const title = String(body.title || '').trim()
+    const description = String(body.description || '').trim()
+    const buttonText = String(body.buttonText || 'إرسال البيانات').trim()
+    const successMessage = String(
+      body.successMessage || 'تم استلام بياناتك بنجاح!'
+    ).trim()
+    const disqualifyOption = String(body.disqualifyOption || '').trim()
+    const rawFields = Array.isArray(body.fields) ? body.fields : []
+
+    if (!formId || !title || rawFields.length === 0) {
+      return NextResponse.json(
+        { error: 'يرجى التأكد من عنوان الفورم ووجود حقل واحد على الأقل' },
+        { status: 400 }
+      )
+    }
+
+    const db = await getDatabase()
+    const form = db.forms.find(f => f.id === formId)
+    if (!form) {
+      return NextResponse.json({ error: 'الفورم غير موجود' }, { status: 404 })
+    }
+
+    form.title = title
+    form.description = description
+    form.buttonText = buttonText
+    form.successMessage = successMessage
+    if (disqualifyOption) {
+      form.disqualifyOption = disqualifyOption
+    }
+    form.fields = rawFields.map((f: Partial<FormField>, idx: number) => ({
+      id: f.id || `fld_${idx}_${Date.now()}`,
+      label: String(f.label || `حقل ${idx + 1}`).trim(),
+      type: f.type || 'text',
+      placeholder: String(f.placeholder || '').trim(),
+      required: f.required !== false,
+      options: Array.isArray(f.options) ? f.options.map(String) : [],
+    }))
+
+    await saveDatabase(db)
+    return NextResponse.json({ form })
+  } catch (err) {
+    console.error('Update form error:', err)
+    return NextResponse.json({ error: 'حدث خطأ أثناء تحديث الفورم' }, { status: 500 })
   }
 }
 
@@ -94,6 +148,12 @@ export async function DELETE(request: Request) {
     }
 
     if (formId) {
+      if (formId === 'frm_funnel_main') {
+        return NextResponse.json(
+          { error: 'هذا هو فورم الصفحة الرئيسية الأساسي؛ يمكنك تعديل حقوله وخياراته بدلاً من حذفه.' },
+          { status: 400 }
+        )
+      }
       db.forms = db.forms.filter(f => f.id !== formId)
       db.formSubmissions = db.formSubmissions.filter(s => s.formId !== formId)
       await saveDatabase(db)

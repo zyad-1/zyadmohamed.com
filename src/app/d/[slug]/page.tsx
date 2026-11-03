@@ -6,10 +6,10 @@ import {
   Download,
   FileText,
   CheckCircle2,
-  Mail,
   Sparkles,
   AlertCircle,
   ShieldCheck,
+  ArrowRight,
 } from 'lucide-react'
 
 interface PublicMagnet {
@@ -50,6 +50,7 @@ export default function LeadMagnetPublicPage({
   const [magnet, setMagnet] = useState<PublicMagnet | null>(null)
   const [loading, setLoading] = useState(true)
   const [notFoundErr, setNotFoundErr] = useState(false)
+  const [fromFunnel, setFromFunnel] = useState(false)
 
   // Lead form state
   const [name, setName] = useState('')
@@ -61,6 +62,13 @@ export default function LeadMagnetPublicPage({
   const [downloaded, setDownloaded] = useState(false)
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search)
+      if (sp.get('from') === 'funnel') {
+        setFromFunnel(true)
+      }
+    }
+
     const loadMagnet = async () => {
       try {
         const search = typeof window !== 'undefined' ? window.location.search : ''
@@ -212,7 +220,7 @@ export default function LeadMagnetPublicPage({
         <Link href="/" className="flex items-center">
           <img
             src="/logo/logo-white.png"
-            alt="Logo"
+            alt="APX"
             className="h-7 md:h-8 w-auto object-contain"
           />
         </Link>
@@ -222,7 +230,30 @@ export default function LeadMagnetPublicPage({
       </header>
 
       {/* Main Lead Magnet Card */}
-      <div className="my-12 max-w-xl w-full mx-auto">
+      <div className="my-12 max-w-xl w-full mx-auto space-y-6">
+        {fromFunnel && (
+          <div className="glass rounded-2xl p-6 border border-authority/40 bg-authority/10 space-y-3">
+            <p className="text-sm md:text-base font-bold text-white leading-relaxed">
+              شكراً لاهتمامك بمنظومة APX!
+            </p>
+            <p className="text-xs md:text-sm text-luminance/85 leading-relaxed">
+              نظراً لأن منظومة التنفيذ الكامل (<span className="font-mono text-white">Done-For-You</span>) لدينا تتطلب استثماراً يبدأ من{' '}
+              <span className="font-mono font-bold text-white">$2,700</span> شهرياً، فقد جهزنا لك هذا الدليل العملي المجاني لتبدأ بتطبيق أساسيات المحتوى البيعي الآن:
+            </p>
+            <div className="pt-2 border-t border-authority/25">
+              <Link
+                href="/#book"
+                className="inline-flex items-center gap-2 text-xs text-authority hover:text-white font-bold transition-colors"
+              >
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span>
+                  ملاحظة: إذا كنت مستعداً للاستثمار في منظومة Done-For-You (تبدأ من $2,700/شهر) واخترت الخيار السابق بالخطأ، اضغط هنا للعودة وحجز مكالمتك الاستراتيجية.
+                </span>
+              </Link>
+            </div>
+          </div>
+        )}
+
         <div className="glass rounded-3xl p-8 md:p-12 border border-authority/30 shadow-[0_0_80px_rgba(139,92,246,0.18)] space-y-8 relative overflow-hidden">
           {/* Top Accent Glow */}
           <div className="absolute -top-24 -left-24 w-48 h-48 bg-authority/25 rounded-full blur-3xl pointer-events-none" />
@@ -284,14 +315,14 @@ export default function LeadMagnetPublicPage({
               {magnet.collectFields?.name && (
                 <div>
                   <label className="block text-xs font-bold text-luminance/90 mb-2">
-                    الاسم بالكامل <span className="text-authority">*</span>
+                    الاسم الكامل <span className="text-authority">*</span>
                   </label>
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    placeholder="اكتب اسمك الثلاثي أو الثنائي..."
+                    placeholder="اكتب اسمك الكامل..."
                     className="w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority"
                   />
                 </div>
@@ -313,7 +344,7 @@ export default function LeadMagnetPublicPage({
                   />
                   <p className="text-[11px] text-amber-300/90 mt-1.5 flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0" />
-                    <span>تأكد من كتابة إيميلك الحقيقي الذي تفتحه باستمرار لأن الفايل سيُرسل عليه ولن يعمل مع الإيميلات الوهمية.</span>
+                    <span>تأكد من كتابة إيميلك الحقيقي لأن الفايل سيُرسل عليه.</span>
                   </p>
                 </div>
               )}
@@ -329,7 +360,7 @@ export default function LeadMagnetPublicPage({
                     required
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
-                    placeholder="+20 100 000 0000"
+                    placeholder="+966 50 000 0000"
                     className="w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority text-right font-mono"
                   />
                 </div>
@@ -362,8 +393,8 @@ export default function LeadMagnetPublicPage({
       </div>
 
       {/* Footer */}
-      <footer className="max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-mono">
-        © 2025 ZYAD — Your Content. Elevated.
+      <footer className="max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-ar">
+        © 2025 APX — جميع الحقوق محفوظة.
       </footer>
     </main>
   )

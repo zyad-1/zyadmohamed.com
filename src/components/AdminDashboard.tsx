@@ -25,7 +25,17 @@ import {
   Inbox,
   RefreshCw,
   ShieldCheck,
+  MessageSquareQuote,
+  EyeOff,
+  Edit3,
+  Calendar,
 } from 'lucide-react'
+import {
+  DEFAULT_SITE_SETTINGS,
+  type SiteSettings,
+  type TestimonialItem,
+  type ProofCardItem,
+} from '@/lib/constants'
 import type {
   LeadMagnet,
   CapturedLead,
@@ -66,13 +76,26 @@ export default function AdminDashboard({ initialAuth }: Props) {
   const [authLoading, setAuthLoading] = useState(false)
 
   // Dashboard state
-  const [activeTab, setActiveTab] = useState<'magnets' | 'forms' | 'submissions' | 'leads'>('magnets')
+  const [activeTab, setActiveTab] = useState<
+    'magnets' | 'forms' | 'testimonials' | 'submissions' | 'leads'
+  >('magnets')
   const [magnets, setMagnets] = useState<LeadMagnet[]>([])
   const [leads, setLeads] = useState<CapturedLead[]>([])
   const [forms, setForms] = useState<CustomForm[]>([])
   const [formSubmissions, setFormSubmissions] = useState<FormSubmission[]>([])
+  const [siteSettings, setSiteSettings] = useState<SiteSettings>(DEFAULT_SITE_SETTINGS)
+  const [savingSettings, setSavingSettings] = useState(false)
+  const [settingsMsg, setSettingsMsg] = useState('')
   const [storageMode, setStorageMode] = useState<'vercel-blob' | 'vercel-tmp' | 'local'>('local')
   const [loadingData, setLoadingData] = useState(false)
+
+  // Testimonials editor state
+  const [editingTestimonialId, setEditingTestimonialId] = useState<string | null>(null)
+  const [tClientTag, setTClientTag] = useState('')
+  const [tBeforeAfter, setTBeforeAfter] = useState('')
+  const [tQuotePreview, setTQuotePreview] = useState('')
+  const [tImageUrl, setTImageUrl] = useState('')
+  const [uploadingTestimonialImg, setUploadingTestimonialImg] = useState(false)
 
   // Create Lead Magnet form state
   const [title, setTitle] = useState('')
@@ -91,7 +114,10 @@ export default function AdminDashboard({ initialAuth }: Props) {
   const [formError, setFormError] = useState('')
   const [formSuccess, setFormSuccess] = useState('')
 
-  // Create Custom Form state
+  // Create / Edit Custom Form state
+  const [editingFormId, setEditingFormId] = useState<string | null>(null)
+  const [editingIsMainFunnel, setEditingIsMainFunnel] = useState(false)
+  const [disqualifyOption, setDisqualifyOption] = useState('أقل من $2,700')
   const [customFormTitle, setCustomFormTitle] = useState('')
   const [customFormDesc, setCustomFormDesc] = useState('')
   const [customFormBtn, setCustomFormBtn] = useState('إرسال البيانات')
@@ -103,14 +129,15 @@ export default function AdminDashboard({ initialAuth }: Props) {
       id: string
       label: string
       type: FormField['type']
+      placeholder?: string
       required: boolean
       optionsText: string
     }>
   >([
-    { id: 'f1', label: 'الاسم بالكامل', type: 'text', required: true, optionsText: '' },
-    { id: 'f2', label: 'رقم الواتساب / الموبايل', type: 'tel', required: true, optionsText: '' },
-    { id: 'f3', label: 'البريد الإلكتروني', type: 'email', required: true, optionsText: '' },
-    { id: 'f4', label: 'تفاصيل طلبك أو استفسارك', type: 'textarea', required: false, optionsText: '' },
+    { id: 'f1', label: 'الاسم الكامل', type: 'text', placeholder: 'اكتب اسمك الكامل...', required: true, optionsText: '' },
+    { id: 'f2', label: 'رقم الواتساب (مع كود الدولة)', type: 'tel', placeholder: '+966 50 000 0000', required: true, optionsText: '' },
+    { id: 'f3', label: 'البريد الإلكتروني', type: 'email', placeholder: 'name@company.com', required: true, optionsText: '' },
+    { id: 'f4', label: 'تفاصيل طلبك أو استفسارك', type: 'textarea', placeholder: '', required: false, optionsText: '' },
   ])
   const [creatingForm, setCreatingForm] = useState(false)
   const [customFormError, setCustomFormError] = useState('')
@@ -136,6 +163,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
         setLeads(data.leads || [])
         setForms(data.forms || [])
         setFormSubmissions(data.formSubmissions || [])
+        if (data.siteSettings) setSiteSettings(data.siteSettings)
         if (data.storageMode) setStorageMode(data.storageMode)
       }
     } catch (e) {
@@ -419,6 +447,44 @@ export default function AdminDashboard({ initialAuth }: Props) {
   }
 
   // ===================== CUSTOM FORMS HANDLERS =====================
+  const handleStartEditForm = (form: CustomForm) => {
+    setEditingFormId(form.id)
+    setEditingIsMainFunnel(Boolean(form.isMainFunnel || form.id === 'frm_funnel_main'))
+    setDisqualifyOption(form.disqualifyOption || 'أقل من $2,700')
+    setCustomFormTitle(form.title)
+    setCustomFormDesc(form.description || '')
+    setCustomFormBtn(form.buttonText || 'إرسال البيانات')
+    setCustomFormSuccessMsg(form.successMessage || 'تم استلام بياناتك بنجاح!')
+    setCustomFields(
+      form.fields.map(f => ({
+        id: f.id,
+        label: f.label,
+        type: f.type,
+        placeholder: f.placeholder || '',
+        required: f.required !== false,
+        optionsText: Array.isArray(f.options) ? f.options.join(', ') : '',
+      }))
+    )
+    setCustomFormError('')
+    setCustomFormCreatedMsg('')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleCancelEditForm = () => {
+    setEditingFormId(null)
+    setEditingIsMainFunnel(false)
+    setCustomFormTitle('')
+    setCustomFormDesc('')
+    setCustomFormBtn('إرسال البيانات')
+    setCustomFormSuccessMsg('تم استلام بياناتك بنجاح! سنتواصل معك في أقرب وقت.')
+    setCustomFields([
+      { id: 'f1', label: 'الاسم الكامل', type: 'text', placeholder: 'اكتب اسمك الكامل...', required: true, optionsText: '' },
+      { id: 'f2', label: 'رقم الواتساب (مع كود الدولة)', type: 'tel', placeholder: '+966 50 000 0000', required: true, optionsText: '' },
+      { id: 'f3', label: 'البريد الإلكتروني', type: 'email', placeholder: 'name@company.com', required: true, optionsText: '' },
+      { id: 'f4', label: 'تفاصيل طلبك أو استفسارك', type: 'textarea', placeholder: '', required: false, optionsText: '' },
+    ])
+  }
+
   const handleAddFieldRow = () => {
     setCustomFields(prev => [
       ...prev,
@@ -426,6 +492,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
         id: `fld_${Date.now()}_${Math.random().toString(36).slice(2, 5)}`,
         label: '',
         type: 'text',
+        placeholder: '',
         required: true,
         optionsText: '',
       },
@@ -439,7 +506,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
 
   const handleUpdateFieldRow = (
     id: string,
-    key: 'label' | 'type' | 'required' | 'optionsText',
+    key: 'label' | 'type' | 'placeholder' | 'required' | 'optionsText',
     val: string | boolean
   ) => {
     setCustomFields(prev =>
@@ -469,6 +536,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
         id: f.id,
         label: f.label.trim(),
         type: f.type,
+        placeholder: (f.placeholder || '').trim(),
         required: f.required,
         options:
           f.type === 'select'
@@ -479,30 +547,40 @@ export default function AdminDashboard({ initialAuth }: Props) {
             : [],
       }))
 
+      const isUpdating = Boolean(editingFormId)
       const res = await fetch('/api/admin/forms', {
-        method: 'POST',
+        method: isUpdating ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          id: editingFormId || undefined,
           title: customFormTitle.trim(),
           description: customFormDesc.trim(),
           buttonText: customFormBtn.trim() || 'إرسال البيانات',
           successMessage:
             customFormSuccessMsg.trim() || 'تم استلام بياناتك بنجاح! سنتواصل معك قريباً.',
+          disqualifyOption: editingIsMainFunnel ? disqualifyOption.trim() : undefined,
           fields: formattedFields,
         }),
       })
       const data = await res.json()
       if (!res.ok) {
-        throw new Error(data.error || 'فشل إنشاء الفورم')
+        throw new Error(data.error || 'فشل حفظ الفورم')
       }
 
-      setForms(prev => [data.form, ...prev])
-      setCustomFormTitle('')
-      setCustomFormDesc('')
-      setCustomFormCreatedMsg('تم إنشاء الفورم وتوليد اللينك المشفر بنجاح!')
+      if (isUpdating) {
+        setForms(prev => prev.map(f => (f.id === editingFormId ? data.form : f)))
+        setCustomFormCreatedMsg('تم حفظ التعديلات على الفورم بنجاح!')
+        setEditingFormId(null)
+        setEditingIsMainFunnel(false)
+      } else {
+        setForms(prev => [...prev, data.form])
+        setCustomFormTitle('')
+        setCustomFormDesc('')
+        setCustomFormCreatedMsg('تم إنشاء الفورم وتوليد اللينك المشفر بنجاح!')
+      }
       setTimeout(() => setCustomFormCreatedMsg(''), 4000)
     } catch (err) {
-      setCustomFormError((err as Error).message || 'حدث خطأ أثناء إنشاء الفورم')
+      setCustomFormError((err as Error).message || 'حدث خطأ أثناء حفظ الفورم')
     } finally {
       setCreatingForm(false)
     }
@@ -592,6 +670,130 @@ export default function AdminDashboard({ initialAuth }: Props) {
     URL.revokeObjectURL(url)
   }
 
+  // ===================== TESTIMONIALS & SITE SETTINGS HANDLERS =====================
+  const saveSiteSettingsToServer = async (nextSettings: SiteSettings, msg = 'تم حفظ التعديلات بنجاح!') => {
+    setSavingSettings(true)
+    setSettingsMsg('')
+    try {
+      const res = await fetch('/api/admin/testimonials', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(nextSettings),
+      })
+      const data = await res.json()
+      if (res.ok && data.siteSettings) {
+        setSiteSettings(data.siteSettings)
+        setSettingsMsg(msg)
+        setTimeout(() => setSettingsMsg(''), 3500)
+      }
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setSavingSettings(false)
+    }
+  }
+
+  const handleTestimonialImageUpload = async (file: File) => {
+    setUploadingTestimonialImg(true)
+    try {
+      if (storageMode === 'vercel-blob') {
+        const ext = file.name.includes('.') ? '.' + file.name.split('.').pop() : ''
+        const safePath = `zyad-magnets/testimonial_${Date.now()}_${randomHex(8)}${ext}`
+        const blob = await upload(safePath, file, {
+          access: 'public',
+          handleUploadUrl: '/api/admin/blob-upload',
+        })
+        setTImageUrl(blob.url)
+      } else {
+        const fd = new FormData()
+        fd.append('file', file)
+        const upRes = await fetch('/api/admin/upload', {
+          method: 'POST',
+          body: fd,
+        })
+        const upData = await upRes.json()
+        if (upRes.ok && upData.fileUrl) {
+          setTImageUrl(upData.fileUrl)
+        }
+      }
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setUploadingTestimonialImg(false)
+    }
+  }
+
+  const handleSaveTestimonial = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!tClientTag.trim() && !tQuotePreview.trim() && !tImageUrl.trim()) return
+
+    const currentList = [...(siteSettings.testimonials || [])]
+    if (editingTestimonialId) {
+      const idx = currentList.findIndex(t => t.id === editingTestimonialId)
+      if (idx !== -1) {
+        currentList[idx] = {
+          ...currentList[idx],
+          clientTag: tClientTag.trim() || 'عميل APX',
+          beforeAfter: tBeforeAfter.trim(),
+          quotePreview: tQuotePreview.trim(),
+          imageUrl: tImageUrl.trim(),
+        }
+      }
+    } else {
+      currentList.unshift({
+        id: `shot-${Date.now()}`,
+        clientTag: tClientTag.trim() || 'عميل APX',
+        beforeAfter: tBeforeAfter.trim(),
+        quotePreview: tQuotePreview.trim(),
+        imageUrl: tImageUrl.trim(),
+        visible: true,
+      })
+    }
+
+    setEditingTestimonialId(null)
+    setTClientTag('')
+    setTBeforeAfter('')
+    setTQuotePreview('')
+    setTImageUrl('')
+
+    await saveSiteSettingsToServer(
+      { ...siteSettings, testimonials: currentList },
+      editingTestimonialId ? 'تم تحديث الشهادة بنجاح!' : 'تمت إضافة الشهادة الجديدة بنجاح!'
+    )
+  }
+
+  const handleStartEditTestimonial = (item: TestimonialItem) => {
+    setEditingTestimonialId(item.id)
+    setTClientTag(item.clientTag)
+    setTBeforeAfter(item.beforeAfter)
+    setTQuotePreview(item.quotePreview)
+    setTImageUrl(item.imageUrl || '')
+  }
+
+  const handleToggleTestimonialVisible = async (id: string) => {
+    const updated = (siteSettings.testimonials || []).map(t =>
+      t.id === id ? { ...t, visible: !t.visible } : t
+    )
+    await saveSiteSettingsToServer(
+      { ...siteSettings, testimonials: updated },
+      'تم تحديث حالة ظهور الشهادة!'
+    )
+  }
+
+  const handleDeleteTestimonial = async (id: string) => {
+    const updated = (siteSettings.testimonials || []).filter(t => t.id !== id)
+    await saveSiteSettingsToServer(
+      { ...siteSettings, testimonials: updated },
+      'تم حذف الشهادة بنجاح!'
+    )
+  }
+
+  const handleUpdateProofCard = (index: number, patch: Partial<ProofCardItem>) => {
+    const nextCards = [...(siteSettings.proofCards || [])]
+    nextCards[index] = { ...nextCards[index], ...patch }
+    setSiteSettings(prev => ({ ...prev, proofCards: nextCards }))
+  }
+
   // ===================== LOGIN VIEW =====================
   if (!isAuthed) {
     return (
@@ -604,7 +806,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
             <div>
               <img
                 src="/logo/logo-white.png"
-                alt="Logo"
+                alt="APX"
                 className="h-7 w-auto object-contain mb-1.5"
               />
               <p className="text-xs text-authority font-medium">لوحة تحكم الأدمن الخاصة</p>
@@ -674,7 +876,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
             <div className="h-11 px-3 rounded-xl bg-authority/15 border border-authority/35 flex items-center justify-center">
               <img
                 src="/logo/logo-white.png"
-                alt="Logo"
+                alt="APX"
                 className="h-6 w-auto object-contain"
               />
             </div>
@@ -775,6 +977,18 @@ export default function AdminDashboard({ initialAuth }: Props) {
           </button>
 
           <button
+            onClick={() => setActiveTab('testimonials')}
+            className={`inline-flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all ${
+              activeTab === 'testimonials'
+                ? 'bg-authority text-white shadow-[0_0_25px_rgba(139,92,246,0.35)]'
+                : 'glass text-luminance/70 hover:text-white'
+            }`}
+          >
+            <MessageSquareQuote className="w-4 h-4" />
+            <span>شهادات العملاء و Calendly ({(siteSettings.testimonials || []).length})</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('submissions')}
             className={`inline-flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all ${
               activeTab === 'submissions'
@@ -824,7 +1038,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
                     type="text"
                     value={title}
                     onChange={e => setTitle(e.target.value)}
-                    placeholder="مثال: دليل صناعة الريلز السينمائية 2025"
+                    placeholder="مثال: دليل صناعة الريلز البيعية 2025"
                     required
                     className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-sm text-white placeholder-luminance/30 focus:outline-none focus:border-authority"
                   />
@@ -1216,16 +1430,36 @@ export default function AdminDashboard({ initialAuth }: Props) {
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             {/* Form Builder (6 cols) */}
             <div className="lg:col-span-6 glass rounded-2xl p-6 md:p-8 border border-authority/25">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-9 h-9 rounded-lg bg-authority/20 border border-authority/40 flex items-center justify-center text-authority">
-                  <ClipboardList className="w-5 h-5" />
+              <div className="flex items-center justify-between gap-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-authority/20 border border-authority/40 flex items-center justify-center text-authority">
+                    <ClipboardList className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-bold text-white">
+                      {editingFormId
+                        ? editingIsMainFunnel
+                          ? 'تعديل فورم الصفحة الرئيسية (Funnel)'
+                          : 'تعديل الفورم والخيارات'
+                        : 'إنشاء فورم جديد للمشاركة'}
+                    </h2>
+                    <p className="text-xs text-luminance/55">
+                      {editingFormId
+                        ? 'عدّل الأسئلة أو الخيارات أو النصوص ثم اضغط حفظ التعديلات'
+                        : 'أنشئ فورم بعنوان وأسئلة مخصصة وشاركه بلينك مشفر لتستقبل الردود هنا'}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-lg font-bold text-white">إنشاء فورم جديد للمشاركة</h2>
-                  <p className="text-xs text-luminance/55">
-                    أنشئ فورم بعنوان وأسئلة مخصصة وشاركه بلينك مشفر لتستقبل الردود هنا
-                  </p>
-                </div>
+
+                {editingFormId && (
+                  <button
+                    type="button"
+                    onClick={handleCancelEditForm}
+                    className="text-xs text-red-300 hover:text-white bg-red-500/15 border border-red-500/30 px-3 py-1.5 rounded-lg transition-colors"
+                  >
+                    إلغاء التعديل
+                  </button>
+                )}
               </div>
 
               <form onSubmit={handleCreateCustomForm} className="space-y-5">
@@ -1238,7 +1472,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
                     required
                     value={customFormTitle}
                     onChange={e => setCustomFormTitle(e.target.value)}
-                    placeholder="مثال: استمارة طلب خدمة المونتاج السينمائي"
+                    placeholder="مثال: استمارة طلب بناء البراند الشخصي"
                     className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-sm text-white placeholder-luminance/30 focus:outline-none focus:border-authority"
                   />
                 </div>
@@ -1255,6 +1489,24 @@ export default function AdminDashboard({ initialAuth }: Props) {
                     className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-sm text-white placeholder-luminance/30 focus:outline-none focus:border-authority resize-none"
                   />
                 </div>
+
+                {editingIsMainFunnel && (
+                  <div className="rounded-xl bg-authority/10 border border-authority/35 p-4 space-y-2">
+                    <label className="block text-xs font-bold text-white">
+                      خيار الفلترة الذي يحوّل العميل للدليل المجاني بدلاً من التقويم:
+                    </label>
+                    <input
+                      type="text"
+                      value={disqualifyOption}
+                      onChange={e => setDisqualifyOption(e.target.value)}
+                      placeholder="أقل من $2,700"
+                      className="w-full rounded-lg bg-void/90 border border-authority/30 px-3.5 py-2 text-xs text-white focus:outline-none focus:border-authority"
+                    />
+                    <p className="text-[11px] text-luminance/70">
+                      أي عميل يختار هذه الإجابة بالضبط سيتم تحويله تلقائياً لصفحة الـ Lead Magnet ولن يظهر له تقويم المواعيد.
+                    </p>
+                  </div>
+                )}
 
                 {/* Dynamic Fields Builder */}
                 <div className="space-y-3">
@@ -1344,7 +1596,7 @@ export default function AdminDashboard({ initialAuth }: Props) {
                               onChange={e =>
                                 handleUpdateFieldRow(fld.id, 'optionsText', e.target.value)
                               }
-                              placeholder="اكتب الاختيارات مفصولة بفاصلة، مثال: باقة شهرية, فيديو واحد, استشارة"
+                              placeholder="اكتب الاختيارات مفصولة بفاصلة، مثال: أقل من $2,700, من $2,700 إلى $5,000"
                               className="w-full rounded-lg bg-depth/60 border border-authority/25 px-3 py-2 text-xs text-white placeholder-luminance/35 focus:outline-none focus:border-authority"
                             />
                           </div>
@@ -1398,14 +1650,20 @@ export default function AdminDashboard({ initialAuth }: Props) {
                   className="w-full rounded-xl bg-authority hover:bg-crown text-white font-bold py-3.5 px-6 transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.35)] disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>{creatingForm ? 'جاري إنشاء الفورم...' : 'إنشاء الفورم وتوليد اللينك المشفر'}</span>
+                  <span>
+                    {creatingForm
+                      ? 'جاري الحفظ...'
+                      : editingFormId
+                      ? 'حفظ التعديلات على الفورم'
+                      : 'إنشاء الفورم وتوليد اللينك المشفر'}
+                  </span>
                 </button>
               </form>
             </div>
 
             {/* Created Forms List (6 cols) */}
             <div className="lg:col-span-6 space-y-4">
-              <h2 className="text-lg font-bold text-white">الفورمز الجاهزة للمشاركة</h2>
+              <h2 className="text-lg font-bold text-white">الفورمز الجاهزة (بما فيها فورم الصفحة الرئيسية)</h2>
 
               {forms.length === 0 ? (
                 <div className="glass rounded-2xl p-12 text-center border border-authority/20">
@@ -1418,20 +1676,34 @@ export default function AdminDashboard({ initialAuth }: Props) {
               ) : (
                 <div className="space-y-4">
                   {forms.map(form => {
-                    const shareUrl = getFormShareUrl(form)
+                    const isMainFunnel = Boolean(form.isMainFunnel || form.id === 'frm_funnel_main')
+                    const shareUrl = isMainFunnel
+                      ? `${typeof window !== 'undefined' ? window.location.origin : 'https://zyadmohamed.com'}/#book`
+                      : getFormShareUrl(form)
                     const isCopied = copiedId === form.id
                     const count = formSubmissions.filter(s => s.formId === form.id).length
 
                     return (
                       <div
                         key={form.id}
-                        className="glass rounded-2xl p-6 border border-authority/25 hover:border-authority/50 transition-all space-y-5"
+                        className={`glass rounded-2xl p-6 border transition-all space-y-5 ${
+                          isMainFunnel
+                            ? 'border-authority/60 bg-authority/[0.04]'
+                            : 'border-authority/25 hover:border-authority/50'
+                        }`}
                       >
-                        <div className="flex items-start justify-between gap-4">
+                        <div className="flex flex-wrap items-start justify-between gap-4">
                           <div>
-                            <span className="inline-block px-2.5 py-0.5 rounded-md bg-authority/20 border border-authority/40 text-authority text-[11px] font-bold mb-2">
-                              {form.fields.length} حقول / أسئلة
-                            </span>
+                            <div className="flex flex-wrap items-center gap-2 mb-2">
+                              {isMainFunnel && (
+                                <span className="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-bold">
+                                  فورم الصفحة الرئيسية الأساسي (Funnel)
+                                </span>
+                              )}
+                              <span className="inline-block px-2.5 py-0.5 rounded-md bg-authority/20 border border-authority/40 text-authority text-[11px] font-bold">
+                                {form.fields.length} حقول / أسئلة
+                              </span>
+                            </div>
                             <h3 className="text-lg font-bold text-white">{form.title}</h3>
                             {form.description && (
                               <p className="text-xs text-luminance/65 mt-1">{form.description}</p>
@@ -1439,22 +1711,31 @@ export default function AdminDashboard({ initialAuth }: Props) {
                           </div>
 
                           <div className="flex items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => handleStartEditForm(form)}
+                              className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-authority hover:bg-crown px-3.5 py-2 rounded-xl transition-colors"
+                            >
+                              <span>تعديل الخيارات والحقول</span>
+                            </button>
                             <a
-                              href={`/f/${form.slug}`}
+                              href={isMainFunnel ? '/#book' : `/f/${form.slug}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1.5 text-xs text-luminance hover:text-white bg-void/70 border border-authority/25 hover:border-authority px-3.5 py-2 rounded-xl transition-colors"
                             >
                               <ExternalLink className="w-3.5 h-3.5 text-authority" />
-                              <span>معاينة الفورم</span>
+                              <span>معاينة</span>
                             </a>
-                            <button
-                              onClick={() => handleDeleteForm(form.id, form.title)}
-                              className="p-2 rounded-xl bg-red-500/10 hover:bg-red-500/25 border border-red-500/25 text-red-300 transition-colors"
-                              title="حذف الفورم"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </button>
+                            {!isMainFunnel && (
+                              <button
+                                onClick={() => handleDeleteForm(form.id, form.title)}
+                                className="p-2 rounded-xl bg-red-500/10 hover:bg-red-500/25 border border-red-500/25 text-red-300 transition-colors"
+                                title="حذف الفورم"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            )}
                           </div>
                         </div>
 
@@ -1477,12 +1758,12 @@ export default function AdminDashboard({ initialAuth }: Props) {
                             {isCopied ? (
                               <>
                                 <Check className="w-3.5 h-3.5" />
-                                <span>تم نسخ لينك الفورم!</span>
+                                <span>تم نسخ اللينك!</span>
                               </>
                             ) : (
                               <>
                                 <Copy className="w-3.5 h-3.5" />
-                                <span>نسخ لينك الفورم</span>
+                                <span>نسخ اللينك</span>
                               </>
                             )}
                           </button>
@@ -1732,6 +2013,439 @@ export default function AdminDashboard({ initialAuth }: Props) {
                 </table>
               </div>
             )}
+          </div>
+        )}
+
+        {/* ===================== TAB 5: TESTIMONIALS & CALENDLY SETTINGS ===================== */}
+        {activeTab === 'testimonials' && (
+          <div className="space-y-8">
+            {settingsMsg && (
+              <div className="rounded-xl bg-emerald-500/15 border border-emerald-500/35 px-5 py-3.5 text-xs md:text-sm text-emerald-300 font-bold flex items-center gap-2">
+                <Check className="w-4 h-4" />
+                <span>{settingsMsg}</span>
+              </div>
+            )}
+
+            {/* Master Visibility & Calendly Controls */}
+            <div className="grid md:grid-cols-3 gap-4">
+              {/* Toggle 1: Show/Hide Testimonials Section */}
+              <div className="glass rounded-2xl p-5 border border-authority/30 flex flex-col justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-xs font-bold text-authority">التحكم في ظهور الشهادات</span>
+                  <h3 className="text-base font-bold text-white">قسم شهادات ورسائل العملاء</h3>
+                  <p className="text-xs text-luminance/65">
+                    يمكنك إظهار قسم الشهادات في الموقع أو إخفاؤه بالكامل بضغطة زر في أي وقت.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  disabled={savingSettings}
+                  onClick={() =>
+                    saveSiteSettingsToServer({
+                      ...siteSettings,
+                      showTestimonialsSection: !siteSettings.showTestimonialsSection,
+                    })
+                  }
+                  className={`w-full py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+                    siteSettings.showTestimonialsSection
+                      ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-300'
+                      : 'bg-red-500/15 border border-red-500/35 text-red-300'
+                  }`}
+                >
+                  {siteSettings.showTestimonialsSection ? (
+                    <>
+                      <Eye className="w-4 h-4" />
+                      <span>ظاهر حالياً في الموقع (اضغط لإخفائه بالكامل)</span>
+                    </>
+                  ) : (
+                    <>
+                      <EyeOff className="w-4 h-4" />
+                      <span>مخفي حالياً من الموقع (اضغط لإظهاره)</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Toggle 2: Show/Hide Proof Metric Cards */}
+              <div className="glass rounded-2xl p-5 border border-authority/30 flex flex-col justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-xs font-bold text-authority">التحكم في كروت الأرقام</span>
+                  <h3 className="text-base font-bold text-white">كروت النتائج (+185K / +80M)</h3>
+                  <p className="text-xs text-luminance/65">
+                    إظهار أو إخفاء كروت الأرقام الثلاثة أعلى قسم الشهادات.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  disabled={savingSettings}
+                  onClick={() =>
+                    saveSiteSettingsToServer({
+                      ...siteSettings,
+                      showProofCards: !siteSettings.showProofCards,
+                    })
+                  }
+                  className={`w-full py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+                    siteSettings.showProofCards
+                      ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-300'
+                      : 'bg-red-500/15 border border-red-500/35 text-red-300'
+                  }`}
+                >
+                  {siteSettings.showProofCards ? (
+                    <>
+                      <Eye className="w-4 h-4" />
+                      <span>كروت الأرقام ظاهرة (اضغط للإخفاء)</span>
+                    </>
+                  ) : (
+                    <>
+                      <EyeOff className="w-4 h-4" />
+                      <span>كروت الأرقام مخفية (اضغط للإظهار)</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Toggle 3: Direct Calendly vs Qualification Step */}
+              <div className="glass rounded-2xl p-5 border border-authority/30 flex flex-col justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-xs font-bold text-authority">عدد خطوات الحجز للعميل</span>
+                  <h3 className="text-base font-bold text-white">طريقة عرض تقويم Calendly</h3>
+                  <p className="text-xs text-luminance/65">
+                    اختر بين عرض سؤال التأهيل السريع أولاً أو فتح تقويم Calendly مباشرة للعميل بدون أي أسئلة مسبقة.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  disabled={savingSettings}
+                  onClick={() =>
+                    saveSiteSettingsToServer({
+                      ...siteSettings,
+                      skipQualificationForm: !siteSettings.skipQualificationForm,
+                    })
+                  }
+                  className={`w-full py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+                    siteSettings.skipQualificationForm
+                      ? 'bg-authority text-white shadow-[0_0_20px_rgba(139,92,246,0.3)]'
+                      : 'bg-authority/15 border border-authority/35 text-luminance'
+                  }`}
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>
+                    {siteSettings.skipQualificationForm
+                      ? 'الوضع الحالي: عرض Calendly مباشرة (بدون فورم مسبق)'
+                      : 'الوضع الحالي: سؤال تأهيل سريع ثم يفتح Calendly'}
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Calendly Link Editor */}
+            <div className="glass rounded-2xl p-5 md:p-6 border border-authority/25 flex flex-col md:flex-row items-stretch md:items-end gap-4">
+              <div className="flex-1">
+                <label className="block text-xs font-bold text-white mb-2">
+                  رابط تقويم Calendly المدمج في الموقع:
+                </label>
+                <input
+                  type="url"
+                  dir="ltr"
+                  value={siteSettings.calendlyUrl || ''}
+                  onChange={e =>
+                    setSiteSettings(prev => ({ ...prev, calendlyUrl: e.target.value }))
+                  }
+                  placeholder="https://calendly.com/zyaddonga/30min?hide_gdpr_banner=1&primary_color=8b5cf6"
+                  className="w-full rounded-xl bg-void border border-authority/30 px-4 py-3 text-xs md:text-sm font-mono text-white focus:outline-none focus:border-authority"
+                />
+              </div>
+              <button
+                type="button"
+                disabled={savingSettings}
+                onClick={() =>
+                  saveSiteSettingsToServer(siteSettings, 'تم حفظ رابط Calendly بنجاح!')
+                }
+                className="rounded-xl bg-authority hover:bg-crown text-white font-bold text-xs md:text-sm px-6 py-3.5 transition-all"
+              >
+                حفظ رابط Calendly
+              </button>
+            </div>
+
+            {/* Testimonials Add / Edit + List */}
+            <div className="grid lg:grid-cols-12 gap-8 items-start">
+              {/* Add / Edit Testimonial Form (5 cols) */}
+              <div className="lg:col-span-5 glass rounded-2xl p-6 md:p-7 border border-authority/25">
+                <div className="flex items-center justify-between gap-2 mb-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-authority/20 border border-authority/40 flex items-center justify-center text-authority">
+                      <MessageSquareQuote className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h2 className="text-base md:text-lg font-bold text-white">
+                        {editingTestimonialId ? 'تعديل شهادة العميل' : 'إضافة شهادة عميل جديدة (Testimonial)'}
+                      </h2>
+                      <p className="text-xs text-luminance/55">
+                        أضف شهادة نصية أو ارفع صورة سكرين شوت لرأي العميل
+                      </p>
+                    </div>
+                  </div>
+                  {editingTestimonialId && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEditingTestimonialId(null)
+                        setTClientTag('')
+                        setTBeforeAfter('')
+                        setTQuotePreview('')
+                        setTImageUrl('')
+                      }}
+                      className="text-xs px-3 py-1.5 rounded-lg bg-white/10 text-luminance hover:bg-white/20"
+                    >
+                      إلغاء
+                    </button>
+                  )}
+                </div>
+
+                <form onSubmit={handleSaveTestimonial} className="space-y-4">
+                  <div>
+                    <label className="block text-xs font-medium text-luminance/85 mb-1.5">
+                      اسم العميل أو صفته ومجاله <span className="text-authority">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={tClientTag}
+                      onChange={e => setTClientTag(e.target.value)}
+                      placeholder="مثال: مؤسس شركة استشارية — الرياض"
+                      className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-xs md:text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-luminance/85 mb-1.5">
+                      نص الشهادة (رأي العميل)
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={tQuotePreview}
+                      onChange={e => setTQuotePreview(e.target.value)}
+                      placeholder="اكتب نص رسالة العميل أو رأيه هنا..."
+                      className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-xs md:text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority resize-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-luminance/85 mb-1.5">
+                      النتيجة باختصار (اختياري — يظهر أسفل الشهادة)
+                    </label>
+                    <input
+                      type="text"
+                      value={tBeforeAfter}
+                      onChange={e => setTBeforeAfter(e.target.value)}
+                      placeholder="مثال: قبل: محتوى متقطع ← بعد: حضور مستمر واستفسارات أسبوعية"
+                      className="w-full rounded-xl bg-void/80 border border-authority/25 px-4 py-3 text-xs md:text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-luminance/85 mb-1.5">
+                      صورة سكرين شوت للشهادة (اختياري)
+                    </label>
+                    <div className="space-y-2">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={e => {
+                          const f = e.target.files?.[0]
+                          if (f) handleTestimonialImageUpload(f)
+                        }}
+                        className="block w-full text-xs text-luminance/70 file:ml-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-authority/20 file:text-authority hover:file:bg-authority/30"
+                      />
+                      {uploadingTestimonialImg && (
+                        <p className="text-xs text-authority">جاري رفع الصورة...</p>
+                      )}
+                      {tImageUrl && (
+                        <div className="flex items-center justify-between gap-2 bg-void/80 border border-authority/25 rounded-xl p-2">
+                          <img
+                            src={tImageUrl}
+                            alt="Preview"
+                            className="h-12 w-auto rounded-lg object-cover"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => setTImageUrl('')}
+                            className="text-xs text-red-300 hover:underline px-2"
+                          >
+                            إزالة الصورة
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={savingSettings || uploadingTestimonialImg}
+                    className="w-full rounded-xl bg-authority hover:bg-crown text-white font-bold py-3.5 px-6 text-sm transition-all shadow-[0_0_25px_rgba(139,92,246,0.3)] disabled:opacity-50"
+                  >
+                    {editingTestimonialId ? 'حفظ تعديلات الشهادة' : 'إضافة الشهادة للموقع'}
+                  </button>
+                </form>
+              </div>
+
+              {/* List of Testimonials (7 cols) */}
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-bold text-white">
+                    الشهادات الحالية ({(siteSettings.testimonials || []).length})
+                  </h2>
+                  <span className="text-xs text-luminance/60">
+                    يمكنك إخفاء أي شهادة مؤقتاً أو تعديلها أو حذفها
+                  </span>
+                </div>
+
+                {(siteSettings.testimonials || []).length === 0 ? (
+                  <div className="glass rounded-2xl p-10 text-center border border-authority/20">
+                    <p className="text-sm font-bold text-white mb-1">لا توجد شهادات مضافة حالياً</p>
+                    <p className="text-xs text-luminance/60">
+                      أضف أول شهادة من النموذج المجاور لتظهر في الموقع.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3.5">
+                    {(siteSettings.testimonials || []).map(item => (
+                      <div
+                        key={item.id}
+                        className={`glass rounded-2xl p-5 border transition-all ${
+                          item.visible !== false
+                            ? 'border-authority/30'
+                            : 'border-white/10 opacity-60'
+                        }`}
+                      >
+                        <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-sm font-bold text-white">{item.clientTag}</h3>
+                              <span
+                                className={`text-[10px] px-2 py-0.5 rounded-md font-bold ${
+                                  item.visible !== false
+                                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/35'
+                                    : 'bg-white/10 text-luminance/60'
+                                }`}
+                              >
+                                {item.visible !== false ? 'ظاهر في الموقع' : 'مخفي'}
+                              </span>
+                            </div>
+                            {item.beforeAfter && (
+                              <p className="text-xs text-authority mt-0.5">{item.beforeAfter}</p>
+                            )}
+                          </div>
+
+                          <div className="flex items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => handleToggleTestimonialVisible(item.id)}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-void border border-authority/30 text-xs text-luminance hover:text-white"
+                            >
+                              {item.visible !== false ? (
+                                <>
+                                  <EyeOff className="w-3.5 h-3.5" />
+                                  <span>إخفاء</span>
+                                </>
+                              ) : (
+                                <>
+                                  <Eye className="w-3.5 h-3.5" />
+                                  <span>إظهار</span>
+                                </>
+                              )}
+                            </button>
+
+                            <button
+                              type="button"
+                              onClick={() => handleStartEditTestimonial(item)}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-authority/20 border border-authority/40 text-xs text-white hover:bg-authority"
+                            >
+                              <Edit3 className="w-3.5 h-3.5" />
+                              <span>تعديل</span>
+                            </button>
+
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteTestimonial(item.id)}
+                              className="p-1.5 rounded-lg bg-red-500/15 border border-red-500/30 text-red-300 hover:bg-red-500/25"
+                              title="حذف"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </div>
+
+                        {item.imageUrl && (
+                          <div className="mb-3 rounded-xl overflow-hidden border border-authority/20 max-h-48 bg-void">
+                            <img
+                              src={item.imageUrl}
+                              alt={item.clientTag}
+                              className="h-36 w-auto object-contain mx-auto"
+                            />
+                          </div>
+                        )}
+
+                        {item.quotePreview && (
+                          <p className="text-xs text-luminance/85 leading-relaxed bg-void/60 rounded-xl p-3.5 border border-authority/15">
+                            {item.quotePreview}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Edit 3 Proof Metric Cards */}
+                <div className="glass rounded-2xl p-5 md:p-6 border border-authority/25 space-y-4 mt-6">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-base font-bold text-white">
+                      تعديل كروت الأرقام الثلاثة (+185K / +80M / +7 سنوات)
+                    </h3>
+                    <button
+                      type="button"
+                      disabled={savingSettings}
+                      onClick={() =>
+                        saveSiteSettingsToServer(siteSettings, 'تم حفظ تعديلات كروت الأرقام!')
+                      }
+                      className="rounded-xl bg-authority hover:bg-crown text-white font-bold text-xs px-4 py-2 transition-all"
+                    >
+                      حفظ كروت الأرقام
+                    </button>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-3">
+                    {(siteSettings.proofCards || []).map((card, idx) => (
+                      <div
+                        key={card.id || idx}
+                        className="rounded-xl bg-void/70 border border-authority/25 p-3.5 space-y-2"
+                      >
+                        <input
+                          type="text"
+                          value={card.metric}
+                          onChange={e => handleUpdateProofCard(idx, { metric: e.target.value })}
+                          placeholder="+185,000"
+                          className="w-full rounded-lg bg-void border border-authority/25 px-3 py-1.5 text-xs font-bold text-authority"
+                        />
+                        <input
+                          type="text"
+                          value={card.unit}
+                          onChange={e => handleUpdateProofCard(idx, { unit: e.target.value })}
+                          placeholder="متابع في 5 شهور فقط"
+                          className="w-full rounded-lg bg-void border border-authority/25 px-3 py-1.5 text-xs font-bold text-white"
+                        />
+                        <textarea
+                          rows={2}
+                          value={card.desc}
+                          onChange={e => handleUpdateProofCard(idx, { desc: e.target.value })}
+                          className="w-full rounded-lg bg-void border border-authority/25 px-3 py-1.5 text-[11px] text-luminance/80 resize-none"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>

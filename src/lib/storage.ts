@@ -2,6 +2,15 @@ import fs from 'fs'
 import path from 'path'
 import crypto from 'crypto'
 import { put, list, del } from '@vercel/blob'
+import {
+  DEFAULT_MAIN_FUNNEL_FORM as CONST_MAIN_FUNNEL_FORM,
+  DEFAULT_SITE_SETTINGS,
+  type SiteSettings,
+  type TestimonialItem,
+  type ProofCardItem,
+} from '@/lib/constants'
+
+export type { SiteSettings, TestimonialItem, ProofCardItem }
 
 export interface LeadMagnet {
   id: string
@@ -47,12 +56,14 @@ export interface FormField {
 
 export interface CustomForm {
   id: string
-  slug: string // Encrypted hash token
+  slug: string // Encrypted hash token or 'funnel-qualification'
   title: string
   description: string
   fields: FormField[]
   buttonText: string
   successMessage: string
+  disqualifyOption?: string // Option text that redirects to Lead Magnet instead of Calendar
+  isMainFunnel?: boolean
   views: number
   submissionsCount: number
   createdAt: string
@@ -72,9 +83,74 @@ export interface DatabaseSchema {
   leads: CapturedLead[]
   forms: CustomForm[]
   formSubmissions: FormSubmission[]
+  siteSettings?: SiteSettings
 }
 
 const BLOB_DB_PATH = 'zyad-cms/db.json'
+
+export const DEFAULT_MAIN_FUNNEL_FORM: CustomForm = CONST_MAIN_FUNNEL_FORM
+
+export function ensureMainFunnelForm(db: DatabaseSchema): DatabaseSchema {
+  const existingIdx = db.forms.findIndex(
+    f => f.id === 'frm_funnel_main' || f.slug === 'funnel-qualification'
+  )
+  if (existingIdx === -1) {
+    db.forms.unshift({ ...DEFAULT_MAIN_FUNNEL_FORM })
+  } else {
+    db.forms[existingIdx].isMainFunnel = true
+    if (!db.forms[existingIdx].disqualifyOption) {
+      db.forms[existingIdx].disqualifyOption = 'أقل من $2,700'
+    }
+    // Upgrade legacy unedited 6-field form or empty skeleton to the minimal 2-field form
+    const currentFields = db.forms[existingIdx].fields || []
+    const hasOptions = currentFields.some(
+      f => Array.isArray(f.options) && f.options.length > 0
+    )
+    const isLegacySixFieldDefault =
+      currentFields.length === 6 &&
+      currentFields.some(f => f.id === 'fld_account') &&
+      currentFields.some(f => f.id === 'fld_role')
+    if (!hasOptions || isLegacySixFieldDefault) {
+      db.forms[existingIdx].fields = DEFAULT_MAIN_FUNNEL_FORM.fields
+      db.forms[existingIdx].title = DEFAULT_MAIN_FUNNEL_FORM.title
+      db.forms[existingIdx].description = DEFAULT_MAIN_FUNNEL_FORM.description
+      db.forms[existingIdx].buttonText = DEFAULT_MAIN_FUNNEL_FORM.buttonText
+    }
+  }
+
+  // Ensure siteSettings exist with defaults
+  if (!db.siteSettings) {
+    db.siteSettings = {
+      ...DEFAULT_SITE_SETTINGS,
+      proofCards: [...DEFAULT_SITE_SETTINGS.proofCards],
+      testimonials: [...DEFAULT_SITE_SETTINGS.testimonials],
+    }
+  } else {
+    db.siteSettings = {
+      showTestimonialsSection:
+        typeof db.siteSettings.showTestimonialsSection === 'boolean'
+          ? db.siteSettings.showTestimonialsSection
+          : DEFAULT_SITE_SETTINGS.showTestimonialsSection,
+      showProofCards:
+        typeof db.siteSettings.showProofCards === 'boolean'
+          ? db.siteSettings.showProofCards
+          : DEFAULT_SITE_SETTINGS.showProofCards,
+      skipQualificationForm:
+        typeof db.siteSettings.skipQualificationForm === 'boolean'
+          ? db.siteSettings.skipQualificationForm
+          : DEFAULT_SITE_SETTINGS.skipQualificationForm,
+      calendlyUrl: db.siteSettings.calendlyUrl || DEFAULT_SITE_SETTINGS.calendlyUrl,
+      proofCards: Array.isArray(db.siteSettings.proofCards)
+        ? db.siteSettings.proofCards
+        : [...DEFAULT_SITE_SETTINGS.proofCards],
+      testimonials: Array.isArray(db.siteSettings.testimonials)
+        ? db.siteSettings.testimonials
+        : [...DEFAULT_SITE_SETTINGS.testimonials],
+    }
+  }
+
+  return db
+}
 
 export function isBlobConfigured(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN)
@@ -90,7 +166,7 @@ export function validateRealEmail(email: string): { valid: boolean; message?: st
   if (!emailRegex.test(cleaned)) {
     return {
       valid: false,
-      message: 'يرجى كتابة بريد إلكتروني صحيح لنتمكن من إرسال الملف عليه.',
+      message: 'يرجى كتابة بريد إلكتروني صحيح.',
     }
   }
 
@@ -144,8 +220,7 @@ export function validateRealEmail(email: string): { valid: boolean; message?: st
   ) {
     return {
       valid: false,
-      message:
-        'يرجى إدخال بريدك الإلكتروني الحقيقي (وليس بريداً مؤقتاً أو تجريبياً) لأننا سنرسل الفايل عليه مباشرة.',
+      message: 'يرجى إدخال بريدك الإلكتروني الحقيقي (وليس بريداً مؤقتاً أو تجريبياً).',
     }
   }
 
@@ -173,41 +248,45 @@ export async function getDatabase(): Promise<DatabaseSchema> {
       const { blobs } = await list({ prefix: BLOB_DB_PATH, limit: 5 })
       const exactBlob = blobs.find(b => b.pathname === BLOB_DB_PATH) || blobs[0]
       if (!exactBlob) {
-        return { magnets: [], leads: [], forms: [], formSubmissions: [] }
+        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
       }
       const res = await fetch(`${exactBlob.url}?t=${Date.now()}`, {
         cache: 'no-store',
       })
-      if (!res.ok) return { magnets: [], leads: [], forms: [], formSubmissions: [] }
+      if (!res.ok) {
+        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
+      }
       const data = await res.json()
-      return {
+      return ensureMainFunnelForm({
         magnets: Array.isArray(data.magnets) ? data.magnets : [],
         leads: Array.isArray(data.leads) ? data.leads : [],
         forms: Array.isArray(data.forms) ? data.forms : [],
         formSubmissions: Array.isArray(data.formSubmissions) ? data.formSubmissions : [],
-      }
+        siteSettings: data.siteSettings,
+      })
     } catch (err) {
       console.error('Error reading Blob DB:', err)
-      return { magnets: [], leads: [], forms: [], formSubmissions: [] }
+      return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
     }
   }
 
   try {
     const dbPath = getLocalDbPath()
     if (!fs.existsSync(dbPath)) {
-      return { magnets: [], leads: [], forms: [], formSubmissions: [] }
+      return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
     }
     const raw = fs.readFileSync(dbPath, 'utf-8')
     const data = JSON.parse(raw)
-    return {
+    return ensureMainFunnelForm({
       magnets: Array.isArray(data.magnets) ? data.magnets : [],
       leads: Array.isArray(data.leads) ? data.leads : [],
       forms: Array.isArray(data.forms) ? data.forms : [],
       formSubmissions: Array.isArray(data.formSubmissions) ? data.formSubmissions : [],
-    }
+      siteSettings: data.siteSettings,
+    })
   } catch (err) {
     console.error('Error reading local DB:', err)
-    return { magnets: [], leads: [], forms: [], formSubmissions: [] }
+    return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
   }
 }
 

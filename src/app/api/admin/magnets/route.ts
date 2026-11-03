@@ -28,6 +28,7 @@ export async function GET() {
     leads: db.leads,
     forms: db.forms,
     formSubmissions: db.formSubmissions,
+    siteSettings: db.siteSettings,
     storageMode,
   })
 }

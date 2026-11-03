@@ -5,7 +5,7 @@ import AdminDashboard from '@/components/AdminDashboard'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'لوحة التحكم — ZYAD',
+  title: 'لوحة التحكم — APX',
   robots: {
     index: false,
     follow: false,

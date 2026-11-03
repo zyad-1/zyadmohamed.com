@@ -127,7 +127,7 @@ export default function PublicFormPage({
         <Link href="/" className="flex items-center">
           <img
             src="/logo/logo-white.png"
-            alt="Logo"
+            alt="APX"
             className="h-7 md:h-8 w-auto object-contain"
           />
         </Link>
@@ -148,7 +148,7 @@ export default function PublicFormPage({
               </div>
               <h2 className="text-2xl font-bold text-white">{submittedMsg}</h2>
               <p className="text-sm text-luminance/65">
-                تم تسجيل إجابتك بنجاح.
+                تم تسجيل إجابتك بنجاح لدى APX.
               </p>
             </div>
           ) : (
@@ -202,7 +202,10 @@ export default function PublicFormPage({
                         required={field.required}
                         value={answers[field.label] || ''}
                         onChange={e => handleFieldChange(field.label, e.target.value)}
-                        placeholder={field.placeholder || `اكتب ${field.label}...`}
+                        placeholder={
+                          field.placeholder ||
+                          (field.type === 'tel' ? '+966 50 000 0000' : `اكتب ${field.label}...`)
+                        }
                         className={`w-full rounded-xl bg-void/85 border border-authority/30 px-4 py-3.5 text-sm text-white placeholder-luminance/35 focus:outline-none focus:border-authority ${
                           field.type === 'tel' || field.type === 'email' ? 'text-right font-mono' : ''
                         }`}
@@ -233,8 +236,8 @@ export default function PublicFormPage({
       </div>
 
       {/* Footer */}
-      <footer className="max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-mono">
-        © 2025 ZYAD — Your Content. Elevated.
+      <footer className="max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-ar">
+        © 2025 APX — جميع الحقوق محفوظة.
       </footer>
     </main>
   )
