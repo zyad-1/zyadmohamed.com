@@ -1,23 +1,11 @@
-import { PrismaClient } from '@prisma/client'
 import fs from 'fs'
 import path from 'path'
 import { put, list } from '@vercel/blob'
 import { AuditStoreSchema, createInitialAuditStore } from './demoSeed'
 
 const globalForPrisma = globalThis as unknown as {
-  apxAuditPrisma?: PrismaClient
   apxAuditMemoryStore?: AuditStoreSchema
   apxAuditLastWriteMs?: number
-}
-
-export const prisma =
-  globalForPrisma.apxAuditPrisma ??
-  new PrismaClient({
-    log: process.env.NODE_ENV === 'development' ? ['error', 'warn'] : ['error'],
-  })
-
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.apxAuditPrisma = prisma
 }
 
 function getLocalAuditDbPath(): string {
