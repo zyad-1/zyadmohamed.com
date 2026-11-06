@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
+import { apxPreset } from './src/modules/audit/theme/apxPreset'
 
 const config: Config = {
+  presets: [apxPreset as Config],
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {

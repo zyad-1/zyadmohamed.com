@@ -78,7 +78,7 @@ export const FOUNDER_INFO = {
   nameEn: 'Zyad Saadon',
   roleAr: 'المؤسس — Founder of APX',
   photoUrl: '/founder-zyad.jpg',
-  bio: 'أسسنا APX لنساعد الخبراء وأصحاب البيزنس في الخليج ومصر على تحويل خبرتهم الحقيقية إلى براند شخصي قوي ومنظومة محتوى تجلب عملاء مؤهلين باستمرار — دون استنزاف وقتهم في التخطيط أو الكتابة أو المونتاج.',
+  bio: 'أسسنا APX لنساعد الخبراء وأصحاب البيزنس في الخليج ومصر على تحويل خبرتهم الحقيقية إلى براند شخصي قوي وSystem محتوى متكامل يجلب عملاء مؤهلين باستمرار — دون استنزاف وقتهم في التخطيط أو الكتابة أو المونتاج.',
 }
 
 export interface ProofCardItem {
@@ -164,6 +164,13 @@ export interface PageContent {
 export interface SiteSettings {
   showTestimonialsSection: boolean
   showProofCards: boolean
+  showFaqSection?: boolean
+  acceptingClients?: boolean
+  fomoEnabled?: boolean
+  fomoSeatsLeft?: number
+  fomoCountdownMinutes?: number
+  fomoTextAr?: string
+  fomoTextEn?: string
   skipQualificationForm: boolean
   calendlyUrl: string
   unqualifiedMessage: string
@@ -176,23 +183,23 @@ export interface SiteSettings {
 export const PROOF_CARDS: ProofCardItem[] = [
   {
     id: 'proof-1',
-    metric: '+185,000',
+    metric: '+185K',
     unit: 'متابع في 5 شهور فقط',
     desc: 'بناء الهوية، كتابة الـ Hooks، ومونتاج الفيديوهات القصيرة لحساب واحد من الصفر.',
     visible: true,
   },
   {
     id: 'proof-2',
-    metric: '+80,000,000',
+    metric: '+80M',
     unit: 'مشاهدة أورجانيك',
-    desc: 'محتوى فيديو قصير مبني على الاحتفاظ بانتباه المشاهد من أول ثانية بدون إعلانات.',
+    desc: 'فيديوهات قصيرة مبنية على خطف الانتباه من أول ثانية وتحويل المشاهد لعميل بدون إعلانات.',
     visible: true,
   },
   {
     id: 'proof-3',
     metric: '+7 سنوات',
     unit: 'خبرة في الخليج ومصر',
-    desc: 'العمل مع علامات تجارية كبرى مثل: سلة (Salla)، زد (Zid)، مزن (Mozn)، وعطور ريف (Reef Perfumes).',
+    desc: 'شراكات ناجحة مع علامات رائدة مثل سلة، زد، مزن، وعطور ريف.',
     visible: true,
   },
 ]
@@ -229,8 +236,8 @@ export const TESTIMONIAL_SCREENSHOTS: TestimonialItem[] = [
 
 export const FIT_FOR_LIST = [
   'خبير، طبيب، استشاري، مدرب، أو صاحب بيزنس تقدم خدمة عالية القيمة (High-Ticket).',
-  'تريد منظومة متكاملة تتولى عنك التخطيط، كتابة السكريبتات، توجيه التصوير، مونتاج الفيديوهات، وربط الـ Funnel.',
-  'مستعد للالتزام بمنظومة عمل واضحة لمدة 90 يوماً (الحد الأدنى للتعاقد 3 شهور).',
+  'تريد System متكامل يتولى عنك التخطيط، كتابة السكريبتات، توجيه التصوير، مونتاج الفيديوهات، وربط الـ Funnel.',
+  'مستعد للالتزام بـ System عمل واضح لمدة 90 يوماً (الحد الأدنى للتعاقد 3 شهور).',
 ]
 
 export const NOT_FIT_FOR_LIST = [
@@ -261,13 +268,13 @@ export const FAQ_ITEMS = [
 export const DEFAULT_PAGE_CONTENT: PageContent = {
   headerCtaText: 'احجز مكالمتك الاستراتيجية',
   eyebrowText: 'للخبراء، الأطباء، الاستشاريين، وأصحاب البيزنس في الخليج ومصر',
-  heroTitle: 'نحوّل خبرتك إلى براند شخصي قوي ومنظومة فيديوهات قصيرة تجلب لك',
+  heroTitle: 'نحوّل خبرتك إلى براند شخصي قوي وSystem فيديوهات قصيرة يجلب لك',
   heroTitleHighlight: 'عملاء مؤهلين خلال 90 يوماً',
   heroSubtitle:
     'نكتب السكريبتات ونعطيك توجيهات التصوير لتصوّر من مكانك في جلسة واحدة — ثم نستلم الفيديوهات ونتولى المونتاج وربط الـ Funnel بالكامل.',
   vslVideoUrl: VSL_VIDEO_URL,
   vslPosterUrl: '',
-  vslCaption: 'شاهد في 4 دقائق: كيف نبني منظومة براندك الشخصي في 3 خطوات بسيطة',
+  vslCaption: 'شاهد في 4 دقائق: كيف نبني الـ System الخاص ببراندك الشخصي في 3 خطوات بسيطة',
   heroCtaText: 'احجز مكالمة استراتيجية مجانية (30 دقيقة)',
   heroSubCtaText: 'Done-For-You · Reels & TikTok & Shorts · الخليج ومصر',
 
@@ -279,7 +286,7 @@ export const DEFAULT_PAGE_CONTENT: PageContent = {
   problemPoints: PROBLEM_POINTS,
 
   systemHeading: 'كيف نعمل في APX؟ (أقل خطوات ومجهود منك)',
-  systemSubheading: 'منظومة متكاملة (Done-For-You) في 3 خطوات بسيطة فقط:',
+  systemSubheading: 'الـ System المتكامل (Done-For-You) في 3 خطوات بسيطة فقط:',
   systemSteps: SYSTEM_STEPS,
   founderInfo: FOUNDER_INFO,
 
@@ -287,10 +294,10 @@ export const DEFAULT_PAGE_CONTENT: PageContent = {
   testimonialsSubheading: 'شهادات ورسائل العملاء',
   proofCtaText: 'احجز مكالمتك الاستراتيجية الآن',
 
-  fitHeading: 'هل هذه المنظومة مناسبة لك؟',
-  fitYesTitle: 'مناسبة لك إذا كنت:',
+  fitHeading: 'هل هذا الـ System مناسب لك؟',
+  fitYesTitle: 'مناسب لك إذا كنت:',
   fitForList: FIT_FOR_LIST,
-  fitNoTitle: 'غير مناسبة لك إذا كنت:',
+  fitNoTitle: 'غير مناسب لك إذا كنت:',
   notFitForList: NOT_FIT_FOR_LIST,
 
   faqHeading: 'الأسئلة الشائعة',
@@ -325,6 +332,13 @@ export const DEFAULT_PAGE_CONTENT: PageContent = {
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   showTestimonialsSection: true,
   showProofCards: true,
+  showFaqSection: true,
+  acceptingClients: true,
+  fomoEnabled: true,
+  fomoSeatsLeft: 3,
+  fomoCountdownMinutes: 30,
+  fomoTextAr: 'متبقي 3 مقاعد فقط لتطبيق الـ System هذا الشهر',
+  fomoTextEn: 'Only 3 onboarding spots left this month',
   skipQualificationForm: false,
   calendlyUrl: CALENDLY_EMBED_URL,
   unqualifiedMessage: DEFAULT_UNQUALIFIED_MESSAGE,

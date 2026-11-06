@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { isAdminAuthenticated } from '@/lib/auth'
 import AdminDashboard from '@/components/AdminDashboard'
+import { AuditTRPCProvider } from '@/modules/audit/client/trpc'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,5 +15,9 @@ export const metadata: Metadata = {
 
 export default function AdminPage() {
   const authed = isAdminAuthenticated()
-  return <AdminDashboard initialAuth={authed} />
+  return (
+    <AuditTRPCProvider>
+      <AdminDashboard initialAuth={authed} />
+    </AuditTRPCProvider>
+  )
 }

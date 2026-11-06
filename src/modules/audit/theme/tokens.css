@@ -1,0 +1,318 @@
+/**
+ * APX Design System Tokens (UI/UX Pro Max Specification)
+ * Strict Brand Fonts:
+ * - Arabic: 'Expo Arabic' (/fonts/expo-arabic/*)
+ * - English & Numerals: 'Chillax' (/fonts/chillax/*)
+ * Zero external or system font overrides.
+ */
+
+:root {
+  --apx-void: #080608;
+  --apx-depth: #1A0F2E;
+  --apx-authority: #8B5CF6;
+  --apx-authority-soft: rgba(139, 92, 246, 0.16);
+  --apx-authority-glow: rgba(139, 92, 246, 0.32);
+  --apx-crown: #4C1D95;
+  --apx-luminance: #E2D9F3;
+  --apx-luminance-muted: rgba(226, 217, 243, 0.68);
+  --apx-luminance-subtle: rgba(226, 217, 243, 0.45);
+
+  --apx-surface-1: #110B1B;
+  --apx-surface-2: #1A0F2E;
+  --apx-surface-3: #24163D;
+  --apx-border: rgba(139, 92, 246, 0.2);
+  --apx-border-strong: rgba(139, 92, 246, 0.42);
+
+  /* Semantic desaturated status colors */
+  --apx-strong: #4BA37A;
+  --apx-strong-bg: rgba(75, 163, 122, 0.14);
+  --apx-warning: #D49A3D;
+  --apx-warning-bg: rgba(212, 154, 61, 0.14);
+  --apx-weak: #C95D63;
+  --apx-weak-bg: rgba(201, 93, 99, 0.14);
+
+  /* Strict APX local fonts */
+  --font-apx-arabic: 'Expo Arabic';
+  --font-apx-display: 'Chillax';
+  --font-apx-body: 'Chillax';
+}
+
+/* Override landing page's `body { cursor: none; }` inside Admin & Audit pages */
+.apx-audit,
+.apx-audit *,
+.apx-admin-root,
+.apx-admin-root * {
+  cursor: auto !important;
+}
+
+.apx-audit a,
+.apx-audit button,
+.apx-audit [role="button"],
+.apx-audit select,
+.apx-audit label,
+.apx-audit input[type="range"],
+.apx-audit input[type="checkbox"],
+.apx-admin-root a,
+.apx-admin-root button,
+.apx-admin-root [role="button"],
+.apx-admin-root select,
+.apx-admin-root label {
+  cursor: pointer !important;
+}
+
+.apx-audit input[type="text"],
+.apx-audit input[type="number"],
+.apx-audit input[type="url"],
+.apx-audit input[type="date"],
+.apx-audit textarea,
+.apx-admin-root input[type="text"],
+.apx-admin-root input[type="number"],
+.apx-admin-root input[type="url"],
+.apx-admin-root input[type="password"],
+.apx-admin-root textarea {
+  cursor: text !important;
+}
+
+.apx-audit {
+  background-color: var(--apx-void);
+  color: var(--apx-luminance);
+  font-family: 'Expo Arabic', 'Chillax';
+  -webkit-font-smoothing: antialiased;
+}
+
+.apx-audit[dir='rtl'],
+.apx-admin-root[dir='rtl'] {
+  font-family: 'Expo Arabic', 'Chillax';
+  letter-spacing: 0 !important;
+  word-spacing: 0.045em;
+}
+
+.apx-audit[dir='rtl'] *,
+.apx-admin-root[dir='rtl'] * {
+  letter-spacing: 0 !important;
+  word-spacing: 0.04em;
+}
+
+.apx-audit[dir='ltr'],
+.apx-admin-root[dir='ltr'] {
+  font-family: 'Chillax', 'Expo Arabic';
+}
+
+.apx-display-heading {
+  font-family: 'Expo Arabic', 'Chillax';
+  letter-spacing: 0;
+  word-spacing: 0.045em;
+}
+
+.apx-audit[dir='ltr'] .apx-display-heading,
+.apx-admin-root[dir='ltr'] .apx-display-heading {
+  font-family: 'Chillax', 'Expo Arabic';
+  letter-spacing: -0.01em;
+}
+
+.apx-serif-numeral {
+  font-family: 'Chillax', 'Expo Arabic';
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* UI/UX Pro Max Liquid Glassmorphism Cards — Unified Rounded Corners Across All Sections */
+.apx-glass {
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    145deg,
+    rgba(28, 17, 48, 0.72) 0%,
+    rgba(13, 9, 22, 0.88) 55%,
+    rgba(20, 12, 36, 0.8) 100%
+  );
+  backdrop-filter: blur(24px) saturate(165%);
+  -webkit-backdrop-filter: blur(24px) saturate(165%);
+  border: 1px solid rgba(139, 92, 246, 0.24);
+  box-shadow:
+    0 14px 36px -10px rgba(0, 0, 0, 0.65),
+    0 0 24px -10px rgba(139, 92, 246, 0.14),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 0 rgba(139, 92, 246, 0.14);
+}
+
+.apx-glass-hover {
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.apx-glass-hover:hover {
+  border-color: rgba(167, 139, 250, 0.48);
+  box-shadow:
+    0 18px 42px -10px rgba(139, 92, 246, 0.24),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 0 rgba(139, 92, 246, 0.22);
+}
+
+.apx-bento-card {
+  position: relative;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    155deg,
+    rgba(28, 16, 48, 0.64) 0%,
+    rgba(11, 7, 18, 0.9) 60%,
+    rgba(18, 11, 32, 0.82) 100%
+  );
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  box-shadow:
+    0 14px 38px -10px rgba(0, 0, 0, 0.68),
+    0 0 26px -12px rgba(139, 92, 246, 0.14),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.11),
+    inset 0 -1px 0 0 rgba(139, 92, 246, 0.12);
+  transition: all 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.apx-bento-card:hover {
+  border-color: rgba(167, 139, 250, 0.42);
+  box-shadow:
+    0 18px 44px -10px rgba(139, 92, 246, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 0 rgba(139, 92, 246, 0.2);
+}
+
+/* Unified Rounded Inputs & Buttons Across Admin & Audit */
+.apx-admin-root input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.apx-admin-root select,
+.apx-admin-root textarea,
+.apx-audit input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.apx-audit select,
+.apx-audit textarea {
+  border-radius: 1rem;
+}
+
+/* Remove Ugly Scrollbars Inside Admin Panel & Navigation Strips */
+.apx-admin-root,
+.apx-admin-root *:not(.apx-scroll-box),
+.apx-audit nav,
+.apx-audit [class*="overflow-x-auto"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.apx-admin-root::-webkit-scrollbar,
+.apx-admin-root *:not(.apx-scroll-box)::-webkit-scrollbar,
+.apx-audit nav::-webkit-scrollbar,
+.apx-audit [class*="overflow-x-auto"]::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apx-audit *,
+  .apx-audit *::before,
+  .apx-audit *::after,
+  .apx-admin-root *,
+  .apx-admin-root *::before,
+  .apx-admin-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Light Mode Support for APX Audit Report */
+.apx-audit.apx-audit-light {
+  --apx-void: #F6F4FB;
+  --apx-depth: #ECE6F9;
+  --apx-authority: #7C3AED;
+  --apx-authority-soft: rgba(124, 58, 237, 0.12);
+  --apx-authority-glow: rgba(124, 58, 237, 0.24);
+  --apx-crown: #5B21B6;
+  --apx-luminance: #160D2B;
+  --apx-luminance-muted: rgba(22, 13, 43, 0.75);
+  --apx-luminance-subtle: rgba(22, 13, 43, 0.55);
+  --apx-surface-1: #FFFFFF;
+  --apx-surface-2: #F4F0FC;
+  --apx-surface-3: #EAE2FA;
+  --apx-border: rgba(124, 58, 237, 0.22);
+  --apx-border-strong: rgba(124, 58, 237, 0.44);
+  background-color: #F6F4FB !important;
+  color: #160D2B !important;
+}
+
+.apx-audit.apx-audit-light header {
+  background-color: rgba(250, 248, 255, 0.9) !important;
+  border-bottom-color: rgba(124, 58, 237, 0.22) !important;
+}
+
+.apx-audit.apx-audit-light .apx-glass,
+.apx-audit.apx-audit-light .apx-bento-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(246, 242, 255, 0.96) 60%,
+    rgba(239, 233, 254, 0.92) 100%
+  ) !important;
+  border-color: rgba(124, 58, 237, 0.24) !important;
+  box-shadow:
+    0 16px 38px -12px rgba(76, 29, 149, 0.1),
+    0 0 22px -10px rgba(124, 58, 237, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.apx-audit.apx-audit-light .text-\[\#E2D9F3\],
+.apx-audit.apx-audit-light .text-white {
+  color: #160D2B !important;
+}
+
+.apx-audit.apx-audit-light .bg-\[\#8B5CF6\],
+.apx-audit.apx-audit-light .bg-\[\#8B5CF6\] *,
+.apx-audit.apx-audit-light .bg-\[\#4BA37A\] * {
+  color: #FFFFFF !important;
+}
+
+/* Preserve FOMO Banner "غير مناسب" Red Badge & Amber Timer colors in Audit Light Mode */
+.apx-audit.apx-audit-light .apx-fomo-banner {
+  background-color: #120C1D !important;
+}
+.apx-audit.apx-audit-light .apx-fomo-banner .text-white,
+.apx-audit.apx-audit-light .apx-fomo-banner span,
+.apx-audit.apx-audit-light .apx-fomo-banner p {
+  color: #FFFFFF !important;
+}
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-red-pill,
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-red-pill span,
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-red-pill svg {
+  color: #F87171 !important;
+}
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-timer-pill,
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-timer-pill span,
+.apx-audit.apx-audit-light .apx-fomo-banner .apx-fomo-timer-pill svg {
+  color: #FBBF24 !important;
+}
+
+.apx-audit.apx-audit-light [class*="bg-[#080608]"],
+.apx-audit.apx-audit-light [class*="bg-[#110B1B]"],
+.apx-audit.apx-audit-light [class*="bg-[#140B24]"],
+.apx-audit.apx-audit-light [class*="bg-[#1A0F2E]"] {
+  background-color: rgba(242, 237, 253, 0.88) !important;
+}
+
+.apx-audit.apx-audit-light img[src="/logo/logo-white.png"] {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(55%) saturate(3800%) hue-rotate(254deg) brightness(78%) contrast(106%);
+}
+
+@media print {
+  .apx-audit {
+    background: #080608 !important;
+    color: #E2D9F3 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

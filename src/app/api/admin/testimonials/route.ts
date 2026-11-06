@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { isAdminAuthenticated } from '@/lib/auth'
 import { getDatabase, saveDatabase } from '@/lib/storage'
+import { readAuditStore, writeAuditStore } from '@/modules/audit/server/db'
 import {
   DEFAULT_SITE_SETTINGS,
   DEFAULT_PAGE_CONTENT,
@@ -59,6 +60,34 @@ export async function PUT(request: Request) {
         typeof body.showProofCards === 'boolean'
           ? body.showProofCards
           : current.showProofCards,
+      showFaqSection:
+        typeof body.showFaqSection === 'boolean'
+          ? body.showFaqSection
+          : current.showFaqSection ?? true,
+      acceptingClients:
+        typeof body.acceptingClients === 'boolean'
+          ? body.acceptingClients
+          : current.acceptingClients ?? true,
+      fomoEnabled:
+        typeof body.fomoEnabled === 'boolean'
+          ? body.fomoEnabled
+          : current.fomoEnabled ?? true,
+      fomoSeatsLeft:
+        typeof body.fomoSeatsLeft === 'number'
+          ? Math.max(1, Math.min(20, Math.round(body.fomoSeatsLeft)))
+          : current.fomoSeatsLeft ?? 3,
+      fomoCountdownMinutes:
+        typeof body.fomoCountdownMinutes === 'number'
+          ? Math.max(5, Math.min(1440, Math.round(body.fomoCountdownMinutes)))
+          : current.fomoCountdownMinutes ?? 30,
+      fomoTextAr:
+        typeof body.fomoTextAr === 'string'
+          ? body.fomoTextAr.trim()
+          : current.fomoTextAr || DEFAULT_SITE_SETTINGS.fomoTextAr,
+      fomoTextEn:
+        typeof body.fomoTextEn === 'string'
+          ? body.fomoTextEn.trim()
+          : current.fomoTextEn || DEFAULT_SITE_SETTINGS.fomoTextEn,
       skipQualificationForm:
         typeof body.skipQualificationForm === 'boolean'
           ? body.skipQualificationForm
@@ -99,6 +128,25 @@ export async function PUT(request: Request) {
 
     db.siteSettings = updated
     await saveDatabase(db)
+
+    // Synchronize FOMO & Booking settings to Audit Store so Audit Page & Main Page are 100% unified
+    try {
+      const auditStore = await readAuditStore()
+      auditStore.settings = {
+        ...auditStore.settings,
+        fomoEnabled: updated.fomoEnabled ?? true,
+        acceptingClients: updated.acceptingClients ?? true,
+        fomoSeatsLeft: updated.fomoSeatsLeft ?? 3,
+        fomoCountdownMinutes: updated.fomoCountdownMinutes ?? 30,
+        fomoUrgencyTextAr: updated.fomoTextAr || auditStore.settings.fomoUrgencyTextAr,
+        fomoUrgencyTextEn: updated.fomoTextEn || auditStore.settings.fomoUrgencyTextEn,
+        bookingUrl: updated.calendlyUrl || auditStore.settings.bookingUrl,
+        updatedAt: new Date().toISOString(),
+      }
+      await writeAuditStore(auditStore)
+    } catch (syncErr) {
+      console.error('Failed to sync FOMO settings to AuditStore:', syncErr)
+    }
 
     return NextResponse.json({ siteSettings: updated })
   } catch (err) {

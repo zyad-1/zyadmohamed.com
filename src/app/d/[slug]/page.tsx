@@ -10,9 +10,16 @@ import {
   AlertCircle,
   ShieldCheck,
   ArrowRight,
+  Sun,
+  Moon,
+  Clock,
+  Flame,
 } from 'lucide-react'
 import CountryPhoneInput from '@/components/CountryPhoneInput'
-import { DEFAULT_UNQUALIFIED_MESSAGE } from '@/lib/constants'
+import FomoBanner, { useUnifiedFomoTimer } from '@/components/FomoBanner'
+import { useSystemTheme } from '@/lib/useSystemTheme'
+import { validatePhoneForCountry } from '@/lib/countries'
+import { DEFAULT_UNQUALIFIED_MESSAGE, DEFAULT_SITE_SETTINGS } from '@/lib/constants'
 
 interface PublicMagnet {
   id: string
@@ -54,6 +61,11 @@ export default function LeadMagnetPublicPage({
   const [notFoundErr, setNotFoundErr] = useState(false)
   const [fromFunnel, setFromFunnel] = useState(false)
   const [unqualifiedMsg, setUnqualifiedMsg] = useState(DEFAULT_UNQUALIFIED_MESSAGE)
+  const { themeMode, toggleThemeMode } = useSystemTheme()
+  const { secondsLeft: fomoSecondsLeft } = useUnifiedFomoTimer(30)
+  const [fomoBadgeText, setFomoBadgeText] = useState(
+    DEFAULT_SITE_SETTINGS.fomoTextAr || 'وصول حصري مجاني لفترة محدودة'
+  )
 
   // Lead form state
   const [name, setName] = useState('')
@@ -69,15 +81,18 @@ export default function LeadMagnetPublicPage({
       const sp = new URLSearchParams(window.location.search)
       if (sp.get('from') === 'funnel') {
         setFromFunnel(true)
-        fetch('/api/funnel/qualify')
-          .then(r => r.json())
-          .then(d => {
-            if (d?.siteSettings?.unqualifiedMessage) {
-              setUnqualifiedMsg(d.siteSettings.unqualifiedMessage)
-            }
-          })
-          .catch(() => {})
       }
+      fetch('/api/funnel/qualify')
+        .then(r => r.json())
+        .then(d => {
+          if (d?.siteSettings?.unqualifiedMessage) {
+            setUnqualifiedMsg(d.siteSettings.unqualifiedMessage)
+          }
+          if (d?.siteSettings?.fomoTextAr) {
+            setFomoBadgeText(d.siteSettings.fomoTextAr)
+          }
+        })
+        .catch(() => {})
     }
 
     const loadMagnet = async () => {
@@ -151,6 +166,15 @@ export default function LeadMagnetPublicPage({
     e.preventDefault()
     if (!magnet) return
     setError('')
+
+    if (magnet.collectFields?.phone) {
+      const phoneCheck = validatePhoneForCountry(phone)
+      if (!phoneCheck.valid) {
+        setError(phoneCheck.errorAr || 'رقم الهاتف غير مكتمل')
+        return
+      }
+    }
+
     setSubmitting(true)
 
     try {
@@ -181,6 +205,9 @@ export default function LeadMagnetPublicPage({
       setSubmitting(false)
     }
   }
+
+  const fomoMin = String(Math.floor(fomoSecondsLeft / 60)).padStart(2, '0')
+  const fomoSec = String(fomoSecondsLeft % 60).padStart(2, '0')
 
   if (loading) {
     return (
@@ -224,24 +251,52 @@ export default function LeadMagnetPublicPage({
   return (
     <main
       dir="rtl"
-      className="min-h-screen flex flex-col justify-between px-6 py-10 font-ar cursor-auto relative overflow-hidden"
+      className={`min-h-screen flex flex-col justify-between px-6 py-10 font-ar cursor-auto relative overflow-x-hidden ${
+        themeMode === 'light' ? 'apx-light-mode' : ''
+      }`}
     >
-      {/* Top Minimal Brand Header with Real Logo */}
-      <header className="max-w-5xl w-full mx-auto flex items-center justify-between">
+      {/* Top Minimal Brand Header with Real Logo & Theme Switcher */}
+      <header className="relative z-10 max-w-5xl w-full mx-auto flex items-center justify-between gap-3">
         <Link href="/" className="flex items-center">
           <img
-            src="/logo/logo-white.png"
+            src={themeMode === 'light' ? '/logo/logo-colored.png' : '/logo/logo-white.png'}
+            onError={e => {
+              ;(e.currentTarget as HTMLImageElement).src = '/logo/logo-white.png'
+            }}
             alt="APX"
             className="h-7 md:h-8 w-auto object-contain"
           />
         </Link>
-        <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-authority bg-authority/10 border border-authority/30 px-3 py-1 rounded-full">
-          Exclusive Resource
-        </span>
+        <div className="flex items-center gap-2.5">
+          <button
+            type="button"
+            onClick={toggleThemeMode}
+            title={themeMode === 'dark' ? 'الوضع النهاري (Light Mode)' : 'الوضع الليلي (Dark Mode)'}
+            className="inline-flex items-center justify-center w-9 h-9 rounded-xl glass border border-authority/35 text-luminance hover:text-white transition-all"
+          >
+            {themeMode === 'dark' ? (
+              <Sun className="w-4 h-4 text-amber-300" />
+            ) : (
+              <Moon className="w-4 h-4 text-authority" />
+            )}
+          </button>
+          <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-authority bg-authority/10 border border-authority/30 px-3 py-1.5 rounded-full">
+            Exclusive Resource
+          </span>
+        </div>
       </header>
 
       {/* Main Lead Magnet Card */}
-      <div className="my-12 max-w-xl w-full mx-auto space-y-6">
+      <div className="relative z-10 my-10 max-w-xl w-full mx-auto space-y-5">
+        {/* Unified FOMO Urgency Bar (Exact Same Component as Audit & Main Site) */}
+        <FomoBanner
+          locale="ar"
+          acceptingClients={true}
+          seatsLeft={3}
+          urgencyTextAr={fomoBadgeText}
+          secondsLeftOverride={fomoSecondsLeft}
+        />
+
         {fromFunnel && (
           <div className="glass rounded-2xl p-6 border border-authority/40 bg-authority/10 space-y-3">
             <p className="text-sm md:text-base font-bold text-white leading-relaxed">
@@ -396,8 +451,8 @@ export default function LeadMagnetPublicPage({
       </div>
 
       {/* Footer */}
-      <footer className="max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-ar">
-        © 2025 APX — جميع الحقوق محفوظة.
+      <footer className="relative z-10 max-w-5xl w-full mx-auto text-center text-xs text-luminance/40 font-ar">
+        © 2026 APX — جميع الحقوق محفوظة.
       </footer>
     </main>
   )

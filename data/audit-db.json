@@ -1,0 +1,2875 @@
+{
+  "audits": [
+    {
+      "id": "audit_1eafb4713a348f41",
+      "prospectId": "prosp_1fc68bc7afa056ca",
+      "status": "ARCHIVED",
+      "language": "ar",
+      "shareToken": "es6MtA7E8U-pEG9HO4PQ05YmqnZEmV9q",
+      "publishedAt": "2026-11-06T00:54:34.158Z",
+      "expiresAt": "2026-11-13T00:00:00.000Z",
+      "overallScore": 48,
+      "summaryOpening": "تمتلك خبرة واضحة وحضوراً مهنياً قوياً أمام الكاميرا، لكن الحساب حالياً يعمل بدون منظومة تحويل تلتقط المشاهدين المهتمين.",
+      "verdictLine": "خبرة مهنية حقيقية، لكن منظومة المحتوى ومسار التحويل في البايو يسربان عملاء محتملين يومياً.",
+      "createdAt": "2026-11-06T00:53:37.434Z",
+      "updatedAt": "2026-11-06T00:58:26.388Z",
+      "prospect": {
+        "id": "prosp_1fc68bc7afa056ca",
+        "handle": "iamaayushswamy",
+        "displayName": "Aayush Swamy",
+        "niche": "خبير / استشاري",
+        "followers": 97794,
+        "followingCount": 149,
+        "postsCount": 212,
+        "profileUrl": "https://www.instagram.com/iamaayushswamy/",
+        "linkInBioUrl": "http://lastshotmedia.net/",
+        "avatarUrl": "/api/audit/image-proxy?url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.82787-19%2F625344007_17924768619226447_6955782101700569545_n.jpg%3F_nc_cat%3D104%26ig_cache_key%3DGAf_RSVP5Tpqe64-AMnp4dr35odgbmNDAQAB0j-ccb7-5%26ccb%3D7-5%26_nc_sid%3D669407%26efg%3DeyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy44NDIuQzMifQ%253D%253D%26_nc_ohc%3D92NSlNMayawQ7kNvwEHo80m%26_nc_oc%3DAdpdw496PxXIy5mwUp_KGqqZ3qcGJmGT0H9tKc5QMaFGScoSNmoTqJIg6q8NQ-1wRXg%26_nc_zt%3D24%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_gid%3DiwmJBgrk_mZOb5HwXcq-zA%26_nc_ss%3D7c689%26oh%3D00_AQRzyNdzfLL7Fl0-wy3kX6BiGGSLbGk55d-2CBlC6CeLAA%26oe%3D6AF31137",
+        "bio": "I help business owners turn views into customers\n💸 | $30M+ / 1B+ views / 3M+ followers for clients\n↓ Apply To Build Your Brand",
+        "bioLinks": [
+          {
+            "title": "Landing Page",
+            "url": "http://lastshotmedia.net/"
+          }
+        ],
+        "notes": "",
+        "createdAt": "2026-11-06T00:53:37.434Z",
+        "updatedAt": "2026-11-06T00:54:34.112Z"
+      },
+      "reels": [
+        {
+          "id": "reel_3d2afdfa04361bea",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DdlHdi_T24o",
+          "url": "https://www.instagram.com/reel/DdlHdi_T24o/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.71878-15%2F820205359_1080600098165900_7594046048945731913_n.jpg%3Fstp%3Dc0.248.640.640a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D108%26_nc_oc%3DQ6cZ2gGogJ_4KC2mR4fVVZba64tAZlyt9GOgehtixx4XBN-6PrYSidTnQ5MXSJ-Cj6qp0w4%26_nc_ohc%3D-xoE4FEfA0wQ7kNvwElrO_S%26_nc_gid%3DwXg61Id8m4y0GWORsFIuyw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQTD00NWKVcX_7Z543HLjc4JvjElb5y1unNgUwv2tkWLOQ%26oe%3D6AF2DD5C%26_nc_sid%3D10d13b",
+          "caption": "Can we run it back except we get to stay the whole time with a little less rain?  #lostlands2026",
+          "postedAt": "2026-09-22",
+          "views": 169152,
+          "viewsEstimated": true,
+          "likes": 6983,
+          "comments": 39,
+          "shares": 1011,
+          "saves": 1562,
+          "durationSec": 29,
+          "topic": "Can we run it back except we get to stay the whole time with a little less rain?  #lost...",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "أداء استثنائي يتفوق على وسيط الحساب بـ 36.8x (المرتبة #1 على الحساب) مع خطاف افتتاحي يجذب الانتباه فوراً.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "مصنّف ضمن أفضل 5 فيديوهات في الحساب (المركز #1) — يوصى بإعادة تدوير هيكل هذا الفيديو وزاويته التسويقية في الخطة القادمة.",
+          "position": 1
+        },
+        {
+          "id": "reel_74b773e4ef330b5d",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "Dc9fBj-yjQF",
+          "url": "https://www.instagram.com/reel/Dc9fBj-yjQF/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F799200924_17956711128226447_4783451457010033703_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gFqBDeX88TASVNIjQJIMxWvH7VH2F96iTBIsz44uCcDGPRpuyVLuM04BsNy1hP6ivA%26_nc_ohc%3DzsE_A4MYkJAQ7kNvwGh-fOF%26_nc_gid%3DPC9u0f-gs5KL9YaxJ_QO2A%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSYJF_pQekDadzJFrtk2TU62Vcb3LWQIZMH30b26EqUOA%26oe%3D6AF30E93%26_nc_sid%3D10d13b",
+          "caption": "how to yap on camera",
+          "postedAt": "2026-09-06",
+          "views": 74776,
+          "viewsEstimated": true,
+          "likes": 3034,
+          "comments": 49,
+          "shares": 466,
+          "saves": 699,
+          "durationSec": 65,
+          "topic": "how to yap on camera",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "أداء استثنائي يتفوق على وسيط الحساب بـ 16.3x (المرتبة #2 على الحساب) مع خطاف افتتاحي يجذب الانتباه فوراً.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "مصنّف ضمن أفضل 5 فيديوهات في الحساب (المركز #2) — يوصى بإعادة تدوير هيكل هذا الفيديو وزاويته التسويقية في الخطة القادمة.",
+          "position": 2
+        },
+        {
+          "id": "reel_5739a58277a0ae10",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DePGd1Nsugv",
+          "url": "https://www.instagram.com/reel/DePGd1Nsugv/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F839388585_17961580356226447_4108458400412575233_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gHTU_PtbgrfBv_SnEjmr98NKu9Ha-1aPn7SD3xrsW9XRiCQpfN0jW4zo5kwuflX-mM%26_nc_ohc%3Dp2s7UD8JeXUQ7kNvwGwGnS4%26_nc_gid%3DfFHDev2umIdZyTi6UVQfVA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSrC4z1etIdzY8ddt9DFjIRICjWcKF39UWQ1N8DkQiHvw%26oe%3D6AF2E8AC%26_nc_sid%3D10d13b",
+          "caption": "👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-10-08",
+          "views": 31328,
+          "viewsEstimated": true,
+          "likes": 1067,
+          "comments": 143,
+          "shares": 271,
+          "saves": 328,
+          "durationSec": 93,
+          "topic": "👋🏾 if you’re new here, i’m Aayush.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "أداء استثنائي يتفوق على وسيط الحساب بـ 6.8x (المرتبة #3 على الحساب) مع خطاف افتتاحي يجذب الانتباه فوراً.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "مصنّف ضمن أفضل 5 فيديوهات في الحساب (المركز #3) — يوصى بإعادة تدوير هيكل هذا الفيديو وزاويته التسويقية في الخطة القادمة.",
+          "position": 3
+        },
+        {
+          "id": "reel_e0e88f7932d15f54",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfOMDD3FB81",
+          "url": "https://www.instagram.com/reel/DfOMDD3FB81/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883300224_17965827294226447_8410278882958966047_n.jpg%3Fstp%3Dc0.512.3072.3072a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gG-mh9lrtExBaFDraqu_LQEdXErFUeQ4QZLNmy-nw5DT1UAXkw9nM1vnCF36pK_zAU%26_nc_ohc%3DilwwUgWfxKEQ7kNvwHqoU3P%26_nc_gid%3DoYVKuDMFdMUqAduRYNAgRg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSk5R-02YttN_dwqze2d4X4EulcPnf6TXkIdOS6F8Q_BQ%26oe%3D6AF312CF%26_nc_sid%3D10d13b",
+          "caption": "1 year ago i made the best decision i could have ever made in my life…\n\ntogether we’ve done more than i could have ever thought was possible.\n\nwithout you, i wouldn’t be the man i am today.\n\ncrazy to think it’s been exactly 1 year since i proposed to you.\n\n….lets wait to pop out babies😅 need to buy a rolls royce still 🫣",
+          "postedAt": "2026-11-02",
+          "views": 13672,
+          "viewsEstimated": true,
+          "likes": 548,
+          "comments": 13,
+          "shares": 88,
+          "saves": 129,
+          "durationSec": null,
+          "topic": "1 year ago i made the best decision i could have ever made in my life…",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "أداء استثنائي يتفوق على وسيط الحساب بـ 3.0x (المرتبة #4 على الحساب) مع خطاف افتتاحي يجذب الانتباه فوراً.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "مصنّف ضمن أفضل 5 فيديوهات في الحساب (المركز #4) — يوصى بإعادة تدوير هيكل هذا الفيديو وزاويته التسويقية في الخطة القادمة.",
+          "position": 4
+        },
+        {
+          "id": "reel_02c2537bc4bb8f9a",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfVEJxkMOCH",
+          "url": "https://www.instagram.com/reel/DfVEJxkMOCH/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883374989_17966255391226447_8825020149914999504_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gHu118DyfSdfS8MZyJMWmXZ86JezW-LB9BvllZB37ZqmFCEz8TBv03xHpz_mw7cWi8%26_nc_ohc%3D3qvKkaLQRdcQ7kNvwFq_Q0H%26_nc_gid%3DIbCvGOTB2f92nQ0DbtA6CA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQYMnvRjQw2DKS1Pd9Y2Lbj-FC1KgR1juK4DEa36-wBpg%26oe%3D6AF31237%26_nc_sid%3D10d13b",
+          "caption": "how to attract clients and repel window shoppers\n\ncomment FILTER for the claude skill to do this for you.\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, over 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-11-04",
+          "views": 7080,
+          "viewsEstimated": true,
+          "likes": 105,
+          "comments": 114,
+          "shares": 112,
+          "saves": 97,
+          "durationSec": 69,
+          "topic": "how to attract clients and repel window shoppers",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "تفاعل أعلى من المعدل الطبيعي للحساب (1.5x من الوسيط) وموضوع يلامس اهتمام الجمهور المستهدف.",
+          "cons": "يمكن مضاعفة معدل الحفظ والمشاركة عبر تكثيف القيمة التطبيقية وإبراز النتيجة النهائية في أول ثانيتين.",
+          "editorNotes": "مصنّف ضمن أفضل 5 فيديوهات في الحساب (المركز #5) — يوصى بإعادة تدوير هيكل هذا الفيديو وزاويته التسويقية في الخطة القادمة.",
+          "position": 5
+        },
+        {
+          "id": "reel_2728f6f16a4fb8ba",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DdXxO7Msvjn",
+          "url": "https://www.instagram.com/reel/DdXxO7Msvjn/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F813613966_17958400641226447_1663745036188448219_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gGEc-kSlAng3eZg72OMnXSJRSQYH57i7P2WcgBYBD7M9V9nydiCu0UU72WWveKYUto%26_nc_ohc%3DDF6HhF82ITUQ7kNvwHOVwT6%26_nc_gid%3DfLl35nyCJeDgXBOsuxu6fw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQTn0uJzk_u5oJEMlhbo4EUs0UBk674ZBjmjmEDVFABM5w%26oe%3D6AF2DD5A%26_nc_sid%3D10d13b",
+          "caption": "3 factors that make a great video\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-09-17",
+          "views": 7064,
+          "viewsEstimated": true,
+          "likes": 246,
+          "comments": 29,
+          "shares": 59,
+          "saves": 73,
+          "durationSec": 61,
+          "topic": "3 factors that make a great video",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "تفاعل أعلى من المعدل الطبيعي للحساب (1.5x من الوسيط) وموضوع يلامس اهتمام الجمهور المستهدف.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 6
+        },
+        {
+          "id": "reel_e3f09ead3f1bef4b",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "Demo0RDsEfw",
+          "url": "https://www.instagram.com/reel/Demo0RDsEfw/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F851150065_17963060493226447_7994637352854089236_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gFECsaTiWe2KTo85Q3QfcRNVQ_i3Pt-A75NxiB5kcagRCIN_-D5t6HuSOIwNDJR4bI%26_nc_ohc%3DwjKy2wdkCkwQ7kNvwErkc0u%26_nc_gid%3DkPUczD2ydfLWE1qe-YI26w%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQU55SmZkU4bmjm6U59Hr4JXSsb55-qSeqJhJtv_WcyTw%26oe%3D6AF30060%26_nc_sid%3D10d13b",
+          "caption": "👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-10-17",
+          "views": 5136,
+          "viewsEstimated": true,
+          "likes": 179,
+          "comments": 21,
+          "shares": 43,
+          "saves": 53,
+          "durationSec": 74,
+          "topic": "👋🏾 if you’re new here, i’m Aayush.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "تفاعل أعلى من المعدل الطبيعي للحساب (1.1x من الوسيط) وموضوع يلامس اهتمام الجمهور المستهدف.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 7
+        },
+        {
+          "id": "reel_b162cbb25c7505c6",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DdM0tkNhhZz",
+          "url": "https://www.instagram.com/reel/DdM0tkNhhZz/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F807844061_17957786364226447_3704985353461192042_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gG5PKjsv26QiZbGvAnDJNFNKlMPn5xWAHuSLBnZk_7GxncxY-Nzk3U3K_hDu_h1qgI%26_nc_ohc%3Dq9osrilcIHYQ7kNvwGpQlD0%26_nc_gid%3DjQBUPVztFCLgiNb2q2Ik0Q%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRJZTWGWH0nDD7ymk4c_6cBBs7rr9zc0MZFWYepb11yBA%26oe%3D6AF30F5B%26_nc_sid%3D10d13b",
+          "caption": "10 years of creating content in 60 sec",
+          "postedAt": "2026-09-12",
+          "views": 5552,
+          "viewsEstimated": true,
+          "likes": 223,
+          "comments": 5,
+          "shares": 35,
+          "saves": 52,
+          "durationSec": 68,
+          "topic": "10 years of creating content in 60 sec",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "تفاعل أعلى من المعدل الطبيعي للحساب (1.2x من الوسيط) وموضوع يلامس اهتمام الجمهور المستهدف.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 8
+        },
+        {
+          "id": "reel_1f3febe2bad6ab50",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "Ddaciw7syYe",
+          "url": "https://www.instagram.com/reel/Ddaciw7syYe/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F814381883_17958561822226447_3351287260627161204_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gHZfRYjThuEKPBBOwGWTHpm_BIkgOS-EWsxsYBP-fRkL7kXVvyFBU_jS7oJ36IfNx4%26_nc_ohc%3D813Ot4oAzq8Q7kNvwHgjBof%26_nc_gid%3D9ikINXzGe7MaRAFT5--BOw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRhtlPRbAGpco6vt--umKjcuWZ06Rwt8OyXLdEKg5OqbQ%26oe%3D6AF2E7D7%26_nc_sid%3D10d13b",
+          "caption": "how i gained 3 million followers in 12 months\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-09-18",
+          "views": 4696,
+          "viewsEstimated": true,
+          "likes": 189,
+          "comments": 4,
+          "shares": 30,
+          "saves": 44,
+          "durationSec": 92,
+          "topic": "how i gained 3 million followers in 12 months",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 9
+        },
+        {
+          "id": "reel_c72b0a04266548fe",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "Deh-mufhhp_",
+          "url": "https://www.instagram.com/reel/Deh-mufhhp_/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F846927456_17962731372226447_1009693797089881991_n.jpg%3Fstp%3Dc0.502.1290.1290a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gHEwKJN7FQaFix6jqwrMnggxrTsfzfKzTrpwUp9GLVYjxhZB2ZlYMQqAHj8_82wnB8%26_nc_ohc%3DwkL73sCbRFsQ7kNvwGRwnUw%26_nc_gid%3D7iVLWssawU1N7ZNTZHIgEw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRp5Hw2-NEvfaiW2sKkJCfVNiEDBwRXDgofEo-cmvUUYg%26oe%3D6AF2E623%26_nc_sid%3D10d13b",
+          "caption": "👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-10-15",
+          "views": 4496,
+          "viewsEstimated": true,
+          "likes": 169,
+          "comments": 11,
+          "shares": 33,
+          "saves": 44,
+          "durationSec": 48,
+          "topic": "👋🏾 if you’re new here, i’m Aayush.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 10
+        },
+        {
+          "id": "reel_e6fb1c278ac05feb",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "Dd6jJZPMjGq",
+          "url": "https://www.instagram.com/reel/Dd6jJZPMjGq/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F830668940_17960397036226447_7393078375408492886_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gEcisMrUnrgqWg1qjFF81cfd5LYhslMEtYaI-t2oRswReFES_NI91k5Dc96aHVV3Mk%26_nc_ohc%3DMuS9q8uFXokQ7kNvwHeguOT%26_nc_gid%3DyKMtn1kPLIxVlDyFUlqNhw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQUKZ2exZrZYCbDnmqw_WlevxfdExmwwrsEjgof4POpIQ%26oe%3D6AF2F582%26_nc_sid%3D10d13b",
+          "caption": "how my client made $40k in the first 2 weeks working with us\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-09-30",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 112,
+          "comments": 13,
+          "shares": 27,
+          "saves": 33,
+          "durationSec": 56,
+          "topic": "how my client made $40k in the first 2 weeks working with us",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 11
+        },
+        {
+          "id": "reel_14b5da14308048f8",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfXV_kPGyIB",
+          "url": "https://www.instagram.com/reel/DfXV_kPGyIB/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F890358286_17966377800226447_7358644363146929262_n.jpg%3Fstp%3Dc0.135.1080.1080a_dst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gGpSlOPxWIY0IcDI3uHWFbn_3YbaS9nTZOgewX0KOlHFFd0xkMPzmd7r2XieqENxtI%26_nc_ohc%3DUrnjq51BMSAQ7kNvwF224Qz%26_nc_gid%3D_HATvVrHk0gO6etqdVL8Yg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSzvqU1EFea9G3moT0Hpstn429Icc0dKnsB3xM2xvSQ3w%26oe%3D6AF2FB4D%26_nc_sid%3D10d13b",
+          "caption": "why the fuck is it so hard to yap on camera\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, over 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-11-05",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 52,
+          "comments": 19,
+          "shares": 23,
+          "saves": 24,
+          "durationSec": null,
+          "topic": "why the fuck is it so hard to yap on camera",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 12
+        },
+        {
+          "id": "reel_bd207ea08e70ace5",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfI4UpxGVUu",
+          "url": "https://www.instagram.com/reel/DfI4UpxGVUu/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883300147_17965442862226447_2319218512934434642_n.jpg%3Fstp%3Dc0.135.1080.1080a_dst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gEHlZE_n83fuOnIVEHPWj-Y1KlrbU5MFCEy1FSA7fXdd0NAwl0-z9sLum0WjA9f2Nw%26_nc_ohc%3D38hz8UqMoVQQ7kNvwHODd0i%26_nc_gid%3DBARetxe-K20CaEfCQZAIwg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQTnjR8IA6ov_AABEeR2--7U2VRamjMgL1yNrtau9fShjQ%26oe%3D6AF30283%26_nc_sid%3D10d13b",
+          "caption": "this is how i helped my client hit $100k in revenue in a single month\n\ncomment ONYX to work with me 1:1\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-10-31",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 63,
+          "comments": 5,
+          "shares": 13,
+          "saves": 17,
+          "durationSec": null,
+          "topic": "this is how i helped my client hit $100k in revenue in a single month",
+          "hookType": "BOLD_CLAIM",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "يمكن مضاعفة معدل الحفظ والمشاركة عبر تكثيف القيمة التطبيقية وإبراز النتيجة النهائية في أول ثانيتين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 13
+        },
+        {
+          "id": "reel_1a3864dad7f6191f",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfTZkCAlL1L",
+          "url": "https://www.instagram.com/reel/DfTZkCAlL1L/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F888107273_17966136264226447_6077973722677038932_n.jpg%3Fstp%3Dc0.135.1080.1080a_dst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gGOM6meSFWvrYw3kaRkGw9AZHvAbxIyjpkJ3ge2sPYkcNcnJAqI3dV0fpuMpWCVXOs%26_nc_ohc%3DATwWgPLMUgoQ7kNvwFcfczE%26_nc_gid%3DE03rEJY5cEoCDx6Liem5SA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQT7LZ6seOqWqUahETHv_sgCarg3GB0ihANnbsXsqgOVZw%26oe%3D6AF2FE23%26_nc_sid%3D10d13b",
+          "caption": "if i had to start my instagram from scratch here’s what id do…\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, over 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-11-04",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 52,
+          "comments": 2,
+          "shares": 9,
+          "saves": 13,
+          "durationSec": null,
+          "topic": "if i had to start my instagram from scratch here’s what id do…",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 14
+        },
+        {
+          "id": "reel_5956feadc315cb7f",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DesjMK0s3cV",
+          "url": "https://www.instagram.com/reel/DesjMK0s3cV/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F858212713_17963452092226447_59977252723715853_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gGXkUT1J75X4vS37z0dDmKCMWqWLvSUMYa73w5okyLcG9fjZaHFMZlUsOZxZTyePqE%26_nc_ohc%3DeeQZbvJka7wQ7kNvwE-UNUv%26_nc_gid%3DGAJgQDjZcdaNM3cqwpXG3g%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQwNlJ1vFlXM4H0eLOcu7GnuHA4chwHRxzh1ygnMio63g%26oe%3D6AF2F47C%26_nc_sid%3D10d13b",
+          "caption": "👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-10-20",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 38,
+          "comments": 3,
+          "shares": 8,
+          "saves": 10,
+          "durationSec": 79,
+          "topic": "👋🏾 if you’re new here, i’m Aayush.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 15
+        },
+        {
+          "id": "reel_5734d02b42f3809a",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfREAIzlBP6",
+          "url": "https://www.instagram.com/reel/DfREAIzlBP6/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883300452_17966003922226447_9185227976129847347_n.jpg%3Fstp%3Dc0.135.1080.1080a_dst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gE52HRXZ7vgJDbARfLgFtuI7IPMKLi9TtfmgrsNhR8qNFAinssmbVO5fX5Vg3W9mmI%26_nc_ohc%3DKWVsKFf-5y0Q7kNvwFSn47p%26_nc_gid%3D7EDA6WzhaPHTN9xiSjsR8A%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQ1p-dNFto9EMO6yMxl8ccpFJthBpSJrcn030fnpzYKRw%26oe%3D6AF2F22B%26_nc_sid%3D10d13b",
+          "caption": "in the past 3 months i’ve taken 3 clients from…\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, close to 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-11-03",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 32,
+          "comments": 3,
+          "shares": 7,
+          "saves": 9,
+          "durationSec": null,
+          "topic": "in the past 3 months i’ve taken 3 clients from…",
+          "hookType": "BOLD_CLAIM",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 16
+        },
+        {
+          "id": "reel_aa9037b85639420d",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfXkqy7MyjM",
+          "url": "https://www.instagram.com/reel/DfXkqy7MyjM/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F886200852_17966391129226447_7370266649720964345_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gHX0iU7vPiw5RHlu2zUTTT-1Kzy4wfZsM8A3AMDSRPy39b0irmE6uLnMLE7duKPd8k%26_nc_ohc%3D8uFDejKPCO0Q7kNvwHtOXuX%26_nc_gid%3Dn5rN5_7fA6cQRX-o4WBxrA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQpWhzPN48g0Ryy7V2eKe4_EFZWsjSoyyKDqmg-d2uj-Q%26oe%3D6AF2FA03%26_nc_sid%3D10d13b",
+          "caption": "why doesn’t my content convert into new customers\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, over 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.",
+          "postedAt": "2026-11-05",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 21,
+          "comments": 5,
+          "shares": 7,
+          "saves": 8,
+          "durationSec": 51,
+          "topic": "why doesn’t my content convert into new customers",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 17
+        },
+        {
+          "id": "reel_fbffa2e84048d4f4",
+          "auditId": "audit_1eafb4713a348f41",
+          "shortcode": "DfYK8mrGSMf",
+          "url": "https://www.instagram.com/reel/DfYK8mrGSMf/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-3.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883083448_17966425029226447_4409580838010235348_n.jpg%3Fstp%3Ddst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-3.fna.fbcdn.net%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2gFFOl8Q1pBWdfttjFmhynkKCAXqHUzvieGZMyhO-GoPeSh6YZhlUTEH0nU0LzneiO8%26_nc_ohc%3Da3b1Ft2CG3oQ7kNvwGn1n1H%26_nc_gid%3DbrHQvkMBFIW0puAePyd8Og%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRaTFkhzk0y0htNqqx7bBcFNPSyld2x0zeFD4UyNA6Lew%26oe%3D6AF2E680%26_nc_sid%3D10d13b",
+          "caption": "people start “businesses” when in reality they need therapy.\n\n👋🏾 if you’re new here, i’m Aayush.\n\ni’ve spent the last 10 years helping hundreds of business owners build their brands online generating $30M+ in client revenue, over 1 billion views and over 3 million followers along the way.\n\n(stupid amounts of proof on my landing page + story highlights)\n\nand after doing this for a decade, there’s one thing i know for sure:\n\nattention means absolutely nothing if you can’t turn it into trust, leads + customers.\n\n❌ you don’t need to post 10x a day\n❌ you don’t need millions of followers\n❌ you definitely don’t need to chase every new content trend\n\nyou need 3 things:\n\na brand people trust\na content engine that gets the right attention\na system that converts that attention into customers\n\nthat’s what i teach here.\n\nif you’re a business owner trying to build a personal brand that actually grows your business, you’re in the right place.\n\nfollow @iamaayushswamy 🫱🏾‍🫲🏻\n\nclient results are not guaranteed. individual results vary based on numerous factors including business, offer, market + execution.\n\nquote cred: @thelindaivelisse",
+          "postedAt": "2026-11-05",
+          "views": 3912,
+          "viewsEstimated": true,
+          "likes": 9,
+          "comments": 2,
+          "shares": 3,
+          "saves": 3,
+          "durationSec": null,
+          "topic": "people start “businesses” when in reality they need therapy.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "طرح واضح للموضوع الأساسي وجودة إنتاج مقبولة.",
+          "cons": "غياب دعوة صريحة للتفاعل (CTA) في نهاية الفيديو أو الوصف لتحويل المشاهدين إلى عملاء محتملين.",
+          "editorNotes": "أداء مستقر ضمن المعدل الطبيعي للحساب.",
+          "position": 18
+        }
+      ],
+      "profileChecks": [
+        {
+          "id": "pc_8cd843d6f4d9daf5",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "nameKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_dfa9f3f4e213e9d1",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "bioPromise",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_48c015238005461e",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "singleCta",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_773743173c102f1d",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "highlights",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_173e0bc76cc728ef",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "pinnedPosts",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_71d4dae55ad4eb91",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "linkSpeed",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_39172f5e49af8a2c",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "offerClarity",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_a38714b7dbcc9d4b",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "leadMagnetOrDmKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_7b3f66a3ac0ce2b3",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "contactButton",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_6ba2b501457fa358",
+          "auditId": "audit_1eafb4713a348f41",
+          "key": "socialProofVisible",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        }
+      ],
+      "categoryScores": [
+        {
+          "id": "cs_e16310424698e644",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "positioning",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_a20cb893d2c935bb",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "profile_bio",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1
+        },
+        {
+          "id": "cs_f6bf2ef9997749b8",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "hooks_editing",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_968aa98875df27ce",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "content_system",
+          "score": 5,
+          "autoSuggestedScore": 5,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "معدل النشر الحالي 15.6 فيديو/شهر مع أطول انقطاع 11 يوماً ومعامل تذبذب 3.49x.",
+          "recommendation": "تثبيت إيقاع نشر منتظم (3 إلى 4 فيديوهات أسبوعياً) مبني على 3 سلاسل محتوى واضحة تخدم قرار الشراء.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_c4a6c0758b5ab713",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "reach_efficiency",
+          "score": 3,
+          "autoSuggestedScore": 3,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "كفاءة الوصول الحالية تبلغ 4% من إجمالي المتابعين (متوسط المشاهدات مقارنة بحجم الجمهور).",
+          "recommendation": "إعادة هيكلة أول 3 ثوانٍ (Visual + Verbal Hook) ورفع قابلية المشاركة والحفظ لفتح الوصول لغير المتابعين.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_4a7f6a3ef50ab4c4",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "engagement_quality",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1
+        },
+        {
+          "id": "cs_e356d4bde56a1bf0",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "authority_proof",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_3571620acaf56d79",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "conversion_funnel",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_2c9778c03270c8b1",
+          "auditId": "audit_1eafb4713a348f41",
+          "categoryKey": "competitor_gap",
+          "score": 5,
+          "autoSuggestedScore": 5,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "تم التقييم المبدئي بناءً على معايير السوق الإقليمي لحين إضافة بيانات المنافسين.",
+          "recommendation": "تبني زوايا طرح أكثر حدة وتفصيلاً (Case-driven hooks) لسد فجوة الانتشار مع المنافسين في السوق.",
+          "weight": 0.9
+        }
+      ],
+      "findings": [
+        {
+          "id": "find_2d2d1f58cb6e1b78",
+          "auditId": "audit_1eafb4713a348f41",
+          "rank": 1,
+          "title": "المشكلة الرئيسية #1",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "find_c9b197fcee65c395",
+          "auditId": "audit_1eafb4713a348f41",
+          "rank": 2,
+          "title": "المشكلة الرئيسية #2",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        },
+        {
+          "id": "find_49469be12b1d5c3d",
+          "auditId": "audit_1eafb4713a348f41",
+          "rank": 3,
+          "title": "المشكلة الرئيسية #3",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        }
+      ],
+      "competitors": [],
+      "unmeasuredItems": [
+        {
+          "id": "unm_1d9900c44ddc5a9b",
+          "auditId": "audit_1eafb4713a348f41",
+          "label": "منحنى الاحتفاظ بالمشاهد (Retention Curve & 3s Skip Rate) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يحدد الثانية الدقيقة التي يغادر فيها المشاهد الفيديو؛ بدونه لا يمكن معرفة هل الهوك البصري أم الإيقاع الداخلي هو سبب توقف انتشار الفيديو.",
+          "position": 1
+        },
+        {
+          "id": "unm_2eac1dd7d6317b5f",
+          "auditId": "audit_1eafb4713a348f41",
+          "label": "عمليات الحفظ والإرسال بالخاص (Saves & DM Shares) — غير قابل للقياس من الخارج",
+          "whyItMatters": "أقوى إشارتين في خوارزمية إنستغرام الحالية لفتح الوصول لغير المتابعين (Unconnected Reach)؛ لا تظهر إلا داخل Insights.",
+          "position": 2
+        },
+        {
+          "id": "unm_08234b80c1649ea3",
+          "auditId": "audit_1eafb4713a348f41",
+          "label": "نسبة الوصول لغير المتابعين (Non-Follower Reach %) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تكشف هل الحساب ينمو بجمهور جديد أم يدور في نفس الدائرة المغلقة من المتابعين القدامى.",
+          "position": 3
+        },
+        {
+          "id": "unm_acb1746b294cc301",
+          "auditId": "audit_1eafb4713a348f41",
+          "label": "زيارات البروفايل ونقرات الرابط (Profile Visits & Link Clicks) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تقيس كفاءة تحويل المشاهدين من الفيديوهات إلى البايو ثم إلى صفحة الحجز أو الواتساب.",
+          "position": 4
+        },
+        {
+          "id": "unm_a12ba6e83ac9a2fc",
+          "auditId": "audit_1eafb4713a348f41",
+          "label": "التوزيع الجغرافي والعمري للجمهور الفعلي (Audience Demographics) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يؤكد هل المشاهدات تأتي من السوق المستهدف صاحب القدرة الشرائية (الخليج ومصر) أم من جمهور غير مؤهل شرائياً.",
+          "position": 5
+        }
+      ],
+      "events": [
+        {
+          "id": "ev_712165500f6bdfc5",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "OPEN",
+          "payload": {
+            "elapsedSec": 1,
+            "locale": "ar",
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:43.854Z"
+        },
+        {
+          "id": "ev_6ef32c7edd894b31",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 0,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:44.356Z"
+        },
+        {
+          "id": "ev_19c592a9692afd16",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 2,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:44.437Z"
+        },
+        {
+          "id": "ev_700fab60bdc8db7b",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 25,
+            "elapsedSec": 8,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:49.768Z"
+        },
+        {
+          "id": "ev_3bbd38e3fb7a54ca",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 8,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:50.224Z"
+        },
+        {
+          "id": "ev_faeed0885de1e3f7",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 9,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:51.298Z"
+        },
+        {
+          "id": "ev_8a249362c2896d16",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 50,
+            "elapsedSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:51.676Z"
+        },
+        {
+          "id": "ev_54740ad563db886b",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 10,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:51.904Z"
+        },
+        {
+          "id": "ev_5bd840dec45036fc",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 11,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:54:52.717Z"
+        },
+        {
+          "id": "ev_37937da099f19600",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 22,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:03.680Z"
+        },
+        {
+          "id": "ev_ea0475d483ef30cd",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 22,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:04.066Z"
+        },
+        {
+          "id": "ev_743b5ed1c14addd5",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 23,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:04.701Z"
+        },
+        {
+          "id": "ev_95a19536b60b64c4",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 23,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:05.574Z"
+        },
+        {
+          "id": "ev_eee532eb2aab1a50",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "LANGUAGE_TOGGLE",
+          "payload": {
+            "to": "en",
+            "elapsedSec": 25,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:07.251Z"
+        },
+        {
+          "id": "ev_caedae2f5af5fdd7",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 0,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:07.333Z"
+        },
+        {
+          "id": "ev_3e0e1d329f6804fc",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 1,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:08.417Z"
+        },
+        {
+          "id": "ev_45f7d31769b3c1fe",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 2,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:09.351Z"
+        },
+        {
+          "id": "ev_543861fb68fae54f",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 3,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:10.254Z"
+        },
+        {
+          "id": "ev_f2566d2ee2b93245",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 3,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:10.569Z"
+        },
+        {
+          "id": "ev_3043745cb3063c6e",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:11.151Z"
+        },
+        {
+          "id": "ev_4c19468a59572240",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "funnel",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:11.426Z"
+        },
+        {
+          "id": "ev_d7c03bac873ebf5f",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 75,
+            "elapsedSec": 5,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:11.890Z"
+        },
+        {
+          "id": "ev_f1951085b4c7a4f6",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 5,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:11.902Z"
+        },
+        {
+          "id": "ev_57aa1a8d46bd9124",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "cta",
+            "elapsedSec": 5,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:12.296Z"
+        },
+        {
+          "id": "ev_2a536f0cab47bd67",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 100,
+            "elapsedSec": 6,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:55:13.077Z"
+        },
+        {
+          "id": "ev_fd98e0f4c0bf8b3d",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 153,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:41.114Z"
+        },
+        {
+          "id": "ev_8ee15535c2c31764",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "OPEN",
+          "payload": {
+            "elapsedSec": 1,
+            "locale": "ar",
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.119Z"
+        },
+        {
+          "id": "ev_a4e209224aecb9bb",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 25,
+            "elapsedSec": 1,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.122Z"
+        },
+        {
+          "id": "ev_4d4749b84ac03539",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 50,
+            "elapsedSec": 1,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.169Z"
+        },
+        {
+          "id": "ev_a40cf846b948e2fe",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 75,
+            "elapsedSec": 1,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.171Z"
+        },
+        {
+          "id": "ev_fa0cdf570327bce3",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 100,
+            "elapsedSec": 1,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.173Z"
+        },
+        {
+          "id": "ev_aab587c79936f762",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "cta",
+            "elapsedSec": 0,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.362Z"
+        },
+        {
+          "id": "ev_49fbc408fa9bc2a2",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 0,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:45.369Z"
+        },
+        {
+          "id": "ev_1f9504d6896632bf",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.674Z"
+        },
+        {
+          "id": "ev_660d013b7a33d6e5",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "funnel",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.728Z"
+        },
+        {
+          "id": "ev_8e550d59b9bb16a7",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.761Z"
+        },
+        {
+          "id": "ev_4df843e030572e97",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.826Z"
+        },
+        {
+          "id": "ev_5b11ec20e0da1be6",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.828Z"
+        },
+        {
+          "id": "ev_7ecca93530cd3374",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.874Z"
+        },
+        {
+          "id": "ev_6a4c6996343a0252",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.905Z"
+        },
+        {
+          "id": "ev_8e0a2eff3decd518",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 4,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:47.958Z"
+        },
+        {
+          "id": "ev_ae2358e6c5df0ad3",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 10,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:57:54.035Z"
+        },
+        {
+          "id": "ev_05c57c48f5371b1a",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "OPEN",
+          "payload": {
+            "elapsedSec": 1,
+            "locale": "ar",
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:58:21.905Z"
+        },
+        {
+          "id": "ev_8ca8573592d0c090",
+          "auditId": "audit_1eafb4713a348f41",
+          "sessionId": "sess_ofrhn4ho_mw49ichy",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 0,
+            "dwellSec": 10,
+            "countryCode": "EG",
+            "countryName": "مصر"
+          },
+          "createdAt": "2026-11-06T00:58:22.139Z"
+        }
+      ],
+      "uploads": []
+    },
+    {
+      "id": "audit_0e030b5a444070c2",
+      "prospectId": "prosp_1e769837fb0b8da2",
+      "status": "DRAFT",
+      "language": "ar",
+      "shareToken": "QnIZ-DbXdH4uCjR5O-umlqX_jDxv4PJN",
+      "publishedAt": "2026-11-05T21:51:24.806Z",
+      "expiresAt": "2026-12-05T00:00:00.000Z",
+      "overallScore": 46,
+      "summaryOpening": "تمتلك خبرة واضحة وحضوراً مهنياً قوياً أمام الكاميرا، لكن الحساب حالياً يعمل بدون منظومة تحويل تلتقط المشاهدين المهتمين.",
+      "verdictLine": "خبرة مهنية حقيقية، لكن منظومة المحتوى ومسار التحويل في البايو يسربان عملاء محتملين يومياً.",
+      "createdAt": "2026-11-05T21:49:52.027Z",
+      "updatedAt": "2026-11-05T22:23:18.641Z",
+      "prospect": {
+        "id": "prosp_1e769837fb0b8da2",
+        "handle": "laithhashemm7",
+        "displayName": "Laith Hashem | ليث هاشم",
+        "niche": "Digital creator",
+        "followers": 93522,
+        "followingCount": 56,
+        "postsCount": 78,
+        "profileUrl": "https://www.instagram.com/laithhashemm7/",
+        "linkInBioUrl": null,
+        "avatarUrl": "/api/audit/image-proxy?url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.82787-19%2F761584663_17901711594473064_3178744850970299094_n.jpg%3F_nc_cat%3D105%26ig_cache_key%3DGBfcZC1oxnUIg5k-ANbKr6mZKx0sbmNDAQAB0j-ccb7-5%26ccb%3D7-5%26_nc_sid%3D669407%26efg%3DeyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDIzLkMzIn0%253D%26_nc_ohc%3DC7GrRbuDvv0Q7kNvwFRi1s1%26_nc_oc%3DAdqAY0yZYgqGiq5SAldyrsQ6m_R-EGIju3LlLz0ivFaA1GrJbfkQUNcpm1dc7Xa9MHM%26_nc_zt%3D24%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_gid%3DBwS1RmkByeT8-QIw4v0Pcw%26_nc_ss%3D7c689%26oh%3D00_AQRz0T84oa3MWAv0OwABsdxsKDxE2HhMfmZzKJBUN058RA%26oe%3D6AF2C2C2",
+        "bio": "🇯🇴 Jordan 📍\n🎥 أعلمك لعبة صناعة المحتوى بشكل مختلف |      محب للتقنية 🎃",
+        "bioLinks": [],
+        "notes": "",
+        "createdAt": "2026-11-05T21:49:52.027Z",
+        "updatedAt": "2026-11-05T22:23:18.641Z"
+      },
+      "reels": [
+        {
+          "id": "reel_0facaa600d7d72bf",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DfXRR81JX3S",
+          "url": "https://www.instagram.com/reel/DfXRR81JX3S/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F887694185_17915730492473064_4933685381175997981_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D100%26_nc_oc%3DQ6cZ2gF4iZszE89b-2NBsIg2DHB3ElDJtaOx7bAZ-XKJx0YvCUdbVrShHmIeLIZTnlSh43k%26_nc_ohc%3Dk7K7T5xLCwUQ7kNvwGwdUat%26_nc_gid%3DfaAlAW7f08RSuwEx5xZ3qg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQS8395HH8rzlo_0G2pwTfGQitIYtBsr3nd703KPvnEoeA%26oe%3D6AF2C4E5%26_nc_sid%3D10d13b",
+          "caption": "مش كل أداة أو طريقة مناسبة لكل نوع محتوى، اختار اللي يخدم أسلوبك ومحتواك.\n\n#صناعة_المحتوى #نصائح_انستقرام #زيادة_المتابعين #تسويق_رقمي #محتوى_رقمي الربح_من_انستغرام شرح_انستغرام",
+          "postedAt": "2026-11-05",
+          "views": 3741,
+          "viewsEstimated": true,
+          "likes": 61,
+          "comments": 6,
+          "shares": null,
+          "saves": null,
+          "durationSec": 14,
+          "topic": "مش كل أداة أو طريقة مناسبة لكل نوع محتوى، اختار اللي يخدم أسلوبك ومحتواك.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 1
+        },
+        {
+          "id": "reel_1b4e839ddf18c69a",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DfSMhfkJoOg",
+          "url": "https://www.instagram.com/reel/DfSMhfkJoOg/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F887016852_17915469549473064_3715247928185912381_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D100%26_nc_oc%3DQ6cZ2gH4xnexjmEPeFH4keIGvEqeqohtJDc3JQtOHEsbP0_LqlL9PaFi4LEwOKFo1M8E-as%26_nc_ohc%3Dj9qxYy_VzlkQ7kNvwEs2zgj%26_nc_gid%3Df-NNNgX4BlRYsVnZL6bZVQ%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRvGl_Yo6UvhKBKh9TnI0cB2ut9nrSnkr8nrIorkNypXQ%26oe%3D6AF2D004%26_nc_sid%3D10d13b",
+          "caption": "حوّل شكل صفحتك من عادية لإحترافية بخطوات بسيطه\n\nمن الصورة الشخصية والبايو، إلى الهايلايت والهوية البصرية… كل هذا بتقدر تصممه بطريقة تناسب تخصصك وجمهورك.\n\nانسخ البرومبت الموجود عندي وجرّبه على صفحتك.\n\nوإذا بدك تعرف كيف وصلت من صفر إلى 90 ألف متابع خلال 3 شهور، شوف الهايلايت عندي.\n\n#صناعة_المحتوى #انستقرام #تسويق_رقمي #تصميم_حساب #ChatGPT نمو_الحسابات",
+          "postedAt": "2026-11-03",
+          "views": 60288,
+          "viewsEstimated": true,
+          "likes": 2392,
+          "comments": 72,
+          "shares": null,
+          "saves": null,
+          "durationSec": 28,
+          "topic": "حوّل شكل صفحتك من عادية لإحترافية بخطوات بسيطه",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 2
+        },
+        {
+          "id": "reel_e7bc1a532438b0b9",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DfFwei6JnVH",
+          "url": "https://www.instagram.com/reel/DfFwei6JnVH/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F878870607_17914529637473064_8930582121757316238_n.jpg%3Fstp%3Dc0.128.1088.1088a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D100%26_nc_oc%3DQ6cZ2gHAhE0VMAU_dFvAdq2vozA-66gkd8VI2ehHl1O62cJ5QM-7rNfYP8Dshr3ypTH2sqs%26_nc_ohc%3DZyRcjPSETscQ7kNvwGO3zHl%26_nc_gid%3D4qwzxTralPh1ANt-Muiv1A%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQTXu-z8oAwn_Gp55wSEZAPgBl-RtmH7Hs1sN1_d4DYZ_w%26oe%3D6AF2C50E%26_nc_sid%3D10d13b",
+          "caption": "",
+          "postedAt": "2026-10-29",
+          "views": 10432,
+          "viewsEstimated": true,
+          "likes": 318,
+          "comments": 70,
+          "shares": null,
+          "saves": null,
+          "durationSec": null,
+          "topic": "",
+          "hookType": "OTHER",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 3
+        },
+        {
+          "id": "reel_694cf83d3be728d7",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DexAkVaGzuy",
+          "url": "https://www.instagram.com/reel/DexAkVaGzuy/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-2.fna.fbcdn.net%2Fv%2Ft39.30808-6%2F859832618_122235273698331990_802305782733956943_n.jpg%3Fstp%3Dc0.152.1215.1215a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-2.fna.fbcdn.net%26_nc_cat%3D106%26_nc_oc%3DQ6cZ2gGhNAzMWBtX4BYYJ6tL9a847SYEDBA9m2c6Fcufd-pqF1NoB4gTRJVzFB_ZK4MHgU4%26_nc_ohc%3DNFOCSMgmzJ4Q7kNvwGpmd9N%26_nc_gid%3DOd3QFEJAioMEgceTQYyNhg%26edm%3DAPs17CUAAAAA%26ccb%3D7-5%26oh%3D00_AQRfSiODkzoZrq3FKryIaYSawA5stpqWSuUf50N2OkRdtg%26oe%3D6AF2CF75%26_nc_sid%3D10d13b",
+          "caption": "عم تضيع وقتك بـ \"خرافات\" إنستغرام؟ 🤦‍♂️\nالسر مو بالخوارزميات ولا بتوقيت النشر.. السر بقوة محتواك وهُوك يشد الانتباه من أول 2 ثانية!\n​اسحب الشرائح واكتشف 7 أخطاء عم تدمر تفاعل حسابك ➡️\n​💬 كم خطأ منهم كنت تفكره صح؟\n🔖 احفظ البوست لترجعله بعدين!\n\n.\n.\n.\n.\n.\n#صناعة_المحتوى #صانع_المحتوى #انستقرام #ريلز #تسويق_رقمي",
+          "postedAt": "2026-10-21",
+          "views": 7216,
+          "viewsEstimated": true,
+          "likes": 274,
+          "comments": 16,
+          "shares": null,
+          "saves": null,
+          "durationSec": null,
+          "topic": "عم تضيع وقتك بـ \"خرافات\" إنستغرام؟ 🤦‍♂️",
+          "hookType": "QUESTION",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 4
+        },
+        {
+          "id": "reel_8ff6097cb9deabf1",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DepaG4Nl8dX",
+          "url": "https://www.instagram.com/reel/DepaG4Nl8dX/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F856940689_17912841540473064_2868031920079138602_n.jpg%3Fstp%3Dc0.90.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D100%26_nc_oc%3DQ6cZ2gFWqdNwKtOg1MFKmWeepLFF06yTllK3EG-b_eKC_RXmvsEElVqofzkVpAyRzO3hOeE%26_nc_ohc%3DeTQVVvU_xR0Q7kNvwFiKuJI%26_nc_gid%3DQ4z5XEJkXt4RXWd09JXeGQ%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRJbIjTh-CxO3K4569ilE899YLUSgFpN3jeGQf0m61ybQ%26oe%3D6AF2E63E%26_nc_sid%3D10d13b",
+          "caption": "سر نجاح اي فيديو او منشور هي الثواني الاولى لذلك جمعا لك 60 هوك بساعدك بصناعة المحتوى عالانستقرام \n.\n.\n\n.\n\n#صناعة_المحتوى #ريلز #تسويق_رقمي",
+          "postedAt": "2026-10-18",
+          "views": 3741,
+          "viewsEstimated": true,
+          "likes": 108,
+          "comments": 8,
+          "shares": null,
+          "saves": null,
+          "durationSec": null,
+          "topic": "سر نجاح اي فيديو او منشور هي الثواني الاولى لذلك جمعا لك 60 هوك بساعدك بصناعة المحتوى ع...",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 5
+        },
+        {
+          "id": "reel_f4789dcb75d8c945",
+          "auditId": "audit_0e030b5a444070c2",
+          "shortcode": "DePke2VAr_7",
+          "url": "https://www.instagram.com/reel/DePke2VAr_7/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F841645038_17911440387473064_3964609947397160353_n.jpg%3Fstp%3Dc0.181.1086.1086a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D100%26_nc_oc%3DQ6cZ2gGjakzef2aa6CILkW2X0wU7IpteQ40ahkTDzPKEpJ1_xDw3C8O5zxX7Gg5FcwPXc_w%26_nc_ohc%3DfnEF2vVcCZEQ7kNvwGv4DbN%26_nc_gid%3D1z65w5AM__s0gYw9Ne_LsQ%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQTHb7PE3KMT06IIKKJTDLwABn30gibRkJDEbZoqFCtSTw%26oe%3D6AF2CFCD%26_nc_sid%3D10d13b",
+          "caption": "إذا بتستخدم ChatGPT لصناعة المحتوى، هاي الأوامر ممكن تختصر عليك وقت كبير وتساعدك من الفكرة لحد تحليل المحتوى.\n\nاحفظ البوست، واكتب «أوامر» بالتعليقات إذا بدك أوامر جاهزة تستخدمها مع ChatGPT.\n\n#صناعة_المحتوى #انستقرام #خوارزميات_انستقرام",
+          "postedAt": "2026-10-08",
+          "views": 30200,
+          "viewsEstimated": true,
+          "likes": 515,
+          "comments": 446,
+          "shares": null,
+          "saves": null,
+          "durationSec": null,
+          "topic": "إذا بتستخدم ChatGPT لصناعة المحتوى، هاي الأوامر ممكن تختصر عليك وقت كبير وتساعدك من الف...",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": true,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 6
+        }
+      ],
+      "profileChecks": [
+        {
+          "id": "pc_d933dccd1fee270d",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "nameKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_686c22a96b59592c",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "bioPromise",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_f3b09b1564bad15c",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "singleCta",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_2ccadaa26d81cf7e",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "highlights",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_34b49d690f62308c",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "pinnedPosts",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_388711fcd1ab461d",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "linkSpeed",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_0c82312acf75122d",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "offerClarity",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_4f1fb08bf20686a9",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "leadMagnetOrDmKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_3f2ab6655b8db13e",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "contactButton",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_1cbcbdbd079f8b6f",
+          "auditId": "audit_0e030b5a444070c2",
+          "key": "socialProofVisible",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        }
+      ],
+      "categoryScores": [
+        {
+          "id": "cs_319f9b2f28b1ede9",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "positioning",
+          "score": 3,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_d691672d2eb7893e",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "profile_bio",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1
+        },
+        {
+          "id": "cs_db16b9604d3ab966",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "hooks_editing",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_86847d51dff91e61",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "content_system",
+          "score": 4,
+          "autoSuggestedScore": 4,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "معدل النشر الحالي 0 فيديو/شهر مع أطول انقطاع 0 يوماً ومعامل تذبذب 0x.",
+          "recommendation": "تثبيت إيقاع نشر منتظم (3 إلى 4 فيديوهات أسبوعياً) مبني على 3 سلاسل محتوى واضحة تخدم قرار الشراء.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_99b34bb4bcfc7a5f",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "reach_efficiency",
+          "score": 4,
+          "autoSuggestedScore": 4,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "كفاءة الوصول الحالية تبلغ 0% من إجمالي المتابعين (متوسط المشاهدات مقارنة بحجم الجمهور).",
+          "recommendation": "إعادة هيكلة أول 3 ثوانٍ (Visual + Verbal Hook) ورفع قابلية المشاركة والحفظ لفتح الوصول لغير المتابعين.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_6221e6168900fa6b",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "engagement_quality",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1
+        },
+        {
+          "id": "cs_7d2caa1076a3fdd5",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "authority_proof",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_cd2d080f349040a1",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "conversion_funnel",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم تقييم هذا المحور بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "بناء مسار واضح وممنهج لرفع كفاءة هذا المحور ضمن الـ System خلال 90 يوماً.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_b353bdb8364e8dc5",
+          "auditId": "audit_0e030b5a444070c2",
+          "categoryKey": "competitor_gap",
+          "score": 5,
+          "autoSuggestedScore": 5,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "تم التقييم المبدئي بناءً على معايير السوق الإقليمي لحين إضافة بيانات المنافسين.",
+          "recommendation": "تبني زوايا طرح أكثر حدة وتفصيلاً (Case-driven hooks) لسد فجوة الانتشار مع المنافسين في السوق.",
+          "weight": 0.9
+        }
+      ],
+      "findings": [
+        {
+          "id": "find_1073e21f5c619bf1",
+          "auditId": "audit_0e030b5a444070c2",
+          "rank": 1,
+          "title": "المشكلة الرئيسية #1",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "find_882cecdee3c205b3",
+          "auditId": "audit_0e030b5a444070c2",
+          "rank": 2,
+          "title": "المشكلة الرئيسية #2",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        },
+        {
+          "id": "find_185ccb8372d3b93b",
+          "auditId": "audit_0e030b5a444070c2",
+          "rank": 3,
+          "title": "المشكلة الرئيسية #3",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        }
+      ],
+      "competitors": [],
+      "unmeasuredItems": [
+        {
+          "id": "unm_8dcb7e30ad821029",
+          "auditId": "audit_0e030b5a444070c2",
+          "label": "منحنى الاحتفاظ بالمشاهد (Retention Curve & 3s Skip Rate) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يحدد الثانية الدقيقة التي يغادر فيها المشاهد الفيديو؛ بدونه لا يمكن معرفة هل الهوك البصري أم الإيقاع الداخلي هو سبب توقف انتشار الفيديو.",
+          "position": 1
+        },
+        {
+          "id": "unm_309e1bb9dd9a8642",
+          "auditId": "audit_0e030b5a444070c2",
+          "label": "عمليات الحفظ والإرسال بالخاص (Saves & DM Shares) — غير قابل للقياس من الخارج",
+          "whyItMatters": "أقوى إشارتين في خوارزمية إنستغرام الحالية لفتح الوصول لغير المتابعين (Unconnected Reach)؛ لا تظهر إلا داخل Insights.",
+          "position": 2
+        },
+        {
+          "id": "unm_5ab5f78a5a3ed109",
+          "auditId": "audit_0e030b5a444070c2",
+          "label": "نسبة الوصول لغير المتابعين (Non-Follower Reach %) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تكشف هل الحساب ينمو بجمهور جديد أم يدور في نفس الدائرة المغلقة من المتابعين القدامى.",
+          "position": 3
+        },
+        {
+          "id": "unm_012fd9eadf74dccc",
+          "auditId": "audit_0e030b5a444070c2",
+          "label": "زيارات البروفايل ونقرات الرابط (Profile Visits & Link Clicks) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تقيس كفاءة تحويل المشاهدين من الفيديوهات إلى البايو ثم إلى صفحة الحجز أو الواتساب.",
+          "position": 4
+        },
+        {
+          "id": "unm_7e2cc25658804442",
+          "auditId": "audit_0e030b5a444070c2",
+          "label": "التوزيع الجغرافي والعمري للجمهور الفعلي (Audience Demographics) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يؤكد هل المشاهدات تأتي من السوق المستهدف صاحب القدرة الشرائية (الخليج ومصر) أم من جمهور غير مؤهل شرائياً.",
+          "position": 5
+        }
+      ],
+      "events": [],
+      "uploads": []
+    },
+    {
+      "id": "audit_db04319d4248234c",
+      "prospectId": "prosp_3337caa1c67c35f0",
+      "status": "PUBLISHED",
+      "language": "ar",
+      "shareToken": "y6f-1yiWpBmDj4CLFWhtTqa6gSF1-mVG",
+      "publishedAt": "2026-11-05T21:01:48.147Z",
+      "expiresAt": "2026-11-12T21:01:48.147Z",
+      "overallScore": 57,
+      "summaryOpening": "تمتلك خبرة واضحة وحضوراً مهنياً قوياً أمام الكاميرا، لكن الحساب حالياً يعمل بدون منظومة تحويل تلتقط المشاهدين المهتمين.",
+      "verdictLine": "خبرة مهنية حقيقية، لكن منظومة المحتوى ومسار التحويل في البايو يسربان عملاء محتملين يومياً.",
+      "createdAt": "2026-11-05T20:30:49.058Z",
+      "updatedAt": "2026-11-05T21:01:48.147Z",
+      "prospect": {
+        "id": "prosp_3337caa1c67c35f0",
+        "handle": "abdulelsayed",
+        "displayName": "Dr. Abdul El-Sayed",
+        "niche": "Public figure",
+        "followers": 5896342,
+        "followingCount": 5129,
+        "postsCount": 2857,
+        "profileUrl": "https://instagram.com/abdulelsayed",
+        "linkInBioUrl": "http://abdulforsenate.com",
+        "avatarUrl": "/api/audit/image-proxy?url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.2885-19%2F491440274_1019308529725124_5377030258244168357_n.jpg%3F_nc_cat%3D1%26ig_cache_key%3DGJLISh3ErtRCDp8DAKWqK-mHDJ9KbkULAAAB0j-ccb7-5%26ccb%3D7-5%26_nc_sid%3D669407%26efg%3DeyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy40NzUuQzMifQ%253D%253D%26_nc_ohc%3DnsR7dij7VdoQ7kNvwHBwy-u%26_nc_oc%3DAdrC-eA6FCtx6DP9RKIG9FSv73-TmBM46y8tNDD8IjixVOSO87AM9vRktb9_EovOIxM%26_nc_zt%3D24%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_ss%3D7c689%26oh%3D00_AQRMotordIEGtSxe4jtsAtza8enWgkLSkTCa3KXTgSbTiA%26oe%3D6AF2A413",
+        "bio": "U.S. Senator-elect for Michigan. It shouldn't be THIS hard to get by. Michigan born and raised. Girl Dad. Doctor.",
+        "bioLinks": [
+          {
+            "title": "abdulforsenate.com",
+            "url": "http://abdulforsenate.com"
+          },
+          {
+            "title": "Donate",
+            "url": "https://secure.actblue.com/donate/aes-social-q3-eoq-2"
+          },
+          {
+            "title": "Upcoming Events",
+            "url": "https://www.mobilize.us/abdulforsenate/?show_all_events=true"
+          },
+          {
+            "title": "Join Creators for Abdul",
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLSfFwCyHjeniiu_aRSEv0FOkxLq4WRFWex83FOt66Y6i-vIvDA/viewform?usp=preview"
+          },
+          {
+            "title": "abdulforsenate.com",
+            "url": "http://abdulforsenate.com/vote"
+          }
+        ],
+        "notes": "",
+        "createdAt": "2026-11-05T20:30:49.058Z",
+        "updatedAt": "2026-11-05T20:30:49.058Z"
+      },
+      "reels": [
+        {
+          "id": "reel_6ce4d153d7749859",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfXyH0JvKlR",
+          "url": "https://www.instagram.com/reel/DfXyH0JvKlR/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F892058714_18652708762051587_5275635119433701060_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gFNtVCtLGZBX-9shOLcHdoPOaY1r63RB8Kz6lBEugQwbyG-TxCIPj3dWWHaI9AFy7c%26_nc_ohc%3Da-kY1fU30kYQ7kNvwGXleH_%26_nc_gid%3DR6GJG2pemRub5cLfYi2sKA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSyHcbnr_hdnWRvkZ2AjSkqfD5IFnCggOK7rrl4Ksd1yA%26oe%3D6AF2A85F%26_nc_sid%3D10d13b",
+          "caption": "Let’s do this, @elissa.slotkin.",
+          "postedAt": "2026-11-05T19:28:52.000Z",
+          "views": 260640,
+          "viewsEstimated": true,
+          "likes": 10250,
+          "comments": 366,
+          "shares": null,
+          "saves": null,
+          "durationSec": 4,
+          "topic": "Let’s do this, @elissa.slotkin.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 1
+        },
+        {
+          "id": "reel_b759c06c81e9a5a2",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfVUZSEAaEk",
+          "url": "https://www.instagram.com/reel/DfVUZSEAaEk/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F886842860_18646338106040367_8469366658019666572_n.jpg%3Fstp%3Dc0.420.1080.1080a_dst-jpg_e15_fr_s1080x1080_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gFUzJEFVBBpg_lY8cikgxdXGQ7fZ1mzeF4rn5xEBiXU7Sro3xsmDP3B0He5Naa7rew%26_nc_ohc%3DixguZiqXXFgQ7kNvwHdvG9k%26_nc_gid%3DgKRnlX_UGb2MZwb6Ec7mMg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRfrNV57A0ZBbvZk9c6MMxEL8JsabPIGXOghNE6UAQaig%26oe%3D6AF2D08D%26_nc_sid%3D10d13b",
+          "caption": "MICHIGAN’S NEXT SENATOR ABDUL El-SAYED",
+          "postedAt": "2026-11-04T20:30:41.000Z",
+          "views": 3632936,
+          "viewsEstimated": true,
+          "likes": 143269,
+          "comments": 4862,
+          "shares": null,
+          "saves": null,
+          "durationSec": 30,
+          "topic": "MICHIGAN’S NEXT SENATOR ABDUL El-SAYED",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 2
+        },
+        {
+          "id": "reel_4b16d0cc3a9f68aa",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfUq4YMR6uT",
+          "url": "https://www.instagram.com/reel/DfUq4YMR6uT/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F883141482_18097350077657444_4710888949810467932_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gENlehLBgE4xK1Uo5tFSYWJJ-y4Z-s2acuiYbVFcrFsAgmngdVvn_I2fvEQOKJD6Vc%26_nc_ohc%3DkijqXfxJ0QcQ7kNvwFDj-UT%26_nc_gid%3Dd2VQ2esLaDXpOHA4E689mA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQb0L-tjVk4yJnHwFPjZ8GrQavywRM3OiU1accukDNVbw%26oe%3D6AF2A528%26_nc_sid%3D10d13b",
+          "caption": "@abdulelsayed  Hours of work in a few seconds ✍️✨\nCharcoal on paper\nWhat do you think of this piece? 👇🖤. #instagram #explore #viral #art #freepalestine🇵🇸",
+          "postedAt": "2026-11-04T14:34:27.000Z",
+          "views": 5743072,
+          "viewsEstimated": true,
+          "likes": 232583,
+          "comments": 4027,
+          "shares": null,
+          "saves": null,
+          "durationSec": 29,
+          "topic": "@abdulelsayed  Hours of work in a few seconds ✍️✨",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 3
+        },
+        {
+          "id": "reel_506117b28692b1d2",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfUlYLmvvxr",
+          "url": "https://www.instagram.com/reel/DfUlYLmvvxr/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F887716166_18652223542051587_8067601723622774472_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gEL6DlY5SVgpfP-zFWM3k1hKgiLrvXwnpi9tyH-0euUcIHRrouZEl2X9XxvKLZYpns%26_nc_ohc%3DW47kpnJY4PIQ7kNvwELO4oW%26_nc_gid%3D6Hp1JSnkIbKVVAJZtg052A%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQAe7klY52OO_zUGqE17gfJYJTg0NGY2VNmJxze3f6rIw%26oe%3D6AF2C8BB%26_nc_sid%3D10d13b",
+          "caption": "Wolverine: 1\nBuckeye: 0",
+          "postedAt": "2026-11-04T13:40:14.000Z",
+          "views": 79340304,
+          "viewsEstimated": true,
+          "likes": 3216821,
+          "comments": 53415,
+          "shares": null,
+          "saves": null,
+          "durationSec": 49,
+          "topic": "Wolverine: 1",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 4
+        },
+        {
+          "id": "reel_de31a622062bb25b",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfUkSnAvObK",
+          "url": "https://www.instagram.com/reel/DfUkSnAvObK/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F886632521_18652220290051587_3654186132002335795_n.jpg%3Fstp%3Dc0.280.720.720a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gHCUaG2k_bWku1cmZw_nWsAPGtE4UY26AYiPML4ZTGSuKE_fxJ8UoFhtFBWG7SH5XU%26_nc_ohc%3DCFeEwqJoJbIQ7kNvwEJY1PR%26_nc_gid%3DJTVefLpWULNIUtDCRWD3Ig%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRqD6jTMdhVjymLLG5nzXDp_U4nTf6QnDkSHczwgkx44Q%26oe%3D6AF2C6D8%26_nc_sid%3D10d13b",
+          "caption": "Get ready.",
+          "postedAt": "2026-11-04T13:30:38.000Z",
+          "views": 10713504,
+          "viewsEstimated": true,
+          "likes": 434226,
+          "comments": 7302,
+          "shares": null,
+          "saves": null,
+          "durationSec": 9,
+          "topic": "Get ready.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 5
+        },
+        {
+          "id": "reel_472b7f28eb8847ce",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfUhMxNPlV6",
+          "url": "https://www.instagram.com/reel/DfUhMxNPlV6/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.71878-15%2F888562919_1441565337442913_2896075774200124799_n.jpg%3Fstp%3Dc0.248.640.640a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gHkWXpihKzK5yF_RxsfWtqF5HGbXicy-JZbosAPhey7Z4AhDS61iCX-17wTactkuno%26_nc_ohc%3D6XfJDEPYS84Q7kNvwHyOYNH%26_nc_gid%3DOH1ccCArnNkJkjS6FNGrYw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQSBeQ0pMxTK29d7cPwSfDIvTQ9IqT_EFvk8ySM0pjMhLA%26oe%3D6AF2AFC1%26_nc_sid%3D10d13b",
+          "caption": "The many beat the money. The people beat the corporations and special interests. Hope beat hate and fear. \n\nMichigan, we won.",
+          "postedAt": "2026-11-04T13:04:39.000Z",
+          "views": 9561480,
+          "viewsEstimated": true,
+          "likes": 384555,
+          "comments": 8304,
+          "shares": null,
+          "saves": null,
+          "durationSec": 69,
+          "topic": "The many beat the money. The people beat the corporations and special interests. Hope b...",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 6
+        },
+        {
+          "id": "reel_c6ce05691aca1b41",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfT4rUSzYlU",
+          "url": "https://www.instagram.com/reel/DfT4rUSzYlU/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.71878-15%2F890716392_2135348487100630_333047335823914029_n.jpg%3Fstp%3Dc0.248.640.640a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gEWo3R2zjyTPf7x7B5Bhu-s0NBgNwEj8KmMK8qn2M8Dv3wvOtvkb_Mbg2GoB2iqBcQ%26_nc_ohc%3DHUXWtmELqhAQ7kNvwH9vgvg%26_nc_gid%3DpzOOiPyqjGmt-VE7InM6PA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQyz4g3V_2Kt8SkC4etLdLQDdwGWpYy2P0tS0t4LJAdxA%26oe%3D6AF2B0EB%26_nc_sid%3D10d13b",
+          "caption": "The next Senator from Michigan ❤️",
+          "postedAt": "2026-11-04T07:11:13.000Z",
+          "views": 14799488,
+          "viewsEstimated": true,
+          "likes": 596562,
+          "comments": 12050,
+          "shares": null,
+          "saves": null,
+          "durationSec": 63,
+          "topic": "The next Senator from Michigan ❤️",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 7
+        },
+        {
+          "id": "reel_624a0237ddba772f",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfTJO9Dg7Cy",
+          "url": "https://www.instagram.com/reel/DfTJO9Dg7Cy/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.71878-15%2F888229699_1083961484678958_1099777855853450222_n.jpg%3Fstp%3Dc0.249.640.640a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gGxbLp2XVjYfbOx4_bI6Zl0F7Da6o89KPB3FrFhbKVJia600Qu6MqdFBj2yBcePkIo%26_nc_ohc%3Do30Plfv1PVUQ7kNvwGRRHGw%26_nc_gid%3DBpi4HsPXhUVNcZ1VwYmVDw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQRNP4C_1aIAPl0zx8UQIZ-S1R_gB8N8Q_wQkNs410BVcQ%26oe%3D6AF29FC0%26_nc_sid%3D10d13b",
+          "caption": "Michigan! If you’re in line to vote—stay in line! Your vote is your voice. We need to hear you!",
+          "postedAt": "2026-11-04T00:14:30.000Z",
+          "views": 6111104,
+          "viewsEstimated": true,
+          "likes": 248441,
+          "comments": 3713,
+          "shares": null,
+          "saves": null,
+          "durationSec": 10,
+          "topic": "Michigan! If you’re in line to vote—stay in line! Your vote is your voice. We need to h...",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 8
+        },
+        {
+          "id": "reel_3b830e780458f76d",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfSzRhNPlfZ",
+          "url": "https://www.instagram.com/reel/DfSzRhNPlfZ/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.71878-15%2F886235112_1873068070371999_6760062600112937882_n.jpg%3Fstp%3Dc0.248.640.640a_dst-jpg_e15_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gHYgq_C6X9o11W1_pe2mhQMSSTv_DjM45VANHxBQdPwLEK4_3cMXVqUiMAEsXpNIsI%26_nc_ohc%3D_-wZMiox68UQ7kNvwFMzv3p%26_nc_gid%3Dit661wAaULKXrGl4aFbLmw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQr9FQTe0ldFSuXagdCSPU8RaC6y9NzSmt2HAXiDHHphQ%26oe%3D6AF2AB30%26_nc_sid%3D10d13b",
+          "caption": "Sarah’s beautiful speech in the final moments of our final rally of the campaign.",
+          "postedAt": "2026-11-03T21:06:59.000Z",
+          "views": 9076712,
+          "viewsEstimated": true,
+          "likes": 368848,
+          "comments": 5609,
+          "shares": null,
+          "saves": null,
+          "durationSec": 154,
+          "topic": "Sarah’s beautiful speech in the final moments of our final rally of the campaign.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 9
+        },
+        {
+          "id": "reel_7ce6c05a4045e8ff",
+          "auditId": "audit_db04319d4248234c",
+          "shortcode": "DfScQ1IvH6W",
+          "url": "https://www.instagram.com/reel/DfScQ1IvH6W/",
+          "thumbnailUrl": "/api/audit/image-proxy?url=https%3A%2F%2Finstagram.fcai21-4.fna.fbcdn.net%2Fv%2Ft51.82787-15%2F885554892_18108457826215686_5095487495675986782_n.jpg%3Fstp%3Dc0.502.1290.1290a_dst-jpg_e35_s1080x1080_sh2.08_tt6%26_nc_ht%3Dinstagram.fcai21-4.fna.fbcdn.net%26_nc_cat%3D1%26_nc_oc%3DQ6cZ2gH6q4nW2lsXIYaACn27xmvasx1ooNJicsEjR9gAiqQZVktvVHwx9lTh9aGvSocGLWk%26_nc_ohc%3DUH_KTBwL9AwQ7kNvwEVWba1%26_nc_gid%3Drtl-d_6OgKskaDvcaD-t6g%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AQQjQ_gWKLl0XTxi9QXYiJN_prUAx89miHAIIdwTx6ToRg%26oe%3D6AF2CFCD%26_nc_sid%3D10d13b",
+          "caption": "Senator El-Sayed will be Euphoria.",
+          "postedAt": "2026-11-03T17:42:04.000Z",
+          "views": 5570704,
+          "viewsEstimated": true,
+          "likes": 228661,
+          "comments": 2071,
+          "shares": null,
+          "saves": null,
+          "durationSec": 21,
+          "topic": "Senator El-Sayed will be Euphoria.",
+          "hookType": "PATTERN_INTERRUPT",
+          "hasSubtitles": true,
+          "hasCta": false,
+          "isRepost": false,
+          "demandSignalsCount": 0,
+          "pros": "",
+          "cons": "",
+          "editorNotes": "",
+          "position": 10
+        }
+      ],
+      "profileChecks": [
+        {
+          "id": "pc_87b5e5609ac4e889",
+          "auditId": "audit_db04319d4248234c",
+          "key": "nameKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_17e07467d589ada5",
+          "auditId": "audit_db04319d4248234c",
+          "key": "bioPromise",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_6fa18d3ceb44c80f",
+          "auditId": "audit_db04319d4248234c",
+          "key": "singleCta",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_ed44851dd3268c08",
+          "auditId": "audit_db04319d4248234c",
+          "key": "highlights",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_7b22520aa89b2bdb",
+          "auditId": "audit_db04319d4248234c",
+          "key": "pinnedPosts",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_d6220589dbbf4612",
+          "auditId": "audit_db04319d4248234c",
+          "key": "linkSpeed",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_a80af30d24a637c1",
+          "auditId": "audit_db04319d4248234c",
+          "key": "offerClarity",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_e41fa3ae50bf473a",
+          "auditId": "audit_db04319d4248234c",
+          "key": "leadMagnetOrDmKeyword",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_32db880e456f2965",
+          "auditId": "audit_db04319d4248234c",
+          "key": "contactButton",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        },
+        {
+          "id": "pc_961c4bed4dccd167",
+          "auditId": "audit_db04319d4248234c",
+          "key": "socialProofVisible",
+          "status": "WEAK",
+          "evidence": "",
+          "screenshotUrl": null
+        }
+      ],
+      "categoryScores": [
+        {
+          "id": "cs_08c314d9b94762da",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "positioning",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_b13895df2882301d",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "profile_bio",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1
+        },
+        {
+          "id": "cs_bf3c6a48bcc1b162",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "hooks_editing",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_e5eb6c51df5ed632",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "content_system",
+          "score": 8,
+          "autoSuggestedScore": 8,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "معدل النشر الحالي 144.6 فيديو/شهر مع أطول انقطاع 1 يوماً ومعامل تذبذب 10.45x.",
+          "recommendation": "تثبيت إيقاع نشر منتظم (3 إلى 4 فيديوهات أسبوعياً) مبني على 3 سلاسل محتوى واضحة تخدم قرار الشراء.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_3bd1c54ae1f304ac",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "reach_efficiency",
+          "score": 9,
+          "autoSuggestedScore": 9,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "كفاءة الوصول الحالية تبلغ 128.79% من إجمالي المتابعين (وسيط المشاهدات مقارنة بحجم الجمهور).",
+          "recommendation": "إعادة هيكلة أول 3 ثوانٍ (Visual + Verbal Hook) ورفع قابلية المشاركة والحفظ لفتح الوصول لغير المتابعين.",
+          "weight": 1.1
+        },
+        {
+          "id": "cs_fae615287fd88f87",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "engagement_quality",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1
+        },
+        {
+          "id": "cs_358756ee3f31a6b7",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "authority_proof",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1.2
+        },
+        {
+          "id": "cs_3d68009c1cfa6528",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "conversion_funnel",
+          "score": 5,
+          "autoSuggestedScore": null,
+          "isAutoSuggested": false,
+          "isOverridden": false,
+          "evidence": "تم التقييم بناءً على الفحص الخارجي للحساب ومؤشرات الأداء المرصودة.",
+          "recommendation": "تطوير هذا المحور ضمن الـ System المتكامل لرفع كفاءة التحويل.",
+          "weight": 1.6
+        },
+        {
+          "id": "cs_b1c7012331d2c4ee",
+          "auditId": "audit_db04319d4248234c",
+          "categoryKey": "competitor_gap",
+          "score": 5,
+          "autoSuggestedScore": 5,
+          "isAutoSuggested": true,
+          "isOverridden": false,
+          "evidence": "تم التقييم المبدئي بناءً على معايير السوق الإقليمي لحين إضافة بيانات المنافسين.",
+          "recommendation": "تبني زوايا طرح أكثر حدة وتفصيلاً (Case-driven hooks) لسد فجوة الانتشار مع المنافسين في السوق.",
+          "weight": 0.9
+        }
+      ],
+      "findings": [
+        {
+          "id": "find_3e56e55cb6419dde",
+          "auditId": "audit_db04319d4248234c",
+          "rank": 1,
+          "title": "المشكلة الرئيسية #1",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "find_34fa96d622723e3e",
+          "auditId": "audit_db04319d4248234c",
+          "rank": 2,
+          "title": "المشكلة الرئيسية #2",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        },
+        {
+          "id": "find_da76569e49329361",
+          "auditId": "audit_db04319d4248234c",
+          "rank": 3,
+          "title": "المشكلة الرئيسية #3",
+          "evidence": "أدخل الدليل الرقمي المرصود من الحساب هنا...",
+          "businessImpact": "أدخل تأثير هذه المشكلة على المبيعات والعملاء المحتملين...",
+          "apxFix": "أدخل كيف تقوم منظومة APX بحل هذه المشكلة خلال 90 يوماً...",
+          "severity": "HIGH"
+        }
+      ],
+      "competitors": [],
+      "unmeasuredItems": [
+        {
+          "id": "unm_5730fec539b3245e",
+          "auditId": "audit_db04319d4248234c",
+          "label": "منحنى الاحتفاظ بالمشاهد (Retention Curve & 3s Skip Rate) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يحدد الثانية الدقيقة التي يغادر فيها المشاهد الفيديو؛ بدونه لا يمكن معرفة هل الهوك البصري أم الإيقاع الداخلي هو سبب توقف انتشار الفيديو.",
+          "position": 1
+        },
+        {
+          "id": "unm_27dafd5d6eafd003",
+          "auditId": "audit_db04319d4248234c",
+          "label": "عمليات الحفظ والإرسال بالخاص (Saves & DM Shares) — غير قابل للقياس من الخارج",
+          "whyItMatters": "أقوى إشارتين في خوارزمية إنستغرام الحالية لفتح الوصول لغير المتابعين (Unconnected Reach)؛ لا تظهر إلا داخل Insights.",
+          "position": 2
+        },
+        {
+          "id": "unm_174fb27782e9d5a3",
+          "auditId": "audit_db04319d4248234c",
+          "label": "نسبة الوصول لغير المتابعين (Non-Follower Reach %) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تكشف هل الحساب ينمو بجمهور جديد أم يدور في نفس الدائرة المغلقة من المتابعين القدامى.",
+          "position": 3
+        },
+        {
+          "id": "unm_ed1f362ca08086ab",
+          "auditId": "audit_db04319d4248234c",
+          "label": "زيارات البروفايل ونقرات الرابط (Profile Visits & Link Clicks) — غير قابل للقياس من الخارج",
+          "whyItMatters": "تقيس كفاءة تحويل المشاهدين من الفيديوهات إلى البايو ثم إلى صفحة الحجز أو الواتساب.",
+          "position": 4
+        },
+        {
+          "id": "unm_42be4bbe09a7da22",
+          "auditId": "audit_db04319d4248234c",
+          "label": "التوزيع الجغرافي والعمري للجمهور الفعلي (Audience Demographics) — غير قابل للقياس من الخارج",
+          "whyItMatters": "يؤكد هل المشاهدات تأتي من السوق المستهدف صاحب القدرة الشرائية (الخليج ومصر) أم من جمهور غير مؤهل شرائياً.",
+          "position": 5
+        }
+      ],
+      "events": [
+        {
+          "id": "ev_bc7cc5e25cf94a18",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "overview",
+            "elapsedSec": 0,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:00.269Z"
+        },
+        {
+          "id": "ev_1ff219306dd1f4df",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "OPEN",
+          "payload": {
+            "elapsedSec": 1,
+            "locale": "ar"
+          },
+          "createdAt": "2026-11-05T23:11:00.293Z"
+        },
+        {
+          "id": "ev_c912a65553351373",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "OPEN",
+          "payload": {
+            "elapsedSec": 1,
+            "locale": "ar"
+          },
+          "createdAt": "2026-11-05T23:11:01.477Z"
+        },
+        {
+          "id": "ev_df032854a5d5f1d9",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 5,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:02.712Z"
+        },
+        {
+          "id": "ev_745d728465c418b8",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 6,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:03.674Z"
+        },
+        {
+          "id": "ev_289d59d98c506cba",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 25,
+            "elapsedSec": 7
+          },
+          "createdAt": "2026-11-05T23:11:04.896Z"
+        },
+        {
+          "id": "ev_b5d9dcd96fb3208f",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 7,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:04.931Z"
+        },
+        {
+          "id": "ev_22602da9d44d1a7f",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 8,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:05.270Z"
+        },
+        {
+          "id": "ev_8b47fc7a3fed2795",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 50,
+            "elapsedSec": 9
+          },
+          "createdAt": "2026-11-05T23:11:06.083Z"
+        },
+        {
+          "id": "ev_d7c3e557c9bbeedf",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 9,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:06.102Z"
+        },
+        {
+          "id": "ev_cc1aa632177b79eb",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 9,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:06.499Z"
+        },
+        {
+          "id": "ev_0d1a50441c6130ed",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 10,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:07.010Z"
+        },
+        {
+          "id": "ev_52950fdb759a0a10",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 10,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:07.322Z"
+        },
+        {
+          "id": "ev_a9708c802b454809",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 30,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:27.161Z"
+        },
+        {
+          "id": "ev_e9564919da72ce14",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 30,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:27.871Z"
+        },
+        {
+          "id": "ev_021fb1173e7c7a9b",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "funnel",
+            "elapsedSec": 31,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:28.243Z"
+        },
+        {
+          "id": "ev_0f4fb89be1fd134e",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 75,
+            "elapsedSec": 31
+          },
+          "createdAt": "2026-11-05T23:11:28.524Z"
+        },
+        {
+          "id": "ev_f830d62e73801365",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 31,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:28.779Z"
+        },
+        {
+          "id": "ev_2d15dc9182268129",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "cta",
+            "elapsedSec": 32,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:11:29.156Z"
+        },
+        {
+          "id": "ev_7eb650371e55adf9",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SCROLL_DEPTH",
+          "payload": {
+            "depth": 100,
+            "elapsedSec": 32
+          },
+          "createdAt": "2026-11-05T23:11:29.500Z"
+        },
+        {
+          "id": "ev_c00861242ab84f3a",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "CTA_CLICK",
+          "payload": {
+            "ctaLabel": "احجز مكالمة استراتيجية لتطبيق الـ System الخاص بـ APX (30 دقيقة)",
+            "elapsedSec": 33
+          },
+          "createdAt": "2026-11-05T23:11:30.911Z"
+        },
+        {
+          "id": "ev_57ecdcee0e9ed73b",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "unmeasured",
+            "elapsedSec": 558,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:15.665Z"
+        },
+        {
+          "id": "ev_be35b1482060078c",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "funnel",
+            "elapsedSec": 559,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:16.513Z"
+        },
+        {
+          "id": "ev_3807c4023983d4d2",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "competitors",
+            "elapsedSec": 559,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:16.791Z"
+        },
+        {
+          "id": "ev_efe9e4badef8f200",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "hooks",
+            "elapsedSec": 560,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:17.052Z"
+        },
+        {
+          "id": "ev_0684b85fabebee0a",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "problems",
+            "elapsedSec": 560,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:17.352Z"
+        },
+        {
+          "id": "ev_69ccf59c9a827451",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "scorecard",
+            "elapsedSec": 560,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:17.626Z"
+        },
+        {
+          "id": "ev_4abc94753137557b",
+          "auditId": "audit_db04319d4248234c",
+          "sessionId": "sess_yo6mw7g6_mw45sxiz",
+          "type": "SECTION_VIEW",
+          "payload": {
+            "section": "reels",
+            "elapsedSec": 561,
+            "dwellSec": 10
+          },
+          "createdAt": "2026-11-05T23:20:18.373Z"
+        }
+      ],
+      "uploads": []
+    }
+  ],
+  "snippets": [
+    {
+      "id": "snip-hook-slow-intro",
+      "categoryKey": "hooks_editing",
+      "problemPattern": "Slow / Greeting Intro in First 3 Seconds",
+      "titleAr": "ضبط أول 3 ثوانٍ: إلغاء المقدمات الترحيبية والدخول بهوك نتيجة أو مشكلة",
+      "titleEn": "First 3-Second Hook Overhaul: Replace Greetings with Problem/Outcome Hooks",
+      "bodyAr": "استبدال جمل الترحيب التقليدية (\"السلام عليكم\"، \"في هذا الفيديو سنتحدث عن...\") بهوك مبني على فجوة فضول أو رقم محدد أو خطأ شائع يقع فيه العميل المستهدف، مع حركة بصرية وكابشن واضح من الثانية 0:00.",
+      "bodyEn": "Eliminate generic greetings in seconds 0:00–0:03. Open immediately with a specific costly mistake, contrarian claim, or concrete case metric paired with dynamic visual framing and high-contrast kinetic captions.",
+      "impactAr": "خسارة 65%+ من المشاهدين المؤهلين في أول ثانيتين قبل سماع قيمة خبرتك الحقيقية.",
+      "impactEn": "Losing 65%+ of qualified viewers in the first 2 seconds before they ever hear your core expertise.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "snip-funnel-dead-bio-link",
+      "categoryKey": "conversion_funnel",
+      "problemPattern": "Multi-link Linktree / No Clear Qualifying Funnel",
+      "titleAr": "استبدال تشتيت الروابط المتعددة بمسار تأهيل وحجز واحد (Single VSL + Calendar Funnel)",
+      "titleEn": "Replace Multi-Link Clutter with a Single Qualifying VSL + Booking Funnel",
+      "bodyAr": "توحيد دعوة اتخاذ الإجراء (CTA) في البايو والريلز نحو مسار واحد واضح: صفحة هبوط سريعة تحتوي على فيديو تعريفي قصير (VSL) وفورم تأهيل مسبق يقود مباشرة إلى حجز مكالمة استشارية أو محادثة واتساب مؤهلة.",
+      "bodyEn": "Consolidate all profile and Reel CTAs into a single high-converting path: a focused landing page with a short VSL + qualification form routing directly to a calendar booking or qualified WhatsApp flow.",
+      "impactAr": "حتى عندما ينجح فيديو في تحقيق مشاهدات عالية، يخرج الزائر من البروفايل دون حجز أو ترك بياناته.",
+      "impactEn": "Even when a Reel spikes in views, high-intent visitors bounce from the profile without booking or converting.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "snip-content-outlier-dependency",
+      "categoryKey": "content_system",
+      "problemPattern": "High Outlier Ratio / No Repeatable Series",
+      "titleAr": "تحويل النشر العشوائي إلى 3 سلاسل محتوى أسبوعية قابلة للتكرار",
+      "titleEn": "Replace Sporadic Topics with 3 Repeatable Weekly Content Pillars",
+      "bodyAr": "بناء مصفوفة محتوى من 3 زوايا ثابتة: (1) تفكيك أخطاء شائعة مكلفة لدى العميل، (2) تحليل حالات ومواقف واقعية، (3) الإجابة عن اعتراضات ما قبل الشراء — بمعدل 3 إلى 4 فيديوهات أسبوعياً.",
+      "bodyEn": "Install a 3-pillar weekly matrix: (1) Costly buyer mistakes, (2) Real-world diagnostic breakdowns, (3) Pre-purchase objection handling — executed at 3–4 Reels/week.",
+      "impactAr": "اعتماد الحساب على \"ضربات الحظ\" في المشاهدات وعدم القدرة على التنبؤ بعدد العملاء المحتملين شهرياً.",
+      "impactEn": "Reliance on lucky one-off spikes with zero predictability in monthly inbound pipeline.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "snip-positioning-generic-bio",
+      "categoryKey": "positioning",
+      "problemPattern": "Broad / Generic Bio Title Without ICP + Outcome",
+      "titleAr": "إعادة صياغة البايو بمعادلة: (من تخدم + ما النتيجة + الإثبات + خطوة واحدة)",
+      "titleEn": "Rewrite Bio Using the Authority Formula: ICP + Concrete Outcome + Single CTA",
+      "bodyAr": "تحويل البايو من توصيف وظيفي عام إلى وعد موجه مباشرة لصاحب القرار، مع إضافة الكلمة المفتاحية التخصصية بجانب الاسم ليظهر الحساب في بحث إنستغرام وجوجل.",
+      "bodyEn": "Transform the bio from a generic job title into an outcome-driven promise aimed at decision-makers, and append the primary searchable keyword to the Instagram Name field.",
+      "impactAr": "الزائر الجديد لا يفهم خلال 3 ثوانٍ لماذا يجب أن يختارك أنت بدلاً من عشرات الحسابات المشابهة.",
+      "impactEn": "First-time profile visitors cannot tell within 3 seconds why you are the category authority.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "snip-pinned-posts-missing",
+      "categoryKey": "profile_bio",
+      "problemPattern": "Missing or Random Pinned Posts",
+      "titleAr": "تثبيت 3 منشورات استراتيجية (مسمار السلطة + دراسة حالة + شرح منهجية العمل)",
+      "titleEn": "Pin 3 Strategic Assets: Authority Story, Diagnostic Breakdown, and Offer Mechanism",
+      "bodyAr": "تخصيص الخانات الثلاث المثبتة في أعلى الشبكة لتعمل كصفحة مبيعات مصغرة يستعرضها أي عميل محتمل فور دخوله الحساب.",
+      "bodyEn": "Dedicate the 3 pinned grid slots to act as an instant mini-sales page for every new profile visitor.",
+      "impactAr": "أول 3 فيديوهات يراها الزائر في الشبكة قد تكون أضعف فيديوهاتك أو أقلها صلة بخدمتك الأساسية.",
+      "impactEn": "New visitors judge your brand by whatever random last 3 posts happen to sit at the top of your grid.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "snip-engagement-no-dm-keyword",
+      "categoryKey": "engagement_quality",
+      "problemPattern": "High Demand Comments Left Uncaptured",
+      "titleAr": "تفعيل نظام الكلمة المفتاحية (Comment/DM Keyword) لتحويل التعليقات إلى محادثات بيعية",
+      "titleEn": "Deploy a Comment/DM Keyword Trigger to Capture Buyer-Intent Comments",
+      "bodyAr": "إنهاء كل فيديو بدعوة واضحة لكتابة كلمة محددة في التعليقات أو الخاص للحصول على تشخيص أو ملف تطبيقي، مما يضاعف التفاعل ويفتح محادثات مباشرة مع المهتمين.",
+      "bodyEn": "Close each Reel with a specific keyword CTA that triggers a structured DM qualification conversation and boosts algorithmic comment velocity.",
+      "impactAr": "إهدار تعليقات المهتمين الذين يسألون عن التفاصيل دون تحويلهم إلى مكالمات محجوزة.",
+      "impactEn": "Leaving buyer-intent comments sitting publicly in the thread instead of moving them into booked calls.",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    }
+  ],
+  "settings": {
+    "id": "default",
+    "ctaType": "BOOK_CALL",
+    "whatsappNumber": "+201007311562",
+    "whatsappMessageAr": "مرحباً فريق APX، اطلعت على تقرير تدقيق حسابي وأود حجز جلسة استراتيجية.",
+    "whatsappMessageEn": "Hi APX team, I reviewed my Instagram audit report and would like to book a strategy session.",
+    "bookingUrl": "https://calendly.com/zyaddonga/30min?hide_gdpr_banner=1&primary_color=8b5cf6",
+    "dmKeyword": "AUDIT",
+    "instagramHandle": "zyadcreative",
+    "scarcityTextAr": "نقبل عدداً محدوداً من الشركاء في كل دفعة لضمان جودة التنفيذ الكامل (Done-For-You) خلال 90 يوماً.",
+    "scarcityTextEn": "We onboard a limited number of partners per cohort to guarantee full Done-For-You 90-day execution quality.",
+    "defaultLanguage": "ar",
+    "defaultDigits": "western",
+    "weightsJson": {
+      "positioning": 1.2,
+      "profile_bio": 1,
+      "hooks_editing": 1.6,
+      "content_system": 1.1,
+      "reach_efficiency": 1.1,
+      "engagement_quality": 1,
+      "authority_proof": 1.2,
+      "conversion_funnel": 1.6,
+      "competitor_gap": 0.9
+    },
+    "defaultUnmeasuredJson": [
+      {
+        "label": "منحنى الاحتفاظ بالمشاهد (Retention Curve & 3s Skip Rate) — غير قابل للقياس من الخارج",
+        "whyItMatters": "يحدد الثانية الدقيقة التي يغادر فيها المشاهد الفيديو؛ بدونه لا يمكن معرفة هل الهوك البصري أم الإيقاع الداخلي هو سبب توقف انتشار الفيديو."
+      },
+      {
+        "label": "عمليات الحفظ والإرسال بالخاص (Saves & DM Shares) — غير قابل للقياس من الخارج",
+        "whyItMatters": "أقوى إشارتين في خوارزمية إنستغرام الحالية لفتح الوصول لغير المتابعين (Unconnected Reach)؛ لا تظهر إلا داخل Insights."
+      },
+      {
+        "label": "نسبة الوصول لغير المتابعين (Non-Follower Reach %) — غير قابل للقياس من الخارج",
+        "whyItMatters": "تكشف هل الحساب ينمو بجمهور جديد أم يدور في نفس الدائرة المغلقة من المتابعين القدامى."
+      },
+      {
+        "label": "زيارات البروفايل ونقرات الرابط (Profile Visits & Link Clicks) — غير قابل للقياس من الخارج",
+        "whyItMatters": "تقيس كفاءة تحويل المشاهدين من الفيديوهات إلى البايو ثم إلى صفحة الحجز أو الواتساب."
+      },
+      {
+        "label": "التوزيع الجغرافي والعمري للجمهور الفعلي (Audience Demographics) — غير قابل للقياس من الخارج",
+        "whyItMatters": "يؤكد هل المشاهدات تأتي من السوق المستهدف صاحب القدرة الشرائية (الخليج ومصر) أم من جمهور غير مؤهل شرائياً."
+      }
+    ],
+    "updatedAt": "2026-11-06T01:02:12.246Z",
+    "acceptingClients": true,
+    "fomoEnabled": true,
+    "fomoSeatsLeft": 5,
+    "fomoCountdownMinutes": 10,
+    "fomoUrgencyTextAr": "متبقي 5 مقاعد فقط لتطبيق الـ System هذا الشهر",
+    "fomoUrgencyTextEn": "Only 5 onboarding spots left this month",
+    "reelsDisplayMode": "TOP_5"
+  }
+}

@@ -5,7 +5,7 @@
     {
       "id": "frm_funnel_main",
       "slug": "funnel-qualification",
-      "title": "احجز مكالمتك الاستراتيجية (30 دقيقة)",
+      "title": "احجز مكالمتك الاستراتيجية (45 دقيقة)",
       "description": "",
       "isMainFunnel": true,
       "disqualifyOption": "أقل من $2,700",
@@ -58,7 +58,7 @@
       "buttonText": "حجز Discovery Call مجانية ←",
       "successMessage": "تم تأكيد تأهيل طلبك بنجاح",
       "views": 0,
-      "submissionsCount": 5,
+      "submissionsCount": 10,
       "createdAt": "2025-01-01T00:00:00.000Z"
     },
     {
@@ -108,6 +108,64 @@
     }
   ],
   "formSubmissions": [
+    {
+      "id": "sub_1793918097641_tnfe2",
+      "formId": "frm_funnel_main",
+      "formTitle": "احجز مكالمتك الاستراتيجية (30 دقيقة)",
+      "formSlug": "funnel-qualification",
+      "answers": {
+        "رقم الواتساب (مع كود الدولة)": "+65 91234567",
+        "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "اقل من 2,500$",
+        "حالة التأهيل": "غير مؤهل (اقل من 2,500$) — تم تحويله للصفحة البديلة"
+      },
+      "qualified": false,
+      "createdAt": "2026-11-05T22:34:57.641Z"
+    },
+    {
+      "id": "sub_1793917289877_x8kto",
+      "formId": "frm_funnel_main",
+      "formTitle": "احجز مكالمتك الاستراتيجية (30 دقيقة)",
+      "formSlug": "funnel-qualification",
+      "answers": {
+        "رقم الواتساب (مع كود الدولة)": "+1 4354643664",
+        "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$",
+        "حالة التأهيل": "مؤهل — فُتح له تقويم Calendly"
+      },
+      "qualified": true,
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "createdAt": "2026-11-05T22:21:29.877Z"
+    },
+    {
+      "id": "sub_1793916691331_84h4m",
+      "formId": "frm_funnel_main",
+      "formTitle": "احجز مكالمتك الاستراتيجية (30 دقيقة)",
+      "formSlug": "funnel-qualification",
+      "answers": {
+        "رقم الواتساب (مع كود الدولة)": "+65 685845",
+        "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$",
+        "حالة التأهيل": "مؤهل — فُتح له تقويم Calendly"
+      },
+      "qualified": true,
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "createdAt": "2026-11-05T22:11:31.331Z"
+    },
+    {
+      "id": "sub_1793915023904_id8rm",
+      "formId": "frm_funnel_main",
+      "formTitle": "احجز مكالمتك الاستراتيجية (30 دقيقة)",
+      "formSlug": "funnel-qualification",
+      "answers": {
+        "رقم الواتساب (مع كود الدولة)": "+65 3526363266",
+        "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$",
+        "حالة التأهيل": "مؤهل — فُتح له تقويم Calendly"
+      },
+      "qualified": true,
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "createdAt": "2026-11-05T21:43:43.905Z"
+    },
     {
       "id": "sub_1793745943092_3ezmu",
       "formId": "frm_funnel_main",
@@ -176,8 +234,15 @@
     }
   ],
   "siteSettings": {
-    "showTestimonialsSection": false,
-    "showProofCards": false,
+    "showTestimonialsSection": true,
+    "showProofCards": true,
+    "showFaqSection": true,
+    "acceptingClients": true,
+    "fomoEnabled": true,
+    "fomoSeatsLeft": 5,
+    "fomoCountdownMinutes": 10,
+    "fomoTextAr": "متبقي 5 مقاعد فقط لتطبيق الـ System هذا الشهر",
+    "fomoTextEn": "Only 5 onboarding spots left this month",
     "skipQualificationForm": false,
     "calendlyUrl": "https://calendly.com/zyaddonga/30min?hide_gdpr_banner=1&primary_color=8b5cf6",
     "unqualifiedMessage": "للأسف حاليًا غير مؤهل للعمل معنا، وده هدية مجانية لك",
@@ -185,14 +250,14 @@
     "proofCards": [
       {
         "id": "proof-1",
-        "metric": "+185,000",
+        "metric": "+185K",
         "unit": "متابع في 5 شهور فقط",
         "desc": "بناء الهوية، كتابة الـ Hooks، ومونتاج الفيديوهات القصيرة لحساب واحد من الصفر.",
         "visible": true
       },
       {
         "id": "proof-2",
-        "metric": "+80,000,000",
+        "metric": "+80M",
         "unit": "مشاهدة أورجانيك",
         "desc": "محتوى فيديو قصير مبني على الاحتفاظ بانتباه المشاهد من أول ثانية بدون إعلانات.",
         "visible": true
@@ -381,5 +446,3450 @@
         }
       ]
     }
+  },
+  "siteEvents": [
+    {
+      "id": "sev_1793926945207_ghq11n",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-06T01:02:25.207Z"
+    },
+    {
+      "id": "sev_1793926944335_s8f0mg",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T01:02:24.335Z"
+    },
+    {
+      "id": "sev_1793926943725_lfvgbb",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T01:02:23.725Z"
+    },
+    {
+      "id": "sev_1793926942775_uyqj07",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T01:02:22.775Z"
+    },
+    {
+      "id": "sev_1793926940065_06vo4a",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T01:02:20.065Z"
+    },
+    {
+      "id": "sev_1793926940063_mvb6me",
+      "sessionId": "sess_1793926938768_36x09xc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T01:02:20.063Z"
+    },
+    {
+      "id": "sev_1793926172634_dw25ku",
+      "sessionId": "sess_1793926171642_uaw7fux",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:49:32.634Z"
+    },
+    {
+      "id": "sev_1793926172631_tzgczn",
+      "sessionId": "sess_1793926171642_uaw7fux",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:49:32.631Z"
+    },
+    {
+      "id": "sev_1793926110391_ovbsv4",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T00:48:30.391Z"
+    },
+    {
+      "id": "sev_1793926105560_9ajqqw",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T00:48:25.560Z"
+    },
+    {
+      "id": "sev_1793926102452_ov4pix",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T00:48:22.452Z"
+    },
+    {
+      "id": "sev_1793925945378_vv02sq",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:45:45.378Z"
+    },
+    {
+      "id": "sev_1793925945376_k1g7f3",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:45:45.376Z"
+    },
+    {
+      "id": "sev_1793925923664_9i71tn",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-06T00:45:23.664Z"
+    },
+    {
+      "id": "sev_1793925923647_ufkdul",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T00:45:23.647Z"
+    },
+    {
+      "id": "sev_1793925923645_7yjlcz",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T00:45:23.645Z"
+    },
+    {
+      "id": "sev_1793925923643_rz9bup",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T00:45:23.643Z"
+    },
+    {
+      "id": "sev_1793925923595_9hnh25",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:45:23.595Z"
+    },
+    {
+      "id": "sev_1793925923591_k0gfie",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:45:23.591Z"
+    },
+    {
+      "id": "sev_1793925709631_l0ykdj",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-06T00:41:49.631Z"
+    },
+    {
+      "id": "sev_1793925708898_xdvkd3",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-06T00:41:48.898Z"
+    },
+    {
+      "id": "sev_1793925707843_3bqoui",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-06T00:41:47.843Z"
+    },
+    {
+      "id": "sev_1793925706879_91czma",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-06T00:41:46.879Z"
+    },
+    {
+      "id": "sev_1793925682701_gr08v4",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T00:41:22.701Z"
+    },
+    {
+      "id": "sev_1793925682460_1z59ry",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T00:41:22.460Z"
+    },
+    {
+      "id": "sev_1793925682379_lnmtjk",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T00:41:22.379Z"
+    },
+    {
+      "id": "sev_1793925680904_kxp6ol",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:41:20.904Z"
+    },
+    {
+      "id": "sev_1793925680893_l3iq9s",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:41:20.893Z"
+    },
+    {
+      "id": "sev_1793925121744_cb3ao5",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:32:01.744Z"
+    },
+    {
+      "id": "sev_1793925121743_htpqk7",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:32:01.743Z"
+    },
+    {
+      "id": "sev_1793925114420_eyvhha",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-06T00:31:54.420Z"
+    },
+    {
+      "id": "sev_1793925113662_2vekjx",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-06T00:31:53.662Z"
+    },
+    {
+      "id": "sev_1793925112648_w3ki8h",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-06T00:31:52.648Z"
+    },
+    {
+      "id": "sev_1793925112548_8lq1ri",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-06T00:31:52.548Z"
+    },
+    {
+      "id": "sev_1793924177100_32lyu8",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T00:16:17.100Z"
+    },
+    {
+      "id": "sev_1793924177055_itdr4l",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T00:16:17.055Z"
+    },
+    {
+      "id": "sev_1793924177052_tizau4",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T00:16:17.052Z"
+    },
+    {
+      "id": "sev_1793924177050_owxq0d",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:16:17.050Z"
+    },
+    {
+      "id": "sev_1793924177048_d7eqmj",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:16:17.048Z"
+    },
+    {
+      "id": "sev_1793924134358_jxdzdo",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-06T00:15:34.358Z"
+    },
+    {
+      "id": "sev_1793924133063_ei206j",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-06T00:15:33.063Z"
+    },
+    {
+      "id": "sev_1793924133060_p661fr",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-06T00:15:33.060Z"
+    },
+    {
+      "id": "sev_1793924133002_xm0jnd",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-06T00:15:33.002Z"
+    },
+    {
+      "id": "sev_1793924132999_808jcr",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:15:32.999Z"
+    },
+    {
+      "id": "sev_1793924132995_h7y1kh",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-06T00:15:32.995Z"
+    },
+    {
+      "id": "sev_1793921394944_y9p7tw",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:29:54.944Z"
+    },
+    {
+      "id": "sev_1793921394338_u0q86a",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:29:54.338Z"
+    },
+    {
+      "id": "sev_1793921393584_7mvg0y",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:29:53.584Z"
+    },
+    {
+      "id": "sev_1793921392248_vw872u",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:29:52.248Z"
+    },
+    {
+      "id": "sev_1793921392245_055z56",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:29:52.245Z"
+    },
+    {
+      "id": "sev_1793921282911_nevyq3",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-05T23:28:02.911Z"
+    },
+    {
+      "id": "sev_1793921279497_3gfc26",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-05T23:27:59.497Z"
+    },
+    {
+      "id": "sev_1793921278267_93kr4c",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T23:27:58.267Z"
+    },
+    {
+      "id": "sev_1793921277449_dom1ly",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:27:57.449Z"
+    },
+    {
+      "id": "sev_1793921276650_ym3w6r",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:27:56.650Z"
+    },
+    {
+      "id": "sev_1793921275860_cmsa67",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:27:55.860Z"
+    },
+    {
+      "id": "sev_1793921273761_dlkg71",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:27:53.761Z"
+    },
+    {
+      "id": "sev_1793921273759_l7l92w",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:27:53.759Z"
+    },
+    {
+      "id": "sev_1793920386576_wxwvih",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T23:13:06.576Z"
+    },
+    {
+      "id": "sev_1793920385941_g4060q",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:13:05.941Z"
+    },
+    {
+      "id": "sev_1793920385903_5bqsl6",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:13:05.903Z"
+    },
+    {
+      "id": "sev_1793920385901_u03632",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:13:05.901Z"
+    },
+    {
+      "id": "sev_1793920385794_l7kfhb",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:13:05.794Z"
+    },
+    {
+      "id": "sev_1793920385792_mgg36d",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:13:05.792Z"
+    },
+    {
+      "id": "sev_1793920379892_chctn7",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:12:59.892Z"
+    },
+    {
+      "id": "sev_1793920379890_lspxds",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:12:59.890Z"
+    },
+    {
+      "id": "sev_1793920362179_swkfxq",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-05T23:12:42.179Z"
+    },
+    {
+      "id": "sev_1793920361048_6cu8gk",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-05T23:12:41.048Z"
+    },
+    {
+      "id": "sev_1793920359601_lrwbax",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T23:12:39.601Z"
+    },
+    {
+      "id": "sev_1793920355424_wxynbb",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:12:35.424Z"
+    },
+    {
+      "id": "sev_1793920355200_72pdqs",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:12:35.200Z"
+    },
+    {
+      "id": "sev_1793920355114_67cd9o",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:12:35.114Z"
+    },
+    {
+      "id": "sev_1793920347323_vyrl3m",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:12:27.323Z"
+    },
+    {
+      "id": "sev_1793920347322_twb13y",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:12:27.322Z"
+    },
+    {
+      "id": "sev_1793920331650_ujdkmk",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Form_Start",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T23:12:11.650Z"
+    },
+    {
+      "id": "sev_1793920328905_f4xek3",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:12:08.905Z"
+    },
+    {
+      "id": "sev_1793920328339_5vvan3",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:12:08.339Z"
+    },
+    {
+      "id": "sev_1793920327742_8jsdwi",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:12:07.742Z"
+    },
+    {
+      "id": "sev_1793920034812_7948rk",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:07:14.812Z"
+    },
+    {
+      "id": "sev_1793920034811_wji42v",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T23:07:14.811Z"
+    },
+    {
+      "id": "sev_1793920030935_sepezt",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Schedule_Call",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {},
+      "createdAt": "2026-11-05T23:07:10.935Z"
+    },
+    {
+      "id": "sev_1793920030933_9g7wjd",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Schedule_Call",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {},
+      "createdAt": "2026-11-05T23:07:10.933Z"
+    },
+    {
+      "id": "sev_1793920016520_meollh",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Lead_Qualified",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "answers": {
+          "رقم الواتساب (مع كود الدولة)": "+1 3253253233",
+          "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$"
+        }
+      },
+      "createdAt": "2026-11-05T23:06:56.520Z"
+    },
+    {
+      "id": "sev_1793920014914_th2k85",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "BUDGET_SELECT",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "budget": "2,500$ - 5,000$",
+        "field": "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟"
+      },
+      "createdAt": "2026-11-05T23:06:54.914Z"
+    },
+    {
+      "id": "sev_1793920010150_9lqq02",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Form_Start",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T23:06:50.150Z"
+    },
+    {
+      "id": "sev_1793920009010_gvaeap",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T23:06:49.010Z"
+    },
+    {
+      "id": "sev_1793920008864_bh8hl8",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T23:06:48.865Z"
+    },
+    {
+      "id": "sev_1793920008862_ky0d5m",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T23:06:48.862Z"
+    },
+    {
+      "id": "sev_1793919497581_2eet28",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:58:17.581Z"
+    },
+    {
+      "id": "sev_1793919497579_dfb3w2",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:58:17.579Z"
+    },
+    {
+      "id": "sev_1793919454430_v4yvsp",
+      "sessionId": "sess_1793919454170_8r6u9j7",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:57:34.430Z"
+    },
+    {
+      "id": "sev_1793919454428_64k3s8",
+      "sessionId": "sess_1793919454170_8r6u9j7",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:57:34.428Z"
+    },
+    {
+      "id": "sev_1793919420161_w5xeoh",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:57:00.161Z"
+    },
+    {
+      "id": "sev_1793919419923_rfket0",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:56:59.923Z"
+    },
+    {
+      "id": "sev_1793919406532_a4sjqs",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:56:46.532Z"
+    },
+    {
+      "id": "sev_1793919406531_jsrnbs",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:56:46.531Z"
+    },
+    {
+      "id": "sev_1793919406517_xwwir5",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:56:46.517Z"
+    },
+    {
+      "id": "sev_1793919401171_wfsbp5",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:41.171Z"
+    },
+    {
+      "id": "sev_1793919401170_k9aghu",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:56:41.170Z"
+    },
+    {
+      "id": "sev_1793919401169_z3hes5",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:41.169Z"
+    },
+    {
+      "id": "sev_1793919395850_r5fi9o",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:56:35.850Z"
+    },
+    {
+      "id": "sev_1793919363156_t2y9b8",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:03.156Z"
+    },
+    {
+      "id": "sev_1793919363155_611hvo",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:03.155Z"
+    },
+    {
+      "id": "sev_1793919363154_5k7nw5",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:03.154Z"
+    },
+    {
+      "id": "sev_1793919361134_087uo4",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:56:01.134Z"
+    },
+    {
+      "id": "sev_1793919137315_pxm1yq",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:52:17.315Z"
+    },
+    {
+      "id": "sev_1793919137313_4prh0b",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:52:17.313Z"
+    },
+    {
+      "id": "sev_1793919137245_52skhw",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:52:17.245Z"
+    },
+    {
+      "id": "sev_1793919137243_3q68kq",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:52:17.243Z"
+    },
+    {
+      "id": "sev_1793918694667_jmdvx9",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:44:54.667Z"
+    },
+    {
+      "id": "sev_1793918693947_2is2z2",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:44:53.947Z"
+    },
+    {
+      "id": "sev_1793918692941_993heq",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:44:52.941Z"
+    },
+    {
+      "id": "sev_1793918689621_n9ii15",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:44:49.621Z"
+    },
+    {
+      "id": "sev_1793918254522_yw4236",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "VSL_Play",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T22:37:34.522Z"
+    },
+    {
+      "id": "sev_1793918252462_1030jg",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:37:32.462Z"
+    },
+    {
+      "id": "sev_1793918252461_79jrke",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:37:32.461Z"
+    },
+    {
+      "id": "sev_1793918245925_fxvuge",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:37:25.925Z"
+    },
+    {
+      "id": "sev_1793918245924_n4a498",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:37:25.924Z"
+    },
+    {
+      "id": "sev_1793918245922_4yurea",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:37:25.922Z"
+    },
+    {
+      "id": "sev_1793918245921_wqzuyi",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:37:25.921Z"
+    },
+    {
+      "id": "sev_1793918029629_uu2qxy",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:49.629Z"
+    },
+    {
+      "id": "sev_1793918029628_pav9xc",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:49.628Z"
+    },
+    {
+      "id": "sev_1793918016859_togc8m",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:36.859Z"
+    },
+    {
+      "id": "sev_1793918016857_f82lzp",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:36.857Z"
+    },
+    {
+      "id": "sev_1793918015115_o5hr66",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:35.115Z"
+    },
+    {
+      "id": "sev_1793918014330_off2mz",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:33:34.330Z"
+    },
+    {
+      "id": "sev_1793918000319_pibt4j",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:33:20.320Z"
+    },
+    {
+      "id": "sev_1793918000098_c14qs9",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:33:20.098Z"
+    },
+    {
+      "id": "sev_1793918000050_xcyq8i",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:33:20.050Z"
+    },
+    {
+      "id": "sev_1793917928703_jj1q72",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:32:08.703Z"
+    },
+    {
+      "id": "sev_1793917928702_h4yc1w",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:32:08.702Z"
+    },
+    {
+      "id": "sev_1793917928701_bxu09u",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:32:08.701Z"
+    },
+    {
+      "id": "sev_1793917928700_068zok",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:32:08.700Z"
+    },
+    {
+      "id": "sev_1793917705442_4nnrpp",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-05T22:28:25.442Z"
+    },
+    {
+      "id": "sev_1793917704558_xhg65c",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-05T22:28:24.558Z"
+    },
+    {
+      "id": "sev_1793917703612_5elef8",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-05T22:28:23.612Z"
+    },
+    {
+      "id": "sev_1793917701464_qqhriq",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:28:21.464Z"
+    },
+    {
+      "id": "sev_1793917700543_subc4p",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:28:20.543Z"
+    },
+    {
+      "id": "sev_1793917699683_ntjji8",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:28:19.683Z"
+    },
+    {
+      "id": "sev_1793917697903_nr609w",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:28:17.903Z"
+    },
+    {
+      "id": "sev_1793917695832_nuvazr",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:28:15.832Z"
+    },
+    {
+      "id": "sev_1793917695829_843wv1",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:28:15.829Z"
+    },
+    {
+      "id": "sev_1793917616318_3wzq5e",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:26:56.318Z"
+    },
+    {
+      "id": "sev_1793917604818_9jcofb",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:26:44.818Z"
+    },
+    {
+      "id": "sev_1793917604282_y15wqz",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:26:44.282Z"
+    },
+    {
+      "id": "sev_1793917604262_2nn7vr",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:26:44.262Z"
+    },
+    {
+      "id": "sev_1793917604246_d8tdh7",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:26:44.246Z"
+    },
+    {
+      "id": "sev_1793917604225_wxs3pa",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:26:44.225Z"
+    },
+    {
+      "id": "sev_1793917602654_tplvh9",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:26:42.654Z"
+    },
+    {
+      "id": "sev_1793917602652_h4593d",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:26:42.652Z"
+    },
+    {
+      "id": "sev_1793917602651_ohzvtf",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:26:42.651Z"
+    },
+    {
+      "id": "sev_1793917602649_kcbhzx",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:26:42.649Z"
+    },
+    {
+      "id": "sev_1793917520662_0c8o3e",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:20.663Z"
+    },
+    {
+      "id": "sev_1793917520647_2139qb",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:20.647Z"
+    },
+    {
+      "id": "sev_1793917520645_kbq1h9",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:20.645Z"
+    },
+    {
+      "id": "sev_1793917520618_9xlx0o",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:20.618Z"
+    },
+    {
+      "id": "sev_1793917516171_tw3kwm",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:25:16.171Z"
+    },
+    {
+      "id": "sev_1793917513956_pz2jo2",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:25:13.956Z"
+    },
+    {
+      "id": "sev_1793917512565_i95zif",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:25:12.565Z"
+    },
+    {
+      "id": "sev_1793917511019_krhes4",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:25:11.019Z"
+    },
+    {
+      "id": "sev_1793917508072_66whb0",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:08.072Z"
+    },
+    {
+      "id": "sev_1793917508071_stl229",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:08.071Z"
+    },
+    {
+      "id": "sev_1793917508070_jo6ynh",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:08.070Z"
+    },
+    {
+      "id": "sev_1793917508049_9es4yx",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:25:08.049Z"
+    },
+    {
+      "id": "sev_1793917315252_4ycsuw",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:21:55.252Z"
+    },
+    {
+      "id": "sev_1793917315251_pl4kzr",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:21:55.251Z"
+    },
+    {
+      "id": "sev_1793917315241_o34yts",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:21:55.241Z"
+    },
+    {
+      "id": "sev_1793917315039_pmion5",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:21:55.039Z"
+    },
+    {
+      "id": "sev_1793917315026_vknmp2",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:21:55.026Z"
+    },
+    {
+      "id": "sev_1793917311050_corfbh",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:21:51.050Z"
+    },
+    {
+      "id": "sev_1793917310258_geiwj9",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:21:50.258Z"
+    },
+    {
+      "id": "sev_1793917309481_nton51",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:21:49.481Z"
+    },
+    {
+      "id": "sev_1793917289892_2jczik",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "Lead_Qualified",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "answers": {
+          "رقم الواتساب (مع كود الدولة)": "+1 4354643664",
+          "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$"
+        }
+      },
+      "createdAt": "2026-11-05T22:21:29.892Z"
+    },
+    {
+      "id": "sev_1793917279190_kls51w",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "BUDGET_SELECT",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "budget": "2,500$ - 5,000$",
+        "field": "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟"
+      },
+      "createdAt": "2026-11-05T22:21:19.190Z"
+    },
+    {
+      "id": "sev_1793917276659_8jc318",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "Form_Start",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T22:21:16.659Z"
+    },
+    {
+      "id": "sev_1793917273685_uvu4he",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-05T22:21:13.685Z"
+    },
+    {
+      "id": "sev_1793917272901_hqnm1p",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-05T22:21:12.901Z"
+    },
+    {
+      "id": "sev_1793917271851_bpdyt6",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "FAQ_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-05T22:21:11.852Z"
+    },
+    {
+      "id": "sev_1793917270279_g5r6av",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:21:10.279Z"
+    },
+    {
+      "id": "sev_1793917260588_nj1sdn",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:21:00.588Z"
+    },
+    {
+      "id": "sev_1793917260586_5ws0i0",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:21:00.586Z"
+    },
+    {
+      "id": "sev_1793917260574_lf3lmu",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:21:00.574Z"
+    },
+    {
+      "id": "sev_1793917260562_j4jpzp",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:21:00.562Z"
+    },
+    {
+      "id": "sev_1793917260561_m2aw28",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "US",
+      "countryName": "أمريكا",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:21:00.561Z"
+    },
+    {
+      "id": "sev_1793917249119_o2jxnn",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:20:49.119Z"
+    },
+    {
+      "id": "sev_1793917244010_7ev8og",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:20:44.010Z"
+    },
+    {
+      "id": "sev_1793917243963_c3r0ym",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:20:43.963Z"
+    },
+    {
+      "id": "sev_1793917242055_eauj7u",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:20:42.055Z"
+    },
+    {
+      "id": "sev_1793917242042_gyhuuk",
+      "sessionId": "sess_1793917237654_tpmbtyl",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:20:42.042Z"
+    },
+    {
+      "id": "sev_1793916749085_0ghjp1",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:12:29.085Z"
+    },
+    {
+      "id": "sev_1793916749084_czg079",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:12:29.084Z"
+    },
+    {
+      "id": "sev_1793916733262_3w1itr",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T22:12:13.262Z"
+    },
+    {
+      "id": "sev_1793916718903_ojat0p",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:58.903Z"
+    },
+    {
+      "id": "sev_1793916718902_epokih",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:58.902Z"
+    },
+    {
+      "id": "sev_1793916715840_arvi9z",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:11:55.840Z"
+    },
+    {
+      "id": "sev_1793916715839_py25to",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:11:55.839Z"
+    },
+    {
+      "id": "sev_1793916715837_gwiooj",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:11:55.837Z"
+    },
+    {
+      "id": "sev_1793916715820_g84gys",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:55.820Z"
+    },
+    {
+      "id": "sev_1793916715818_mwmjyv",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:55.818Z"
+    },
+    {
+      "id": "sev_1793916691351_rl1ns8",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Lead_Qualified",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "answers": {
+          "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$",
+          "رقم الواتساب (مع كود الدولة)": "+65 685845"
+        }
+      },
+      "createdAt": "2026-11-05T22:11:31.351Z"
+    },
+    {
+      "id": "sev_1793916689047_ong089",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "BUDGET_SELECT",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "budget": "2,500$ - 5,000$",
+        "field": "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟"
+      },
+      "createdAt": "2026-11-05T22:11:29.047Z"
+    },
+    {
+      "id": "sev_1793916688107_53h1vn",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "Form_Start",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T22:11:28.107Z"
+    },
+    {
+      "id": "sev_1793916683862_igmz1u",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:11:23.862Z"
+    },
+    {
+      "id": "sev_1793916680004_vrk15y",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:11:20.004Z"
+    },
+    {
+      "id": "sev_1793916677624_izwatw",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:11:17.624Z"
+    },
+    {
+      "id": "sev_1793916669947_ol45yf",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:09.947Z"
+    },
+    {
+      "id": "sev_1793916669946_hs4wtt",
+      "sessionId": "sess_1793916668050_09nh6tc",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:11:09.946Z"
+    },
+    {
+      "id": "sev_1793916381527_mpwc7h",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T22:06:21.527Z"
+    },
+    {
+      "id": "sev_1793916380032_d7372r",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T22:06:20.032Z"
+    },
+    {
+      "id": "sev_1793916378218_wcwfhr",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T22:06:18.218Z"
+    },
+    {
+      "id": "sev_1793916376466_wc86um",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T22:06:16.466Z"
+    },
+    {
+      "id": "sev_1793916375099_hr0m5k",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:06:15.099Z"
+    },
+    {
+      "id": "sev_1793916370470_2x7ryd",
+      "sessionId": "sess_1793916367755_gkzu1k0",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T22:06:10.470Z"
+    },
+    {
+      "id": "sev_1793915816711_g9popl",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:56:56.711Z"
+    },
+    {
+      "id": "sev_1793915816065_ny1347",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:56.065Z"
+    },
+    {
+      "id": "sev_1793915816064_4nxd2a",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:56.064Z"
+    },
+    {
+      "id": "sev_1793915788922_tew35i",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:56:28.922Z"
+    },
+    {
+      "id": "sev_1793915788571_sbn61d",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:28.571Z"
+    },
+    {
+      "id": "sev_1793915788569_xzd3sn",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:28.569Z"
+    },
+    {
+      "id": "sev_1793915771140_qxhfa1",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:56:11.140Z"
+    },
+    {
+      "id": "sev_1793915766410_43ez66",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:06.410Z"
+    },
+    {
+      "id": "sev_1793915765765_5s8l7w",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:05.765Z"
+    },
+    {
+      "id": "sev_1793915762148_9kqd4u",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:56:02.148Z"
+    },
+    {
+      "id": "sev_1793915761344_pqb2gh",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:01.344Z"
+    },
+    {
+      "id": "sev_1793915761343_8k2fkw",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:56:01.343Z"
+    },
+    {
+      "id": "sev_1793915748849_tbol7l",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:55:48.849Z"
+    },
+    {
+      "id": "sev_1793915748373_7pc9nb",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:55:48.373Z"
+    },
+    {
+      "id": "sev_1793915748361_khvz65",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:55:48.361Z"
+    },
+    {
+      "id": "sev_1793915701724_8uo9qf",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:55:01.724Z"
+    },
+    {
+      "id": "sev_1793915701723_vwpo0i",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:55:01.723Z"
+    },
+    {
+      "id": "sev_1793915695195_q15p4q",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:54:55.195Z"
+    },
+    {
+      "id": "sev_1793915693315_yfo05g",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:54:53.315Z"
+    },
+    {
+      "id": "sev_1793915691432_jswz6q",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:54:51.432Z"
+    },
+    {
+      "id": "sev_1793915689020_8l4f9k",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:54:49.021Z"
+    },
+    {
+      "id": "sev_1793915688997_tnlnbe",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:54:48.997Z"
+    },
+    {
+      "id": "sev_1793915680609_iul1ub",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:54:40.609Z"
+    },
+    {
+      "id": "sev_1793915680607_7d1mnz",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:54:40.607Z"
+    },
+    {
+      "id": "sev_1793915661106_3yjyyz",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "FAQ_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "question": "على أي منصات سننشر المحتوى؟",
+        "index": 3
+      },
+      "createdAt": "2026-11-05T21:54:21.106Z"
+    },
+    {
+      "id": "sev_1793915651893_mtt633",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "FAQ_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-05T21:54:11.893Z"
+    },
+    {
+      "id": "sev_1793915644412_7rbgyl",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "FAQ_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "question": "لماذا الحد الأدنى للتعاقد هو 3 شهور (90 يوماً)؟",
+        "index": 2
+      },
+      "createdAt": "2026-11-05T21:54:04.412Z"
+    },
+    {
+      "id": "sev_1793915642400_gh5fb9",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "FAQ_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "question": "كم من الوقت ستحتاجون مني شهرياً؟",
+        "index": 1
+      },
+      "createdAt": "2026-11-05T21:54:02.400Z"
+    },
+    {
+      "id": "sev_1793915641006_ks7ylm",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "FAQ_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "question": "كيف تتم عملية التصوير والمونتاج؟",
+        "index": 0
+      },
+      "createdAt": "2026-11-05T21:54:01.006Z"
+    },
+    {
+      "id": "sev_1793915640471_lf0b5w",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T21:54:00.471Z"
+    },
+    {
+      "id": "sev_1793915606001_7eelxb",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:53:26.001Z"
+    },
+    {
+      "id": "sev_1793915605121_crgztk",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:53:25.121Z"
+    },
+    {
+      "id": "sev_1793915604525_bp4fva",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:53:24.525Z"
+    },
+    {
+      "id": "sev_1793915603380_5gz49u",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:53:23.380Z"
+    },
+    {
+      "id": "sev_1793915603379_8pfx12",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:53:23.379Z"
+    },
+    {
+      "id": "sev_1793915602215_rjz1g2",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:53:22.215Z"
+    },
+    {
+      "id": "sev_1793915602214_5uaptj",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:53:22.214Z"
+    },
+    {
+      "id": "sev_1793915349611_ghs2cb",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T21:49:09.611Z"
+    },
+    {
+      "id": "sev_1793915348211_fv1qph",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:49:08.211Z"
+    },
+    {
+      "id": "sev_1793915348210_wz1z1r",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:49:08.210Z"
+    },
+    {
+      "id": "sev_1793915348209_es36uk",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:49:08.209Z"
+    },
+    {
+      "id": "sev_1793915346228_gwe819",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:49:06.228Z"
+    },
+    {
+      "id": "sev_1793915346227_n2s2g0",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:49:06.227Z"
+    },
+    {
+      "id": "sev_1793915213885_clwmqj",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:46:53.885Z"
+    },
+    {
+      "id": "sev_1793915212979_yikcgg",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:46:52.979Z"
+    },
+    {
+      "id": "sev_1793915212132_cwll2a",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:46:52.132Z"
+    },
+    {
+      "id": "sev_1793915210866_h5iszf",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:50.866Z"
+    },
+    {
+      "id": "sev_1793915210666_23yj9k",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:50.666Z"
+    },
+    {
+      "id": "sev_1793915200366_y3d8e1",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:46:40.366Z"
+    },
+    {
+      "id": "sev_1793915200230_ex0ox3",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:46:40.230Z"
+    },
+    {
+      "id": "sev_1793915200229_hgt52r",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:46:40.229Z"
+    },
+    {
+      "id": "sev_1793915200161_w6ixh1",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:40.161Z"
+    },
+    {
+      "id": "sev_1793915200018_ftsl34",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:40.018Z"
+    },
+    {
+      "id": "sev_1793915196599_41fias",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:46:36.599Z"
+    },
+    {
+      "id": "sev_1793915195918_kp45uo",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:46:35.918Z"
+    },
+    {
+      "id": "sev_1793915194807_67bq3j",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:46:34.807Z"
+    },
+    {
+      "id": "sev_1793915191873_cgd56c",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:31.873Z"
+    },
+    {
+      "id": "sev_1793915191871_4efvkv",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:31.871Z"
+    },
+    {
+      "id": "sev_1793915167207_xfsar4",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:46:07.207Z"
+    },
+    {
+      "id": "sev_1793915167025_2rmr38",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:46:07.025Z"
+    },
+    {
+      "id": "sev_1793915167024_gcn6j9",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:46:07.024Z"
+    },
+    {
+      "id": "sev_1793915167024_4rn5c7",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:07.024Z"
+    },
+    {
+      "id": "sev_1793915165700_8nyp89",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:46:05.700Z"
+    },
+    {
+      "id": "sev_1793915161223_m3j8kr",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Form_Start",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T21:46:01.223Z"
+    },
+    {
+      "id": "sev_1793915156481_u5w4aj",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:45:56.481Z"
+    },
+    {
+      "id": "sev_1793915148542_5qfa1j",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:45:48.542Z"
+    },
+    {
+      "id": "sev_1793915148540_pz1th9",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:45:48.540Z"
+    },
+    {
+      "id": "sev_1793915147412_vcebrr",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:45:47.412Z"
+    },
+    {
+      "id": "sev_1793915145078_996yl5",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:45:45.078Z"
+    },
+    {
+      "id": "sev_1793915044224_6ow6d1",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:44:04.224Z"
+    },
+    {
+      "id": "sev_1793915039493_pnij14",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "VSL_Play",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "hero_vsl"
+      },
+      "createdAt": "2026-11-05T21:43:59.493Z"
+    },
+    {
+      "id": "sev_1793915037604_n7ck2f",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:43:57.604Z"
+    },
+    {
+      "id": "sev_1793915037603_2vkmbo",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:43:57.603Z"
+    },
+    {
+      "id": "sev_1793915035298_7655j1",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Schedule_Call",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {},
+      "createdAt": "2026-11-05T21:43:55.298Z"
+    },
+    {
+      "id": "sev_1793915035297_53mcjt",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Schedule_Call",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {},
+      "createdAt": "2026-11-05T21:43:55.297Z"
+    },
+    {
+      "id": "sev_1793915023923_62olq2",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Lead_Qualified",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "answers": {
+          "رقم الواتساب (مع كود الدولة)": "+65 3526363266",
+          "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟": "2,500$ - 5,000$"
+        }
+      },
+      "createdAt": "2026-11-05T21:43:43.923Z"
+    },
+    {
+      "id": "sev_1793915022492_suvnmh",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "BUDGET_SELECT",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "budget": "2,500$ - 5,000$",
+        "field": "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟"
+      },
+      "createdAt": "2026-11-05T21:43:42.492Z"
+    },
+    {
+      "id": "sev_1793915014505_qdxegl",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:43:34.505Z"
+    },
+    {
+      "id": "sev_1793915014504_p999o2",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:43:34.504Z"
+    },
+    {
+      "id": "sev_1793915014503_lbaoy4",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:43:34.503Z"
+    },
+    {
+      "id": "sev_1793915010140_196ic6",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Form_Start",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T21:43:30.140Z"
+    },
+    {
+      "id": "sev_1793915010140_r204j3",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:43:30.140Z"
+    },
+    {
+      "id": "sev_1793915010139_p6othm",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "SG",
+      "countryName": "سنغافورة",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:43:30.139Z"
+    },
+    {
+      "id": "sev_1793914996457_t0gddf",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "BUDGET_SELECT",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "budget": "2,500$ - 5,000$",
+        "field": "كم المبلغ اللي مستعد تستثمره في بناء براندك الشخصى؟"
+      },
+      "createdAt": "2026-11-05T21:43:16.457Z"
+    },
+    {
+      "id": "sev_1793914996373_12i0ef",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "Form_Start",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "location": "qualification_gate"
+      },
+      "createdAt": "2026-11-05T21:43:16.373Z"
+    },
+    {
+      "id": "sev_1793914989140_hsj15g",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T21:43:09.140Z"
+    },
+    {
+      "id": "sev_1793914964001_5dwh7c",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:42:44.001Z"
+    },
+    {
+      "id": "sev_1793914964000_6vijsv",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:42:44.000Z"
+    },
+    {
+      "id": "sev_1793914964000_stz5ff",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:42:44.000Z"
+    },
+    {
+      "id": "sev_1793914963089_3ube2a",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:42:43.089Z"
+    },
+    {
+      "id": "sev_1793914963088_t61t9k",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:42:43.088Z"
+    },
+    {
+      "id": "sev_1793914959889_r2ufup",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 25
+      },
+      "createdAt": "2026-11-05T21:42:39.889Z"
+    },
+    {
+      "id": "sev_1793914959888_p0c4o5",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 100
+      },
+      "createdAt": "2026-11-05T21:42:39.888Z"
+    },
+    {
+      "id": "sev_1793914959888_1bsslz",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 75
+      },
+      "createdAt": "2026-11-05T21:42:39.888Z"
+    },
+    {
+      "id": "sev_1793914959886_n9zgbx",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "SCROLL_DEPTH",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "depth": 50
+      },
+      "createdAt": "2026-11-05T21:42:39.886Z"
+    },
+    {
+      "id": "sev_1793914770581_mcb24j",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:39:30.581Z"
+    },
+    {
+      "id": "sev_1793914770581_vykspn",
+      "sessionId": "sess_1793914769848_q63df6e",
+      "event": "PAGE_VIEW",
+      "countryCode": "EG",
+      "countryName": "مصر",
+      "payload": {
+        "page": "home"
+      },
+      "createdAt": "2026-11-05T21:39:30.581Z"
+    }
+  ],
+  "studioStore": {
+    "docs": "{\"mw47q414ubgdo\":{\"type\":\"contract\",\"lang\":\"ar\",\"sig\":\"\",\"cover\":{\"title\":\"عقد تقديم خدمات احترافية\",\"sub\":\"اتفاقية إطار عمل متكاملة تحدد نطاق الخدمات، التسليمات، الالتزامات المالية، وحقوق الملكية الفكرية بين الطرفين.\",\"p1\":\"APX\",\"p2\":\"\",\"date\":\"٦ نوفمبر ٢٠٢٦\"},\"body\":\"<h2>عقد تقديم خدمات احترافية</h2><p>إنه في يوم <b>٦ نوفمبر ٢٠٢٦</b>، حُررت هذه الاتفاقية ودخلت حيز النفاذ بين كلٍّ من:</p><div class=\\\"parties\\\"><div class=\\\"party\\\"><label>FIRST PARTY · <span>الطرف الأول (مقدّم الخدمة)</span></label><p><b>APX</b></p><p>يمثلها قانونًا: [الاسم والمسمى الوظيفي]</p><p>سجل تجاري / بطاقة ضريبية: [الرقم]</p><p>العنوان والبريد المعتمد: [العنوان / الإيميل]</p></div><div class=\\\"party\\\"><label>SECOND PARTY · <span>الطرف الثاني (العميل)</span></label><p><b>[اسم الشركة / العميل]</b></p><p>يمثلها قانونًا: [الاسم والمسمى الوظيفي]</p><p>سجل تجاري / رقم قومي: [الرقم]</p><p>العنوان والبريد المعتمد: [العنوان / الإيميل]</p></div></div><div class=\\\"preamble\\\"><label>RECITALS · <span>التمهيد</span></label><p><b>حيث إن</b> الطرف الأول شركة متخصصة في مجالات الإنتاج الإبداعي، صناعة المحتوى، والحلول التسويقية الرقمية؛ <b>وحيث إن</b> الطرف الثاني يرغب في الاستعانة بخبرات الطرف الأول لتنفيذ الأعمال المبيّنة في هذا العقد؛</p><p><b>لذا فقد تلاقت إرادة الطرفين</b> وهما بكامل الأهلية المعتبرة قانونًا على إبرام هذا العقد وفقًا للبنود والشروط الآتية:</p></div><h3>حجية التمهيد والتعريفات</h3><ol><li>يُعد التمهيد السابق وكافة الملاحق أو عروض الأسعار المعتمدة جزءًا لا يتجزأ من هذا العقد ومكمّلًا ومفسّرًا لبنوده.</li><li>يقصد بـ <b>«المخرجات»</b> كافة الأعمال الإبداعية أو السكربتات أو الفيديوهات المتفق عليها، ويقصد بـ <b>«أيام العمل»</b> أيام العمل الرسمية باستثناء العطلات الرسمية.</li></ol><h3>نطاق العمل والخدمات</h3><ol><li>يلتزم الطرف الأول بتقديم الخدمات والمخرجات التالية لصالح الطرف الثاني: [تفصيل الخدمات وعدد المخرجات الشهرية أو نطاق المشروع].</li><li>ينفّذ الطرف الأول الأعمال وفق أعلى المعايير المهنية والفنية المتعارف عليها وبما يتوافق مع الهوية المعتمدة للطرف الثاني.</li><li>أي أعمال إضافية خارج النطاق المحدد في البند (2.1) تُعد <b>«طلب تغيير»</b> وتخضع لاتفاق مستقل بتكلفة ومدة زمنية إضافية.</li></ol><h3>التسليم والمراجعات والاعتماد</h3><ol><li>يحق للطرف الثاني طلب حتى [٢] جولة من التعديلات المجمّعة على كل مخرج خلال [٣] أيام عمل من تاريخ إرساله للمراجعة.</li><li>في حال عدم إرسال الطرف الثاني لملاحظاته خلال [٥] أيام عمل من تاريخ التسليم، يُعتبر المخرج معتمدًا ومقبولًا نهائيًا.</li><li>أي تعديلات جوهرية تُطلب بعد الاعتماد النهائي أو تخالف التوجيه المتفق عليه مسبقًا تُحتسب بتكلفة مستقلة.</li></ol><h3>المقابل المالي وشروط السداد</h3><ol><li>يلتزم الطرف الثاني بسداد إجمالي مبلغ وقدره <b>[المبلغ] [العملة]</b> نظير الخدمات المتفق عليها (غير شامل ضريبة القيمة المضافة إن وجدت).</li><li>يتم السداد وفق الجدول التالي: [٥٠٪ دفعة مقدمة عند التوقيع و٥٠٪ عند التسليم / أو شهريًا مقدمًا في أول كل شهر].</li><li>في حال تأخر السداد عن الموعد المحدد لأكثر من [٥] أيام عمل، يحق للطرف الأول تعليق العمل والتسليمات مؤقتًا لحين سداد المستحقات دون أدنى مسؤولية.</li></ol><h3>مدة العقد والجدول الزمني</h3><ol><li>يسري هذا العقد لمدة <b>[المدة]</b> تبدأ من تاريخ [تاريخ البداية] شريطة استلام الدفعة المقدمة والمواد اللازمة لبدء التنفيذ.</li><li>يمتد الجدول الزمني للتسليم تلقائيًا بقدر أي تأخير ينشأ عن تأخر الطرف الثاني في تسليم المواد أو الاعتمادات المطلوبة.</li></ol><h3>التزامات الطرفين</h3><ol><li><b>التزامات الطرف الأول:</b> بذل العناية المهنية اللازمة، الالتزام بالمواعيد المتفق عليها، وتخصيص فريق عمل مؤهل لتنفيذ المشروع.</li><li><b>التزامات الطرف الثاني:</b> تعيين ممثل واحد معتمد للتواصل والاعتماد، وتزويد الطرف الأول بالمعلومات والملفات اللازمة في مواعيدها.</li></ol><h3>حقوق الملكية الفكرية وعرض الأعمال</h3><ol><li>تنتقل حقوق الاستخدام والنشر للمخرجات النهائية المعتمدة إلى الطرف الثاني فور سداد كامل المستحقات المالية المقررة بموجب هذا العقد.</li><li>تظل كافة الأدوات، القوالب، والملفات المفتوحة أو المسودات غير المعتمدة ملكية خالصة للطرف الأول ما لم يُتفق كتابةً على خلاف ذلك.</li><li>يحق للطرف الأول الإشارة إلى المشروع وعرض المخرجات المنشورة ضمن سابقة أعماله (Portfolio) بعد نشرها للجمهور.</li></ol><h3>السرية وعدم الإفصاح</h3><ol><li>يلتزم كل طرف بالحفاظ التام على سرية كافة البيانات التجارية، التسويقية، المالية، وبيانات الدخول المتبادلة، وعدم إفشائها لأي طرف ثالث طوال مدة العقد ولمدة [سنتين] بعد انتهائه.</li></ol><h3>الضمانات وحدود المسؤولية</h3><ol><li>يضمن الطرف الثاني ملكيته أو حيازته للتراخيص القانونية لكافة المواد والعلامات التجارية المسلّمة للطرف الأول، وإخلاء مسؤولية الطرف الأول عن أي مطالبة من الغير بشأنها.</li><li>لا يتحمل أي طرف مسؤولية الأضرار غير المباشرة أو التبعية (بما في ذلك تغيرات خوارزميات المنصات أو نتائج الحملات الإعلانية)، وفي جميع الأحوال لا تتجاوز المسؤولية القصوى قيمة الدفعة الخاصةبدورة العمل محل المطالبة.</li></ol><h3>إنهاء العقد والقوة القاهرة</h3><ol><li>يجوز لأي من الطرفين إنهاء العقد بموجب إخطار كتابي مسبق مدته [١٥] يومًا، أو فورًا في حال إخلال الطرف الآخر بالتزام جوهري وعدم معالجته خلال [٧] أيام عمل من إخطاره.</li><li>عند الإنهاء، تُصفّى الحسابات بحيث يسدد الطرف الثاني قيمة كافة الأعمال المنجزة أو الجاري تنفيذها حتى تاريخ الإنهاء، وتكون الدفعات المقدمة عن دورات العمل التي بدأ تنفيذها غير قابلة للاسترداد.</li><li>لا يُعد أي طرف مخلًا بالتزاماته إذا حال دون تنفيذها ظرف من ظروف القوة القاهرة الخارجة عن الإرادة.</li></ol><h3>القانون الواجب التطبيق وفض النزاعات</h3><ol><li>يخضع هذا العقد ويُفسَّر وفقًا للقوانين السارية، وفي حال نشوء أي خلاف يُحسم وديًا خلال [١٥] يومًا، وإلا ينعقد الاختصاص القضائي لمحاكم <b>[المدينة / الدولة]</b>.</li><li>يمثل هذا العقد كامل الاتفاق بين الطرفين ويلغي ما سبقه من تفاهمات شفهية أو كتابية، وتُعد المراسلات عبر البريد الإلكتروني المثبت بصدر العقد منتجة لآثارها القانونية.</li></ol><div class=\\\"closing\\\"><p><b>وإثباتًا لما تقدم،</b> حُرر هذا العقد من نسختين أصليتين باللغة المعتمدة، بيد كل طرف نسخة للعمل بموجبها، ووقّع الطرفان أدناه على كل صفحة من صفحات العقد.</p></div>\",\"id\":\"mw47q414ubgdo\",\"updated\":1793923487360,\"created\":1793923485160,\"folder\":null,\"pinned\":false,\"name\":\"عقد تقديم خدمات احترافية\"},\"mw49e66pt85fm\":{\"id\":\"mw49e66pt85fm\",\"type\":\"contract\",\"lang\":\"ar\",\"name\":\"عقد تقديم خدمات احترافية\",\"folder\":null,\"pinned\":false,\"created\":1793926287313,\"updated\":1793926308618,\"sig\":\"\",\"cover\":{\"title\":\"عقد تقديم خدمات احترافية\",\"sub\":\"اتفاقية إطار عمل متكاملة تحدد نطاق الخدمات، التسليمات، الالتزامات المالية، وحقوق الملكية الفكرية بين الطرفين.\",\"p1\":\"APX\",\"p2\":\"\",\"date\":\"٦ نوفمبر ٢٠٢٦\"},\"body\":\"<h2>عقد تقديم خدمات احترافية</h2><p>إنه في يوم <b>٦ نوفمبر ٢٠٢٦</b>، حُررت هذه الاتفاقية ودخلت حيز النفاذ بين كلٍّ من:</p><div class=\\\"parties\\\"><div class=\\\"party\\\"><label>FIRST PARTY · <span>الطرف الأول (مقدّم الخدمة)</span></label><p><b>APX</b></p><p>يمثلها قانونًا: [الاسم والمسمى الوظيفي]</p><p>سجل تجاري / بطاقة ضريبية: [الرقم]</p><p>العنوان والبريد المعتمد: [العنوان / الإيميل]</p></div><div class=\\\"party\\\"><label>SECOND PARTY · <span>الطرف الثاني (العميل)</span></label><p><b>[اسم الشركة / العميل]</b></p><p>يمثلها قانونًا: [الاسم والمسمى الوظيفي]</p><p>سجل تجاري / رقم قومي: [الرقم]</p><p>العنوان والبريد المعتمد: [العنوان / الإيميل]</p></div></div><div class=\\\"preamble\\\"><label>RECITALS · <span>التمهيد</span></label><p><b>حيث إن</b> الطرف الأول شركة متخصصة في مجالات الإنتاج الإبداعي، صناعة المحتوى، والحلول التسويقية الرقمية؛ <b>وحيث إن</b> الطرف الثاني يرغب في الاستعانة بخبرات الطرف الأول لتنفيذ الأعمال المبيّنة في هذا العقد؛</p><p><b>لذا فقد تلاقت إرادة الطرفين</b> وهما بكامل الأهلية المعتبرة قانونًا على إبرام هذا العقد وفقًا للبنود والشروط الآتية:</p></div><h3>حجية التمهيد والتعريفات</h3><ol><li>يُعد التمهيد السابق وكافة الملاحق أو عروض الأسعار المعتمدة جزءًا لا يتجزأ من هذا العقد ومكمّلًا ومفسّرًا لبنوده.</li><li>يقصد بـ <b>«المخرجات»</b> كافة الأعمال الإبداعية أو السكربتات أو الفيديوهات المتفق عليها، ويقصد بـ <b>«أيام العمل»</b> أيام العمل الرسمية باستثناء العطلات الرسمية.</li></ol><h3>نطاق العمل والخدمات</h3><ol><li>يلتزم الطرف الأول بتقديم الخدمات والمخرجات التالية لصالح الطرف الثاني: [تفصيل الخدمات وعدد المخرجات الشهرية أو نطاق المشروع].</li><li>ينفّذ الطرف الأول الأعمال وفق أعلى المعايير المهنية والفنية المتعارف عليها وبما يتوافق مع الهوية المعتمدة للطرف الثاني.</li><li>أي أعمال إضافية خارج النطاق المحدد في البند (2.1) تُعد <b>«طلب تغيير»</b> وتخضع لاتفاق مستقل بتكلفة ومدة زمنية إضافية.</li></ol><h3>التسليم والمراجعات والاعتماد</h3><ol><li>يحق للطرف الثاني طلب حتى [٢] جولة من التعديلات المجمّعة على كل مخرج خلال [٣] أيام عمل من تاريخ إرساله للمراجعة.</li><li>في حال عدم إرسال الطرف الثاني لملاحظاته خلال [٥] أيام عمل من تاريخ التسليم، يُعتبر المخرج معتمدًا ومقبولًا نهائيًا.</li><li>أي تعديلات جوهرية تُطلب بعد الاعتماد النهائي أو تخالف التوجيه المتفق عليه مسبقًا تُحتسب بتكلفة مستقلة.</li></ol><h3>المقابل المالي وشروط السداد</h3><ol><li>يلتزم الطرف الثاني بسداد إجمالي مبلغ وقدره <b>[المبلغ] [العملة]</b> نظير الخدمات المتفق عليها (غير شامل ضريبة القيمة المضافة إن وجدت).</li><li>يتم السداد وفق الجدول التالي: [٥٠٪ دفعة مقدمة عند التوقيع و٥٠٪ عند التسليم / أو شهريًا مقدمًا في أول كل شهر].</li><li>في حال تأخر السداد عن الموعد المحدد لأكثر من [٥] أيام عمل، يحق للطرف الأول تعليق العمل والتسليمات مؤقتًا لحين سداد المستحقات دون أدنى مسؤولية.</li></ol><h3>مدة العقد والجدول الزمني</h3><ol><li>يسري هذا العقد لمدة <b>[المدة]</b> تبدأ من تاريخ [تاريخ البداية] شريطة استلام الدفعة المقدمة والمواد اللازمة لبدء التنفيذ.</li><li>يمتد الجدول الزمني للتسليم تلقائيًا بقدر أي تأخير ينشأ عن تأخر الطرف الثاني في تسليم المواد أو الاعتمادات المطلوبة.</li></ol><h3>التزامات الطرفين</h3><ol><li><b>التزامات الطرف الأول:</b> بذل العناية المهنية اللازمة، الالتزام بالمواعيد المتفق عليها، وتخصيص فريق عمل مؤهل لتنفيذ المشروع.</li><li><b>التزامات الطرف الثاني:</b> تعيين ممثل واحد معتمد للتواصل والاعتماد، وتزويد الطرف الأول بالمعلومات والملفات اللازمة في مواعيدها.</li></ol><h3>حقوق الملكية الفكرية وعرض الأعمال</h3><ol><li>تنتقل حقوق الاستخدام والنشر للمخرجات النهائية المعتمدة إلى الطرف الثاني فور سداد كامل المستحقات المالية المقررة بموجب هذا العقد.</li><li>تظل كافة الأدوات، القوالب، والملفات المفتوحة أو المسودات غير المعتمدة ملكية خالصة للطرف الأول ما لم يُتفق كتابةً على خلاف ذلك.</li><li>يحق للطرف الأول الإشارة إلى المشروع وعرض المخرجات المنشورة ضمن سابقة أعماله (Portfolio) بعد نشرها للجمهور.</li></ol><h3>السرية وعدم الإفصاح</h3><ol><li>يلتزم كل طرف بالحفاظ التام على سرية كافة البيانات التجارية، التسويقية، المالية، وبيانات الدخول المتبادلة، وعدم إفشائها لأي طرف ثالث طوال مدة العقد ولمدة [سنتين] بعد انتهائه.</li></ol><h3>الضمانات وحدود المسؤولية</h3><ol><li>يضمن الطرف الثاني ملكيته أو حيازته للتراخيص القانونية لكافة المواد والعلامات التجارية المسلّمة للطرف الأول، وإخلاء مسؤولية الطرف الأول عن أي مطالبة من الغير بشأنها.</li><li>لا يتحمل أي طرف مسؤولية الأضرار غير المباشرة أو التبعية (بما في ذلك تغيرات خوارزميات المنصات أو نتائج الحملات الإعلانية)، وفي جميع الأحوال لا تتجاوز المسؤولية القصوى قيمة الدفعة الخاصة بدورة العمل محل المطالبة.</li></ol><h3>إنهاء العقد والقوة القاهرة</h3><ol><li>يجوز لأي من الطرفين إنهاء العقد بموجب إخطار كتابي مسبق مدته [١٥] يومًا، أو فورًا في حال إخلال الطرف الآخر بالتزام جوهري وعدم معالجته خلال [٧] أيام عمل من إخطاره.</li><li>عند الإنهاء، تُصفّى الحسابات بحيث يسدد الطرف الثاني قيمة كافة الأعمال المنجزة أو الجاري تنفيذها حتى تاريخ الإنهاء، وتكون الدفعات المقدمة عن دورات العمل التي بدأ تنفيذها غير قابلة للاسترداد.</li><li>لا يُعد أي طرف مخلًا بالتزاماته إذا حال دون تنفيذها ظرف من ظروف القوة القاهرة الخارجة عن الإرادة.</li></ol><h3>القانون الواجب التطبيق وفض النزاعات</h3><ol><li>يخضع هذا العقد ويُفسَّر وفقًا للقوانين السارية، وفي حال نشوء أي خلاف يُحسم وديًا خلال [١٥] يومًا، وإلا اختصت به المحاكم المختصة في <b>[المدينة / الدولة]</b>.</li><li>يمثّل هذا العقد كامل الاتفاق بين الطرفين ويلغي ما سبقه من تفاهمات شفهية أو كتابية.</li></ol><div class=\\\"closing\\\"><p><b>وإثباتًا لما تقدم،</b> حُرر هذا العقد من نسختين أصليتين باللغة المعتمدة، بيد كل طرف نسخة للعمل بموجبها، ووقّع الطرفان أدناه على كل صفحة من صفحات العقد.</p></div>\"},\"mw49fg2d9vx1i\":{\"id\":\"mw49fg2d9vx1i\",\"type\":\"scripts\",\"lang\":\"ar\",\"name\":\"سكربتات المحتوى\",\"folder\":null,\"pinned\":false,\"created\":1793926346773,\"updated\":1793926346773,\"cover\":{\"title\":\"سكربتات المحتوى\",\"sub\":\"سكربتات محتوى الشهر (هوك + سكربت + CTA)، جاهزة للمراجعة والتصوير.\",\"client\":\"\",\"month\":\"نوفمبر ٢٠٢٦\",\"platforms\":\"Instagram · TikTok\"},\"scripts\":[{\"title\":\"\",\"format\":\"Reel\",\"platform\":\"Instagram\",\"ref\":\"\",\"hook\":\"\",\"script\":\"\",\"cta\":\"\",\"noRef\":false},{\"title\":\"\",\"format\":\"Reel\",\"platform\":\"Instagram\",\"ref\":\"\",\"hook\":\"\",\"script\":\"\",\"cta\":\"\",\"noRef\":false},{\"title\":\"\",\"format\":\"Reel\",\"platform\":\"Instagram\",\"ref\":\"\",\"hook\":\"\",\"script\":\"\",\"cta\":\"\",\"noRef\":false}]}}"
   }
 }

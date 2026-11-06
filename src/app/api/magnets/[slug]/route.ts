@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getDatabase, saveDatabase, validateRealEmail, type LeadMagnet } from '@/lib/storage'
+import { validatePhoneForCountry } from '@/lib/countries'
 
 export const dynamic = 'force-dynamic'
 
@@ -113,8 +114,17 @@ export async function POST(
       if (magnet.collectFields.name && !name) {
         return NextResponse.json({ error: 'يرجى إدخال الاسم بالكامل' }, { status: 400 })
       }
-      if (magnet.collectFields.phone && !phone) {
-        return NextResponse.json({ error: 'يرجى إدخال رقم الواتساب أو الهاتف' }, { status: 400 })
+      if (magnet.collectFields.phone) {
+        if (!phone) {
+          return NextResponse.json({ error: 'يرجى إدخال رقم الواتساب أو الهاتف' }, { status: 400 })
+        }
+        const phoneCheck = validatePhoneForCountry(phone)
+        if (!phoneCheck.valid) {
+          return NextResponse.json(
+            { error: phoneCheck.errorAr || 'يرجى إدخال رقم هاتف صحيح ومكتمل' },
+            { status: 400 }
+          )
+        }
       }
       if (magnet.collectFields.email) {
         if (!email) {

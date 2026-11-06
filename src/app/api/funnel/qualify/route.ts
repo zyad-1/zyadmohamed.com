@@ -6,6 +6,7 @@ import {
   DEFAULT_MAIN_FUNNEL_FORM,
 } from '@/lib/storage'
 import { DEFAULT_SITE_SETTINGS, DEFAULT_UNQUALIFIED_MESSAGE } from '@/lib/constants'
+import { validatePhoneForCountry } from '@/lib/countries'
 
 export const dynamic = 'force-dynamic'
 
@@ -58,6 +59,15 @@ export async function POST(request: Request) {
           )
         }
       }
+      if (field.type === 'tel' && val) {
+        const phoneCheck = validatePhoneForCountry(val, body.countryCode)
+        if (!phoneCheck.valid) {
+          return NextResponse.json(
+            { error: phoneCheck.errorAr || 'يرجى إدخال رقم هاتف صحيح ومكتمل.' },
+            { status: 400 }
+          )
+        }
+      }
       cleanedAnswers[field.label] = val || '—'
 
       // Check per-option qualification flag
@@ -87,6 +97,13 @@ export async function POST(request: Request) {
 
     funnelForm.submissionsCount = (funnelForm.submissionsCount || 0) + 1
 
+    const headerCountry =
+      request.headers.get('x-vercel-ip-country') ||
+      request.headers.get('cf-ipcountry') ||
+      request.headers.get('x-country-code')
+    const submittedCountryCode = String(body.countryCode || headerCountry || '').trim().toUpperCase()
+    const submittedCountryName = String(body.countryName || '').trim()
+
     db.formSubmissions.unshift({
       id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
       formId: funnelForm.id,
@@ -94,6 +111,8 @@ export async function POST(request: Request) {
       formSlug: funnelForm.slug,
       answers: cleanedAnswers,
       qualified: !isUnqualified,
+      countryCode: submittedCountryCode || undefined,
+      countryName: submittedCountryName || undefined,
       createdAt: new Date().toISOString(),
     })
 

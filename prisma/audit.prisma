@@ -1,0 +1,295 @@
+// ============================================================================
+// APX SOLUTIONS — SCHEMA FRAGMENT (audit.prisma)
+// Append this file to the main APX Solutions prisma/schema.prisma or place it
+// in prisma/schema/audit.prisma when using Prisma multi-file schemas.
+// All models and enums are prefixed with "Audit" (and mapped to "audit_*")
+// to guarantee zero naming collisions.
+// ============================================================================
+
+enum AuditStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum AuditLanguage {
+  ar
+  en
+}
+
+enum AuditHookType {
+  QUESTION
+  BOLD_CLAIM
+  STORY
+  PATTERN_INTERRUPT
+  WEAK
+  OTHER
+}
+
+enum AuditCheckStatus {
+  OK
+  WEAK
+  MISSING
+}
+
+enum AuditProfileCheckKey {
+  nameKeyword
+  bioPromise
+  singleCta
+  highlights
+  pinnedPosts
+  linkSpeed
+  offerClarity
+  leadMagnetOrDmKeyword
+  contactButton
+  socialProofVisible
+}
+
+enum AuditCategoryKey {
+  positioning
+  profile_bio
+  hooks_editing
+  content_system
+  reach_efficiency
+  engagement_quality
+  authority_proof
+  conversion_funnel
+  competitor_gap
+}
+
+enum AuditFindingSeverity {
+  CRITICAL
+  HIGH
+  MEDIUM
+}
+
+enum AuditEventType {
+  OPEN
+  SECTION_VIEW
+  SCROLL_DEPTH
+  CTA_CLICK
+  LANGUAGE_TOGGLE
+  UNLOCK_UPLOAD
+}
+
+model AuditProspect {
+  id             String   @id @default(cuid())
+  handle         String
+  displayName    String
+  niche          String
+  followers      Int
+  followingCount Int?
+  postsCount     Int?
+  profileUrl     String
+  linkInBioUrl   String?
+  notes          String   @default("")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  audits         Audit[]
+
+  @@index([handle])
+  @@map("audit_prospects")
+}
+
+model Audit {
+  id              String               @id @default(cuid())
+  prospectId      String
+  prospect        AuditProspect        @relation(fields: [prospectId], references: [id], onDelete: Cascade)
+  status          AuditStatus          @default(DRAFT)
+  language        AuditLanguage        @default(ar)
+  shareToken      String               @unique
+  publishedAt     DateTime?
+  expiresAt       DateTime?
+  overallScore    Int                  @default(0)
+  summaryOpening  String               @default("")
+  verdictLine     String               @default("")
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  reels           AuditReel[]
+  profileChecks   AuditProfileCheck[]
+  categoryScores  AuditCategoryScore[]
+  findings        AuditFinding[]
+  competitors     AuditCompetitor[]
+  unmeasuredItems AuditUnmeasured[]
+  events          AuditEvent[]
+  uploads         AuditUpload[]
+
+  @@index([prospectId])
+  @@index([status])
+  @@map("audits")
+}
+
+model AuditReel {
+  id                 String         @id @default(cuid())
+  auditId            String
+  audit              Audit          @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  url                String?
+  postedAt           DateTime
+  views              Int
+  likes              Int            @default(0)
+  comments           Int            @default(0)
+  durationSec        Int?
+  topic              String?
+  hookType           AuditHookType?
+  hasSubtitles       Boolean?
+  hasCta             Boolean?
+  isRepost           Boolean?       @default(false)
+  demandSignalsCount Int            @default(0)
+  editorNotes        String         @default("")
+  position           Int            @default(0)
+
+  @@index([auditId, postedAt])
+  @@map("audit_reels")
+}
+
+model AuditProfileCheck {
+  id            String               @id @default(cuid())
+  auditId       String
+  audit         Audit                @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  key           AuditProfileCheckKey
+  status        AuditCheckStatus     @default(WEAK)
+  evidence      String               @default("")
+  screenshotUrl String?
+
+  @@unique([auditId, key])
+  @@map("audit_profile_checks")
+}
+
+model AuditCategoryScore {
+  id                 String           @id @default(cuid())
+  auditId            String
+  audit              Audit            @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  categoryKey        AuditCategoryKey
+  score              Int              @default(5)
+  autoSuggestedScore Int?
+  isAutoSuggested    Boolean          @default(false)
+  isOverridden       Boolean          @default(false)
+  evidence           String           @default("")
+  recommendation     String           @default("")
+  weight             Float            @default(1.0)
+
+  @@unique([auditId, categoryKey])
+  @@map("audit_category_scores")
+}
+
+model AuditFinding {
+  id             String               @id @default(cuid())
+  auditId        String
+  audit          Audit                @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  rank           Int
+  title          String
+  evidence       String
+  businessImpact String
+  apxFix         String
+  severity       AuditFindingSeverity @default(CRITICAL)
+
+  @@unique([auditId, rank])
+  @@map("audit_findings")
+}
+
+model AuditCompetitor {
+  id          String                @id @default(cuid())
+  auditId     String
+  audit       Audit                 @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  handle      String
+  displayName String                @default("")
+  followers   Int
+  medianViews Int                   @default(0)
+  notes       String                @default("")
+  reels       AuditCompetitorReel[]
+
+  @@index([auditId])
+  @@map("audit_competitors")
+}
+
+model AuditCompetitorReel {
+  id           String          @id @default(cuid())
+  competitorId String
+  competitor   AuditCompetitor @relation(fields: [competitorId], references: [id], onDelete: Cascade)
+  postedAt     DateTime
+  views        Int
+  likes        Int             @default(0)
+  comments     Int             @default(0)
+
+  @@index([competitorId])
+  @@map("audit_competitor_reels")
+}
+
+model AuditUnmeasured {
+  id           String @id @default(cuid())
+  auditId      String
+  audit        Audit  @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  label        String
+  whyItMatters String
+  position     Int    @default(0)
+
+  @@index([auditId])
+  @@map("audit_unmeasured")
+}
+
+model AuditEvent {
+  id        String         @id @default(cuid())
+  auditId   String
+  audit     Audit          @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  sessionId String
+  type      AuditEventType
+  payload   Json
+  createdAt DateTime       @default(now())
+
+  @@index([auditId, createdAt])
+  @@index([auditId, sessionId])
+  @@map("audit_events")
+}
+
+model RecommendationSnippet {
+  id             String           @id @default(cuid())
+  categoryKey    AuditCategoryKey
+  problemPattern String
+  titleAr        String
+  titleEn        String
+  bodyAr         String
+  bodyEn         String
+  impactAr       String           @default("")
+  impactEn       String           @default("")
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@index([categoryKey])
+  @@map("audit_recommendation_snippets")
+}
+
+model AuditUpload {
+  id        String   @id @default(cuid())
+  auditId   String
+  audit     Audit    @relation(fields: [auditId], references: [id], onDelete: Cascade)
+  fileUrl   String
+  fileName  String
+  fileSize  Int      @default(0)
+  mimeType  String   @default("image/png")
+  notes     String?
+  createdAt DateTime @default(now())
+
+  @@index([auditId])
+  @@map("audit_uploads")
+}
+
+model AuditSettings {
+  id                    String        @id @default("default")
+  ctaType               String        @default("BOOK_CALL")
+  whatsappNumber        String        @default("+966500000000")
+  whatsappMessageAr     String        @default("مرحباً فريق APX، اطلعت على تقرير تدقيق حسابي وأود حجز جلسة استراتيجية.")
+  whatsappMessageEn     String        @default("Hi APX team, I reviewed my Instagram audit report and would like to book a strategy session.")
+  bookingUrl            String        @default("https://calendly.com/zyaddonga/30min")
+  dmKeyword             String        @default("AUDIT")
+  instagramHandle       String        @default("zyadcreative")
+  scarcityTextAr        String        @default("نقبل عدداً محدوداً من الشركاء في كل دفعة لضمان جودة التنفيذ الكامل (Done-For-You).")
+  scarcityTextEn        String        @default("We onboard a limited number of partners per cohort to guarantee full Done-For-You execution quality.")
+  defaultLanguage       AuditLanguage @default(ar)
+  defaultDigits         String        @default("western")
+  weightsJson           Json
+  defaultUnmeasuredJson Json
+  updatedAt             DateTime      @updatedAt
+
+  @@map("audit_settings")
+}

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { COUNTRIES_LIST, DEFAULT_COUNTRY_CODE } from '@/lib/countries'
+import { DEFAULT_COUNTRY_CODE, getCountryByCode } from '@/lib/countries'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,12 +13,21 @@ export async function GET(request: Request) {
 
     if (headerCountry) {
       const upper = headerCountry.trim().toUpperCase()
-      if (COUNTRIES_LIST.some(c => c.code === upper)) {
-        return NextResponse.json({ countryCode: upper })
+      if (/^[A-Z]{2}$/.test(upper) && upper !== 'XX') {
+        const c = getCountryByCode(upper)
+        return NextResponse.json(
+          {
+            countryCode: c.code,
+            countryName: c.nameAr,
+            dialCode: c.dialCode,
+            flag: c.flag,
+          },
+          { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+        )
       }
     }
 
-    // 2. Fallback: Check visitor IP via api.country.is
+    // 2. Fallback: Check visitor IP via ipwho.is & api.country.is
     const forwardedFor = request.headers.get('x-forwarded-for')
     const clientIp = forwardedFor ? forwardedFor.split(',')[0].trim() : ''
     const isLocalIp =
@@ -27,6 +36,40 @@ export async function GET(request: Request) {
       clientIp === '::1' ||
       clientIp.startsWith('192.168.') ||
       clientIp.startsWith('10.')
+
+    const ipWhoUrl = isLocalIp
+      ? 'https://ipwho.is/'
+      : `https://ipwho.is/${encodeURIComponent(clientIp)}`
+
+    try {
+      const controller = new AbortController()
+      const timeout = setTimeout(() => controller.abort(), 2200)
+      const res = await fetch(ipWhoUrl, {
+        signal: controller.signal,
+        cache: 'no-store',
+      })
+      clearTimeout(timeout)
+
+      if (res.ok) {
+        const data = await res.json()
+        const detected = String(data?.country_code || '').trim().toUpperCase()
+        if (/^[A-Z]{2}$/.test(detected)) {
+          const dial = data?.calling_code ? `+${String(data.calling_code).replace(/^\+/, '')}` : undefined
+          const c = getCountryByCode(detected, data?.country, dial)
+          return NextResponse.json(
+            {
+              countryCode: c.code,
+              countryName: c.nameAr,
+              dialCode: c.dialCode,
+              flag: c.flag,
+            },
+            { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+          )
+        }
+      }
+    } catch {
+      // Fallback to api.country.is
+    }
 
     const lookupUrl = isLocalIp
       ? 'https://api.country.is/'
@@ -43,14 +86,32 @@ export async function GET(request: Request) {
 
     if (res.ok) {
       const data = await res.json()
-      const detected = String(data?.country || '').toUpperCase()
-      if (COUNTRIES_LIST.some(c => c.code === detected)) {
-        return NextResponse.json({ countryCode: detected })
+      const detected = String(data?.country || '').trim().toUpperCase()
+      if (/^[A-Z]{2}$/.test(detected)) {
+        const c = getCountryByCode(detected)
+        return NextResponse.json(
+          {
+            countryCode: c.code,
+            countryName: c.nameAr,
+            dialCode: c.dialCode,
+            flag: c.flag,
+          },
+          { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+        )
       }
     }
   } catch {
-    // Ignore and return default country (EG)
+    // Ignore and return default country
   }
 
-  return NextResponse.json({ countryCode: DEFAULT_COUNTRY_CODE })
+  const def = getCountryByCode(DEFAULT_COUNTRY_CODE)
+  return NextResponse.json(
+    {
+      countryCode: def.code,
+      countryName: def.nameAr,
+      dialCode: def.dialCode,
+      flag: def.flag,
+    },
+    { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+  )
 }

@@ -1,0 +1,850 @@
+/* ============================================================================
+   APX Native React Document Studio Styles (A4 Contracts & Content Scripts)
+   Uses local APX fonts (Expo Arabic + Chillax) & refined non-garish palette
+   ============================================================================ */
+
+.apx-doc-studio {
+  --void: #080608;
+  --bg: #0a070e;
+  --panel: #100c16;
+  --panel2: #17121e;
+  --panel3: #211a2b;
+  --line: rgba(226, 217, 243, 0.08);
+  --line2: rgba(226, 217, 243, 0.14);
+  --c1: #7C5CE6;
+  --c2: #432371;
+  --lum: #E2D9F3;
+  --muted: #9388a8;
+  --dim: #675c7c;
+  --p-ink: #181420;
+  --p-soft: #f5f3fa;
+  --p-line: #e6e0f0;
+  --p-muted: #6c637e;
+  --font: var(--font-expo, "Expo Arabic"), var(--font-chillax, "Chillax"), system-ui, sans-serif;
+  --latin: var(--font-chillax, "Chillax"), var(--font-expo, "Expo Arabic"), system-ui, sans-serif;
+  font-family: var(--font);
+  color: var(--lum);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.apx-doc-studio .mk {
+  display: inline-block;
+  line-height: 0;
+}
+.apx-doc-studio .mk svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  fill: currentColor;
+}
+
+.apx-doc-studio .eyebrow {
+  font: 600 11px/1.4 var(--latin);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c1);
+}
+
+/* Stage & A4 Pages */
+.apx-doc-studio .stage {
+  padding: 28px 16px 96px;
+  min-height: 720px;
+  background: radial-gradient(rgba(226, 217, 243, 0.04) 1px, transparent 1px) 0 0 / 22px 22px, #0b0810;
+  overflow-x: auto;
+}
+
+.apx-doc-studio .pages {
+  width: 210mm;
+  margin: 0 auto;
+}
+
+.apx-doc-studio .page {
+  width: 210mm;
+  height: 296.8mm;
+  margin: 0 0 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 28px 56px -28px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.apx-doc-studio .sheet {
+  width: 210mm;
+  margin: 0 0 24px;
+  background: #ffffff;
+  color: var(--p-ink);
+  border-collapse: collapse;
+  box-shadow: 0 28px 56px -28px rgba(0, 0, 0, 0.85);
+  scroll-margin-top: 84px;
+}
+
+.apx-doc-studio .sheet td {
+  padding: 0;
+  vertical-align: top;
+}
+
+.apx-doc-studio .hd {
+  margin: 0 16mm;
+  padding: 9.5mm 0 4mm;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid var(--p-line);
+  position: relative;
+}
+
+.apx-doc-studio .hd::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  inset-inline-start: 0;
+  width: 24mm;
+  height: 2px;
+  background: linear-gradient(90deg, var(--c1), var(--c2));
+}
+
+.apx-doc-studio .hd .mk {
+  width: 10mm;
+  color: var(--c2);
+}
+
+.apx-doc-studio .hd .wn {
+  font: 600 11.5px var(--latin);
+  letter-spacing: 0.24em;
+  color: var(--c2);
+}
+
+.apx-doc-studio .hd .dl {
+  margin-inline-start: auto;
+  font-size: 11.5px;
+  color: var(--p-muted);
+  max-width: 62%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.apx-doc-studio .ft {
+  margin: 0 16mm;
+  padding: 3mm 0 8mm;
+  border-top: 1px solid var(--p-line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10.5px;
+  color: var(--p-muted);
+}
+
+.apx-doc-studio .ft .lt {
+  font-family: var(--latin);
+  letter-spacing: 0.08em;
+}
+
+.apx-doc-studio .bd {
+  padding: 7mm 16mm 8mm;
+  min-height: 248mm;
+}
+
+.apx-doc-studio .c-sheet .bd {
+  min-height: 224mm;
+}
+
+.apx-doc-studio .ed {
+  outline: none;
+  border-radius: 6px;
+  transition: box-shadow 0.15s, background 0.15s;
+  min-width: 2ch;
+}
+
+.apx-doc-studio [contenteditable="true"].ed:hover {
+  box-shadow: 0 0 0 1px rgba(124, 92, 230, 0.28);
+}
+
+.apx-doc-studio [contenteditable="true"].ed:focus {
+  box-shadow: 0 0 0 2px rgba(124, 92, 230, 0.48);
+  background: rgba(124, 92, 230, 0.04);
+}
+
+.apx-doc-studio .ed:empty::before {
+  content: attr(data-ph);
+  color: #b4abc7;
+  pointer-events: none;
+}
+
+.apx-doc-studio .dark .ed:empty::before {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Cover Pages — Refined Luxury Tones (Non-Garish) */
+.apx-doc-studio .cv {
+  color: #fff;
+  padding: 17mm 18mm 15mm;
+  display: flex;
+  flex-direction: column;
+}
+
+.apx-doc-studio .cv::before {
+  content: "";
+  position: absolute;
+  inset: 7mm;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.apx-doc-studio .cv .wm {
+  position: absolute;
+  pointer-events: none;
+}
+
+.apx-doc-studio .cv .wm svg {
+  fill: none;
+  stroke-width: 1.15;
+}
+
+.apx-doc-studio .cv-top,
+.apx-doc-studio .cv-mid,
+.apx-doc-studio .cv-meta,
+.apx-doc-studio .cv-bot {
+  position: relative;
+}
+
+.apx-doc-studio .cv-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apx-doc-studio .cv-brand {
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+}
+
+.apx-doc-studio .cv-brand .mk {
+  width: 17mm;
+  color: #fff;
+}
+
+.apx-doc-studio .cv-brand b {
+  font: 600 14px var(--latin);
+  letter-spacing: 0.34em;
+}
+
+.apx-doc-studio .chip {
+  font: 600 9.5px var(--latin);
+  letter-spacing: 0.2em;
+  padding: 2mm 4.5mm;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.apx-doc-studio .cv-mid {
+  margin-top: auto;
+}
+
+.apx-doc-studio .cv-mid .eyebrow {
+  color: #e4dbf5;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  display: inline-flex;
+  align-items: center;
+  gap: 3mm;
+}
+
+.apx-doc-studio .cv-mid .eyebrow::before {
+  content: "";
+  width: 8mm;
+  height: 2px;
+  border-radius: 2px;
+  background: #d8c9f3;
+}
+
+.apx-doc-studio .cv h1 {
+  font: 700 46px/1.25 var(--font);
+  margin: 5mm 0 4mm;
+  max-width: 16ch;
+  color: #fff;
+}
+
+.apx-doc-studio .cv .sub {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(240, 234, 250, 0.85);
+  max-width: 46ch;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.apx-doc-studio .cv-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.5mm;
+  margin-top: 14mm;
+}
+
+.apx-doc-studio .mi {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 2px solid rgba(216, 201, 243, 0.55);
+  border-radius: 12px;
+  padding: 3.4mm 4.4mm;
+}
+
+.apx-doc-studio .mi label {
+  display: block;
+  font-size: 10.5px;
+  color: #dcd0ef;
+  font-weight: 500;
+  margin-bottom: 1mm;
+}
+
+.apx-doc-studio .mi .ed {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.apx-doc-studio .cv-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 11mm;
+  padding-top: 4.5mm;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  font: 500 9.5px var(--latin);
+  letter-spacing: 0.2em;
+  color: rgba(240, 234, 250, 0.72);
+  text-transform: uppercase;
+}
+
+/* Harmonious Deep Obsidian-Plum Gradients (No Neon / Non-Garish) */
+.apx-doc-studio .cv-c {
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(196, 181, 253, 0.22) 0%, transparent 65%),
+    linear-gradient(155deg, #3B2366 0%, #2B184D 45%, #1A0E30 100%);
+}
+.apx-doc-studio .cv-c .wm {
+  width: 220mm;
+  inset-inline-end: -58mm;
+  top: 52mm;
+}
+.apx-doc-studio .cv-c .wm svg {
+  stroke: rgba(255, 255, 255, 0.11);
+}
+
+.apx-doc-studio .cv-s {
+  background:
+    radial-gradient(85% 55% at 100% 0%, rgba(180, 165, 235, 0.18), transparent 62%),
+    linear-gradient(162deg, #321E59 0%, #241542 48%, #140B26 100%);
+}
+.apx-doc-studio .cv-s .wm {
+  width: 260mm;
+  inset-inline-end: -95mm;
+  top: 28mm;
+}
+.apx-doc-studio .cv-s .wm svg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.apx-doc-studio .count {
+  display: flex;
+  align-items: flex-end;
+  gap: 4mm;
+  margin-top: 10mm;
+}
+
+.apx-doc-studio .count b {
+  font: 600 96px/0.8 var(--latin);
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+
+.apx-doc-studio .count span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  padding-bottom: 1mm;
+}
+
+/* Contract Body */
+.apx-doc-studio .contract {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #241e2e;
+  outline: none;
+  counter-reset: cl;
+}
+
+.apx-doc-studio .contract h2 {
+  font: 700 23px/1.3 var(--font);
+  color: var(--p-ink);
+  margin: 0 0 2.5mm;
+  padding-bottom: 2.5mm;
+  border-bottom: 2px solid var(--p-line);
+}
+
+.apx-doc-studio .contract p {
+  margin: 0 0 2.2mm;
+  text-align: justify;
+}
+
+.apx-doc-studio .parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin: 4mm 0 4.5mm;
+  break-inside: avoid;
+}
+
+.apx-doc-studio .party {
+  background: var(--p-soft);
+  border: 1px solid var(--p-line);
+  border-top: 2.5px solid var(--c1);
+  border-radius: 10px;
+  padding: 3.2mm 4.2mm;
+}
+
+.apx-doc-studio .party label {
+  display: block;
+  font: 600 9.5px var(--latin);
+  letter-spacing: 0.14em;
+  color: var(--c2);
+  margin-bottom: 1.2mm;
+  user-select: none;
+}
+
+.apx-doc-studio .party p {
+  margin: 0 0 0.6mm;
+  line-height: 1.75;
+  text-align: start;
+  font-size: 12.5px;
+}
+
+.apx-doc-studio .preamble {
+  background: #f8f6fc;
+  border: 1px solid var(--p-line);
+  border-inline-start: 3.5px solid var(--c1);
+  border-radius: 10px;
+  padding: 3.4mm 4.5mm;
+  margin: 0 0 5mm;
+  break-inside: avoid;
+}
+
+.apx-doc-studio .preamble label {
+  display: block;
+  font: 600 9.5px var(--latin);
+  letter-spacing: 0.14em;
+  color: var(--c2);
+  margin-bottom: 1mm;
+  user-select: none;
+}
+
+.apx-doc-studio .preamble p {
+  margin: 0 0 1.5mm;
+  font-size: 12.5px;
+  line-height: 1.85;
+}
+
+.apx-doc-studio .contract h3 {
+  counter-increment: cl;
+  counter-reset: sub;
+  display: flex;
+  align-items: center;
+  gap: 2.8mm;
+  font: 700 14px/1.4 var(--font);
+  color: var(--p-ink);
+  background: var(--p-soft);
+  border: 1px solid var(--p-line);
+  border-inline-start: 3.5px solid var(--c1);
+  border-radius: 8px;
+  padding: 2mm 3.2mm;
+  margin: 5mm 0 2.5mm;
+  break-after: avoid;
+}
+
+.apx-doc-studio .contract h3::before {
+  content: counter(cl, decimal-leading-zero);
+  font: 600 10.5px/1 var(--latin);
+  color: #fff;
+  background: var(--c2);
+  padding: 1.4mm 2mm;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+  flex: none;
+}
+
+.apx-doc-studio .contract ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5mm;
+}
+
+.apx-doc-studio .contract ol > li {
+  counter-increment: sub;
+  position: relative;
+  padding-inline-start: 10.5mm;
+  margin: 0 0 1.8mm;
+  text-align: justify;
+  line-height: 1.88;
+}
+
+.apx-doc-studio .contract ol > li::before {
+  content: counter(cl) "." counter(sub);
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.18em;
+  font: 600 10.5px/1.45 var(--latin);
+  color: var(--c2);
+  background: var(--p-soft);
+  border: 1px solid #dfd7ee;
+  border-radius: 5px;
+  padding: 0.15mm 1.5mm;
+  min-width: 7.8mm;
+  text-align: center;
+}
+
+.apx-doc-studio .closing {
+  margin-top: 6mm;
+  padding: 3.5mm 4.5mm;
+  border-radius: 10px;
+  background: var(--p-soft);
+  border: 1px solid var(--p-line);
+  border-inline-start: 3.5px solid var(--c2);
+  font-size: 12.5px;
+  color: var(--p-ink);
+  font-weight: 500;
+  break-inside: avoid;
+}
+
+/* Per-Page Contract Signature Bar */
+.apx-doc-studio .c-sigs {
+  margin: 1.5mm 16mm 2.5mm;
+  padding: 2.8mm 4mm;
+  border: 1px solid #dfd7ee;
+  border-radius: 10px;
+  background: #faf8fd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  break-inside: avoid;
+  user-select: none;
+}
+
+.apx-doc-studio .cs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  min-width: 0;
+}
+
+.apx-doc-studio .cs-col + .cs-col {
+  border-inline-start: 1px dashed #d3c8e8;
+  padding-inline-start: 6mm;
+}
+
+.apx-doc-studio .cs-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2mm;
+}
+
+.apx-doc-studio .cs-role {
+  font: 600 8.5px var(--latin);
+  letter-spacing: 0.14em;
+  color: var(--c2);
+  text-transform: uppercase;
+}
+
+.apx-doc-studio .cs-name {
+  font-weight: 700;
+  font-size: 11.5px;
+  color: var(--p-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 55%;
+}
+
+.apx-doc-studio .cs-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5mm;
+  min-height: 11mm;
+  padding-top: 0.5mm;
+}
+
+.apx-doc-studio .cs-lbl {
+  font-size: 10.5px;
+  color: var(--p-muted);
+  white-space: nowrap;
+}
+
+.apx-doc-studio .cs-line {
+  flex: 1;
+  border-bottom: 1px solid #c3b6de;
+  min-height: 10.5mm;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.5mm;
+  position: relative;
+}
+
+.apx-doc-studio .cs-line img {
+  max-height: 12mm;
+  max-width: 46mm;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+/* Scripts Sheets — Calm, Harmonious & Executive Colors (Non-Garish) */
+.apx-doc-studio .ix h2 {
+  font: 700 24px var(--font);
+  margin: 2mm 0 6mm;
+  color: var(--p-ink);
+}
+
+.apx-doc-studio .ix-row {
+  display: grid;
+  grid-template-columns: 13mm 1fr auto;
+  align-items: center;
+  gap: 4mm;
+  padding: 2.3mm 1mm;
+  border-bottom: 1px solid var(--p-line);
+  cursor: pointer;
+  break-inside: avoid;
+  border-radius: 6px;
+}
+
+.apx-doc-studio .ix-row:hover {
+  background: var(--p-soft);
+}
+
+.apx-doc-studio .ix-row .n {
+  font: 600 14px var(--latin);
+  color: var(--c2);
+}
+
+.apx-doc-studio .ix-row .t {
+  font-weight: 500;
+  font-size: 13.5px;
+}
+
+.apx-doc-studio .ix-row .f {
+  font: 600 9.5px var(--latin);
+  letter-spacing: 0.12em;
+  padding: 1mm 3mm;
+  border-radius: 99px;
+  background: var(--p-soft);
+  color: var(--c2);
+  text-transform: uppercase;
+}
+
+.apx-doc-studio .scr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5mm;
+}
+
+.apx-doc-studio .scr-h {
+  display: flex;
+  gap: 5.5mm;
+  align-items: flex-start;
+  padding-bottom: 4mm;
+  border-bottom: 1px solid var(--p-line);
+}
+
+.apx-doc-studio .scr-n {
+  font: 600 54px/0.88 var(--latin);
+  letter-spacing: -0.04em;
+  color: #3B2366;
+  padding-top: 1mm;
+  flex: none;
+}
+
+.apx-doc-studio .scr-h .tt {
+  flex: 1;
+  min-width: 0;
+}
+
+.apx-doc-studio .scr-h h2 {
+  font: 700 22px/1.4 var(--font);
+  margin: 0 0 2.5mm;
+  color: var(--p-ink);
+}
+
+.apx-doc-studio .chips {
+  display: flex;
+  gap: 2mm;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.apx-doc-studio .tg {
+  display: inline-flex;
+  align-items: center;
+  gap: 2mm;
+  border: 1px solid var(--p-line);
+  border-radius: 99px;
+  padding: 0.6mm 3.2mm;
+  font-size: 11.5px;
+  background: #fafafa;
+}
+
+.apx-doc-studio .tg label {
+  font: 600 9px var(--latin);
+  letter-spacing: 0.14em;
+  color: var(--c2);
+  text-transform: uppercase;
+}
+
+.apx-doc-studio .blk {
+  margin: 0;
+  break-inside: avoid;
+}
+
+.apx-doc-studio .ref-box {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  padding: 2.5mm 3.5mm;
+  border-radius: 10px;
+  background: #f9f8fc;
+  border: 1px dashed #d5cce6;
+}
+
+.apx-doc-studio .sec-hd {
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-bottom: 2mm;
+  user-select: none;
+}
+
+.apx-doc-studio .sec-badge {
+  font: 600 9px/1 var(--latin);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #3B2366;
+  padding: 1.3mm 2.5mm;
+  border-radius: 5px;
+}
+
+.apx-doc-studio .sec-sub {
+  font: 500 11.5px var(--font);
+  color: var(--p-muted);
+}
+
+.apx-doc-studio .hook {
+  background: #f7f5fb;
+  border: 1px solid #e3dcef;
+  border-inline-start: 3.5px solid #593896;
+  border-radius: 11px;
+  padding: 3.8mm 4.8mm;
+}
+
+.apx-doc-studio .hook .ed {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #211536;
+  line-height: 1.75;
+  min-height: 13mm;
+}
+
+.apx-doc-studio .script-box {
+  background: #ffffff;
+  border: 1px solid var(--p-line);
+  border-inline-start: 3.5px solid #7C5CE6;
+  border-radius: 11px;
+  padding: 4.2mm 4.8mm;
+}
+
+.apx-doc-studio .script-box .ed {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--p-ink);
+  min-height: 118mm;
+  white-space: pre-wrap;
+}
+
+.apx-doc-studio .cta-box {
+  background: #f8f7fc;
+  border: 1px solid #e4def0;
+  border-inline-start: 3.5px solid #3B2366;
+  border-radius: 11px;
+  padding: 3.6mm 4.8mm;
+}
+
+.apx-doc-studio .cta-box .ed {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #231638;
+  line-height: 1.75;
+  min-height: 11mm;
+}
+
+/* Print / PDF Rules */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  .apx-studio-no-print,
+  aside,
+  header,
+  nav {
+    display: none !important;
+  }
+  .apx-doc-studio .stage {
+    padding: 0 !important;
+    background: none !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+  }
+  .apx-doc-studio .pages {
+    zoom: 1 !important;
+    width: auto !important;
+  }
+  .apx-doc-studio .page {
+    margin: 0 !important;
+    box-shadow: none !important;
+    break-after: page;
+  }
+  .apx-doc-studio .sheet {
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+  .apx-doc-studio .sheet + .sheet {
+    break-before: page;
+  }
+  .apx-doc-studio .bd,
+  .apx-doc-studio .c-sheet .bd {
+    min-height: 0 !important;
+    padding: 6mm 16mm 5mm !important;
+  }
+  .apx-doc-studio thead {
+    display: table-header-group;
+  }
+  .apx-doc-studio tfoot {
+    display: table-footer-group;
+  }
+  .apx-doc-studio .ed {
+    box-shadow: none !important;
+    background: none !important;
+  }
+  .apx-doc-studio .ed:empty::before {
+    content: none !important;
+  }
+  .apx-doc-studio .script-box .ed {
+    min-height: 40mm !important;
+  }
+}

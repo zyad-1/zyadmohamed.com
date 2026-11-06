@@ -87,6 +87,18 @@ export interface FormSubmission {
   formSlug: string
   answers: Record<string, string>
   qualified?: boolean
+  countryCode?: string
+  countryName?: string
+  createdAt: string
+}
+
+export interface SiteAnalyticsEvent {
+  id: string
+  sessionId: string
+  event: string
+  countryCode: string
+  countryName: string
+  payload?: Record<string, unknown>
   createdAt: string
 }
 
@@ -96,6 +108,8 @@ export interface DatabaseSchema {
   forms: CustomForm[]
   formSubmissions: FormSubmission[]
   siteSettings?: SiteSettings
+  siteEvents?: SiteAnalyticsEvent[]
+  studioStore?: Record<string, string>
 }
 
 const BLOB_DB_PATH = 'zyad-cms/db.json'
@@ -181,6 +195,19 @@ export function ensureMainFunnelForm(db: DatabaseSchema): DatabaseSchema {
   const rawSettings = db.siteSettings || ({} as Partial<SiteSettings>)
   const rawPage = rawSettings.pageContent || ({} as Partial<PageContent>)
 
+  const resolvedFomoSeats =
+    typeof rawSettings.fomoSeatsLeft === 'number'
+      ? rawSettings.fomoSeatsLeft
+      : DEFAULT_SITE_SETTINGS.fomoSeatsLeft ?? 3
+  const rawFomoAr =
+    typeof rawSettings.fomoTextAr === 'string' && rawSettings.fomoTextAr.trim()
+      ? rawSettings.fomoTextAr
+      : DEFAULT_SITE_SETTINGS.fomoTextAr || `متبقي ${resolvedFomoSeats} مقاعد فقط لتطبيق الـ System هذا الشهر`
+  const rawFomoEn =
+    typeof rawSettings.fomoTextEn === 'string' && rawSettings.fomoTextEn.trim()
+      ? rawSettings.fomoTextEn
+      : DEFAULT_SITE_SETTINGS.fomoTextEn || `Only ${resolvedFomoSeats} onboarding spots left this month`
+
   db.siteSettings = {
     showTestimonialsSection:
       typeof rawSettings.showTestimonialsSection === 'boolean'
@@ -190,6 +217,31 @@ export function ensureMainFunnelForm(db: DatabaseSchema): DatabaseSchema {
       typeof rawSettings.showProofCards === 'boolean'
         ? rawSettings.showProofCards
         : DEFAULT_SITE_SETTINGS.showProofCards,
+    showFaqSection:
+      typeof rawSettings.showFaqSection === 'boolean'
+        ? rawSettings.showFaqSection
+        : DEFAULT_SITE_SETTINGS.showFaqSection ?? true,
+    acceptingClients:
+      typeof rawSettings.acceptingClients === 'boolean'
+        ? rawSettings.acceptingClients
+        : DEFAULT_SITE_SETTINGS.acceptingClients ?? true,
+    fomoEnabled:
+      typeof rawSettings.fomoEnabled === 'boolean'
+        ? rawSettings.fomoEnabled
+        : DEFAULT_SITE_SETTINGS.fomoEnabled ?? true,
+    fomoSeatsLeft: resolvedFomoSeats,
+    fomoCountdownMinutes:
+      typeof rawSettings.fomoCountdownMinutes === 'number'
+        ? rawSettings.fomoCountdownMinutes
+        : DEFAULT_SITE_SETTINGS.fomoCountdownMinutes ?? 30,
+    fomoTextAr: rawFomoAr.replace(
+      /(متبقي\s+)[0-9٠-٩]+(\s*(?:مقاعد|مقعد|أماكن|فرص))/g,
+      `$1${resolvedFomoSeats}$2`
+    ),
+    fomoTextEn: rawFomoEn.replace(
+      /(Only\s+)\d+(\s*(?:onboarding\s+)?(?:spots|seats|places))/gi,
+      `$1${resolvedFomoSeats}$2`
+    ),
     skipQualificationForm:
       typeof rawSettings.skipQualificationForm === 'boolean'
         ? rawSettings.skipQualificationForm
@@ -203,9 +255,17 @@ export function ensureMainFunnelForm(db: DatabaseSchema): DatabaseSchema {
       typeof rawSettings.unqualifiedRedirectTarget === 'string'
         ? rawSettings.unqualifiedRedirectTarget
         : '',
-    proofCards: Array.isArray(rawSettings.proofCards)
+    proofCards: (Array.isArray(rawSettings.proofCards)
       ? rawSettings.proofCards
-      : [...DEFAULT_SITE_SETTINGS.proofCards],
+      : [...DEFAULT_SITE_SETTINGS.proofCards]
+    ).map(card => ({
+      ...card,
+      metric: String(card.metric || '')
+        .replace(/\+?80[,\s]*000[,\s]*000/g, '+80M')
+        .replace(/80\s*مليون/g, '80M')
+        .replace(/\+?185[,\s]*000/g, '+185K')
+        .replace(/185\s*ألف/g, '185K'),
+    })),
     testimonials: Array.isArray(rawSettings.testimonials)
       ? rawSettings.testimonials
       : [...DEFAULT_SITE_SETTINGS.testimonials],
@@ -336,68 +396,106 @@ function getLocalDbPath(): string {
   return path.join(dataDir, 'db.json')
 }
 
+const globalForCms = globalThis as unknown as {
+  zyadCmsMemoryDb?: DatabaseSchema
+}
+
 export async function getDatabase(): Promise<DatabaseSchema> {
-  if (isBlobConfigured()) {
-    try {
-      const { blobs } = await list({ prefix: BLOB_DB_PATH, limit: 5 })
-      const exactBlob = blobs.find(b => b.pathname === BLOB_DB_PATH) || blobs[0]
-      if (!exactBlob) {
-        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
-      }
-      const res = await fetch(`${exactBlob.url}?t=${Date.now()}`, {
-        cache: 'no-store',
-      })
-      if (!res.ok) {
-        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
-      }
-      const data = await res.json()
-      return ensureMainFunnelForm({
+  if (globalForCms.zyadCmsMemoryDb) {
+    return ensureMainFunnelForm(globalForCms.zyadCmsMemoryDb)
+  }
+
+  try {
+    const dbPath = getLocalDbPath()
+    if (fs.existsSync(dbPath)) {
+      const raw = fs.readFileSync(dbPath, 'utf-8')
+      const data = JSON.parse(raw)
+      const normalized = ensureMainFunnelForm({
         magnets: Array.isArray(data.magnets) ? data.magnets : [],
         leads: Array.isArray(data.leads) ? data.leads : [],
         forms: Array.isArray(data.forms) ? data.forms : [],
         formSubmissions: Array.isArray(data.formSubmissions) ? data.formSubmissions : [],
         siteSettings: data.siteSettings,
+        siteEvents: Array.isArray(data.siteEvents) ? data.siteEvents : [],
+        studioStore:
+          data.studioStore && typeof data.studioStore === 'object' ? data.studioStore : {},
       })
+      globalForCms.zyadCmsMemoryDb = normalized
+      return normalized
+    }
+  } catch (err) {
+    console.error('Error reading local DB:', err)
+  }
+
+  if (isBlobConfigured()) {
+    try {
+      const { blobs } = await list({ prefix: BLOB_DB_PATH, limit: 5 })
+      const exactBlob = blobs.find(b => b.pathname === BLOB_DB_PATH) || blobs[0]
+      if (!exactBlob) {
+        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [], siteEvents: [] })
+      }
+      const res = await fetch(`${exactBlob.url}?t=${Date.now()}`, {
+        cache: 'no-store',
+      })
+      if (!res.ok) {
+        return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [], siteEvents: [] })
+      }
+      const data = await res.json()
+      const normalized = ensureMainFunnelForm({
+        magnets: Array.isArray(data.magnets) ? data.magnets : [],
+        leads: Array.isArray(data.leads) ? data.leads : [],
+        forms: Array.isArray(data.forms) ? data.forms : [],
+        formSubmissions: Array.isArray(data.formSubmissions) ? data.formSubmissions : [],
+        siteSettings: data.siteSettings,
+        siteEvents: Array.isArray(data.siteEvents) ? data.siteEvents : [],
+        studioStore:
+          data.studioStore && typeof data.studioStore === 'object' ? data.studioStore : {},
+      })
+      globalForCms.zyadCmsMemoryDb = normalized
+      try {
+        fs.writeFileSync(getLocalDbPath(), JSON.stringify(normalized, null, 2), 'utf-8')
+      } catch {}
+      return normalized
     } catch (err) {
       console.error('Error reading Blob DB:', err)
       return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
     }
   }
 
-  try {
-    const dbPath = getLocalDbPath()
-    if (!fs.existsSync(dbPath)) {
-      return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
-    }
-    const raw = fs.readFileSync(dbPath, 'utf-8')
-    const data = JSON.parse(raw)
-    return ensureMainFunnelForm({
-      magnets: Array.isArray(data.magnets) ? data.magnets : [],
-      leads: Array.isArray(data.leads) ? data.leads : [],
-      forms: Array.isArray(data.forms) ? data.forms : [],
-      formSubmissions: Array.isArray(data.formSubmissions) ? data.formSubmissions : [],
-      siteSettings: data.siteSettings,
-    })
-  } catch (err) {
-    console.error('Error reading local DB:', err)
-    return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
-  }
+  return ensureMainFunnelForm({ magnets: [], leads: [], forms: [], formSubmissions: [] })
 }
 
 export async function saveDatabase(db: DatabaseSchema): Promise<void> {
-  if (isBlobConfigured()) {
-    await put(BLOB_DB_PATH, JSON.stringify(db, null, 2), {
-      access: 'public',
-      addRandomSuffix: false,
-      allowOverwrite: true,
-      contentType: 'application/json',
-      cacheControlMaxAge: 0,
-    })
-    return
+  const normalized = ensureMainFunnelForm(db)
+  globalForCms.zyadCmsMemoryDb = normalized
+
+  try {
+    const dbPath = getLocalDbPath()
+    fs.writeFileSync(dbPath, JSON.stringify(normalized, null, 2), 'utf-8')
+  } catch (e) {
+    console.error('Error saving local DB:', e)
   }
 
-  const dbPath = getLocalDbPath()
-  fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf-8')
+  if (isBlobConfigured()) {
+    const syncBlob = async () => {
+      try {
+        await put(BLOB_DB_PATH, JSON.stringify(normalized, null, 2), {
+          access: 'public',
+          addRandomSuffix: false,
+          allowOverwrite: true,
+          contentType: 'application/json',
+          cacheControlMaxAge: 0,
+        })
+      } catch (err) {
+        console.error('Error syncing Blob DB:', err)
+      }
+    }
+    if (process.env.VERCEL) {
+      await syncBlob()
+    } else {
+      void syncBlob()
+    }
+  }
 }
 
 export async function deleteBlobFileIfNeeded(fileUrl: string): Promise<void> {

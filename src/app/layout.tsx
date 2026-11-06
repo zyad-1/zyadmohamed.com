@@ -99,15 +99,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body>
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=sessionStorage.getItem('apx_theme_session_override');var isLight=s?s==='light':(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches);if(isLight){document.documentElement.classList.add('apx-light-mode');document.documentElement.style.colorScheme='light';}else{document.documentElement.classList.remove('apx-light-mode');document.documentElement.style.colorScheme='dark';}}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className="antialiased selection:bg-[#8B5CF6]/30 selection:text-white">
         <SeoGeoSchema />
         <Analytics />
-        {/* APX Atmospheric Background Blobs */}
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-        <div className="blob blob-4" />
+        {/* APX Atmospheric Background — strictly fixed & clipped so it never affects scroll height/width */}
+        <div
+          aria-hidden="true"
+          className="fixed inset-0 pointer-events-none overflow-hidden z-0"
+        >
+          <div className="blob blob-1" />
+          <div className="blob blob-2" />
+          <div className="blob blob-3" />
+        </div>
 
         <Cursor />
         {children}
