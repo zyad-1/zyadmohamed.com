@@ -1218,6 +1218,76 @@ export default function AdminDashboard({ initialAuth }: Props) {
     URL.revokeObjectURL(url)
   }
 
+  // ===================== GLOBAL ADMIN SHORTCUTS HOOK =====================
+  useEffect(() => {
+    if (!isAuthed) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null
+      const inEditable =
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.tagName === 'SELECT' ||
+          target.isContentEditable)
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault()
+        setGlobalCmdOpen(prev => !prev)
+        setGlobalCmdQuery('')
+        return
+      }
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        if (activeSection === 'contracts' || activeSection === 'scripts') {
+          return // Handled natively by AdminDocumentStudioView
+        }
+        e.preventDefault()
+        if (activeSection === 'form') {
+          handleSaveMainForm()
+        } else if (activeSection === 'content' || activeSection === 'settings') {
+          saveSiteSettingsToServer(siteSettings)
+        } else {
+          showSuccessToast(
+            isRtl ? 'تمت مزامنة وحفظ البيانات بنجاح!' : 'All changes synced and saved!'
+          )
+        }
+        return
+      }
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
+        if (activeSection === 'contracts' || activeSection === 'scripts') {
+          return
+        }
+        e.preventDefault()
+        window.print()
+        return
+      }
+
+      if (!inEditable && e.key === '?') {
+        e.preventDefault()
+        setGlobalShortcutsOpen(prev => !prev)
+        return
+      }
+
+      if (!inEditable && e.key === '/') {
+        if (activeSection === 'contracts' || activeSection === 'scripts') {
+          return
+        }
+        e.preventDefault()
+        setGlobalCmdOpen(true)
+        setGlobalCmdQuery('')
+        return
+      }
+
+      if (e.key === 'Escape') {
+        setGlobalCmdOpen(false)
+        setGlobalShortcutsOpen(false)
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  })
+
   // ===================== LOGIN VIEW =====================
   if (!isAuthed) {
     return (
@@ -1300,75 +1370,6 @@ export default function AdminDashboard({ initialAuth }: Props) {
   const customFormsCount = forms.filter(
     f => f.id !== 'frm_funnel_main' && f.slug !== 'funnel-qualification' && !f.isMainFunnel
   ).length
-
-  useEffect(() => {
-    if (!isAuthed) return
-    const onKeyDown = (e: KeyboardEvent) => {
-      const target = e.target as HTMLElement | null
-      const inEditable =
-        target &&
-        (target.tagName === 'INPUT' ||
-          target.tagName === 'TEXTAREA' ||
-          target.tagName === 'SELECT' ||
-          target.isContentEditable)
-
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault()
-        setGlobalCmdOpen(prev => !prev)
-        setGlobalCmdQuery('')
-        return
-      }
-
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
-        if (activeSection === 'contracts' || activeSection === 'scripts') {
-          return // Handled natively by AdminDocumentStudioView
-        }
-        e.preventDefault()
-        if (activeSection === 'form') {
-          handleSaveMainForm()
-        } else if (activeSection === 'content' || activeSection === 'settings') {
-          saveSiteSettingsToServer(siteSettings)
-        } else {
-          showSuccessToast(
-            isRtl ? 'تمت مزامنة وحفظ البيانات بنجاح!' : 'All changes synced and saved!'
-          )
-        }
-        return
-      }
-
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
-        if (activeSection === 'contracts' || activeSection === 'scripts') {
-          return
-        }
-        e.preventDefault()
-        window.print()
-        return
-      }
-
-      if (!inEditable && e.key === '?') {
-        e.preventDefault()
-        setGlobalShortcutsOpen(prev => !prev)
-        return
-      }
-
-      if (!inEditable && e.key === '/') {
-        if (activeSection === 'contracts' || activeSection === 'scripts') {
-          return
-        }
-        e.preventDefault()
-        setGlobalCmdOpen(true)
-        setGlobalCmdQuery('')
-        return
-      }
-
-      if (e.key === 'Escape') {
-        setGlobalCmdOpen(false)
-        setGlobalShortcutsOpen(false)
-      }
-    }
-    window.addEventListener('keydown', onKeyDown)
-    return () => window.removeEventListener('keydown', onKeyDown)
-  })
 
   const sidebarItems: Array<{
     id: AdminSection

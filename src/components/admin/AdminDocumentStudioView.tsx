@@ -828,11 +828,13 @@ export default function AdminDocumentStudioView({
   // Sync contract HTML into contentEditable when switching documents
   useEffect(() => {
     if (activeDoc?.type === 'contract' && contractBodyRef.current) {
-      if (contractBodyRef.current.innerHTML !== (activeDoc.body || '')) {
-        contractBodyRef.current.innerHTML = activeDoc.body || ''
+      if (document.activeElement !== contractBodyRef.current) {
+        if (contractBodyRef.current.innerHTML !== (activeDoc.body || '')) {
+          contractBodyRef.current.innerHTML = activeDoc.body || ''
+        }
       }
     }
-  }, [activeDoc?.id, activeDoc?.type, activeDoc?.lang])
+  }, [activeDoc?.id, activeDoc?.type, activeDoc?.lang, activeDoc?.body])
 
   // Initialize signature canvas when signature modal opens
   useEffect(() => {
